@@ -4,7 +4,7 @@
 <head>
     <title>Tharindu-Dakshina</title>
     <link href="assets/images/Profile_Pitcher.png" rel="icon">
-    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link href="assets/css/normalize.css" rel="stylesheet">
     <meta content="Tharindu,Dakshina,Thatindu dakshina" name="keywords">
     <meta content="The latest Tweets from Tharindu Dakshina (@Dakshina527) ❤❤IJSE Student❤❤ ❤#Sri Lanka.❤"
           name="description">
@@ -13,7 +13,7 @@
     <meta content="IE=edge,chrome" http-equiv="X-UA-Compatible">
 
     <style>
-                         /*header*/
+        /*header*/
         body {
             background-color: #DFE4EA
         }
@@ -32,7 +32,7 @@
             text-align-all: right
         }
 
-                                /*main*/
+        /*main*/
 
         #homeMainSelection {
             background-color: #2F3542;
@@ -45,32 +45,142 @@
             color: white
         }
 
-        #homeMainSelection > aside > h1>p{
+        #homeMainSelection > aside > h1 > p {
             font-size: 40px;
             color: #d6d9d4
         }
 
-        #homeMainSelection>aside>p{
+        #homeMainSelection > aside > p {
             width: 500px;
             font-size: 20px;
             color: #DFE4EA;
             text-align: justify
         }
 
-                    /*contactNavigation*/
+        /*contactNavigation*/
 
-        #contactNavigationSelection{
+        #contactNavigationSelection {
             background-color: #747D8C;
             height: 50px
         }
 
-        #contactNavigationSelection>nav>p{
+        #contactNavigationSelection > nav > p {
             font-size: 20px
         }
 
-                    /*about*/
+        /*about*/
+        #about {
+            background-color: #ffffff
+        }
 
+        #about > h1 {
+            text-align: center;
+            font-size: 38px
+        }
 
+        #about > section > aside > img {
+            border-radius: 50%;
+        }
+
+        #about > section > p {
+            font-size: 20px;
+            width: 500px;
+            text-align: justify
+        }
+
+        /*Education*/
+        #education {
+            background-color: #576574;
+            height: 400px
+        }
+
+        #education > h1 {
+            text-align: center;
+            color: #DFE4EA;
+            font-size: 50px;
+        }
+
+        /*Skill*/
+        #skill {
+            background-color: #A5B1C2;
+            height: 600px
+        }
+
+        /*Skill-->Languages*/
+        #skill > section:first-child > b > u {
+            color: #F8EFBA
+        }
+
+        #skill > section:first-child > b > u > h1 {
+            font-size: 40px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /*Skill-->Tools*/
+        #skill>section:nth-child(2)>b>u{
+            color: #F8EFBA
+        }
+
+        #skill>section:nth-child(2)>b>u>h1{
+            font-size: 40px;
+            text-align: center;
+            color: #F8EFBA;
+            font-style: italic;
+        }
+
+                    /*Project*/
+
+        #projects section:first-child{
+            background-color: white;
+            height: 400px
+        }
+
+        #projects section:first-child > h1 {
+            text-align: center;
+            font-size: 38px;
+        }
+
+                /*course Work*/
+        #projects section:nth-child(2){
+            background-color: #A5B1C2;
+            height: 400px
+        }
+        #projects section:nth-child(2)>h1{
+            text-align: center;
+            font-size: 38px
+        }
+
+                    /*Gallery*/
+        #gallery{
+            background-color: white;
+            height: 600px
+        }
+
+        #gallery>h1{
+            text-align: center;
+            font-size: 38px
+        }
+
+                /*Contact*/
+        #contact{
+            background-color: #808E9B;
+            height: 700px
+        }
+
+        #contact>h1{
+            text-align: center;
+            font-size: 38px
+        }
+        #contact section:nth-child(2)>p{
+            text-align: left;
+            width: 160px
+        }
+
+        #contact section:nth-child(2)>.image{
+            font-size: 28px;
+            color: red;
+        }
 
     </style>
 </head>
@@ -89,8 +199,6 @@
         </p>
     </nav>
 </header>
-
-
 <main>
     <!--home-->
     <section id="homeMainSelection">
@@ -133,16 +241,16 @@
         </nav>
     </section>
     <!--About-->
-    <section id="about" style="background-color: #ffffff">
-        <h1 style="text-align: center;font-size: 38px">About</h1>
+    <section id="about">
+        <h1>About</h1>
         <section>
             <aside>
-                <img alt="Error load the pitcher" src="assets/images/about%20photo.jpeg" width="200">
+                <img alt="Error load the pitcher" src="assets/images/aboutPic.jpeg" width="200">
             </aside>
         </section>
 
         <section>
-            <p style="font-size: 20px; width: 500px;text-align: justify"> I am an enthusiastic individual who is eager
+            <p> I am an enthusiastic individual who is eager
                 to learn new things perpetually while
                 getting myself up-to-date with cutting edge technologies. I am good
                 at being a team player as well as leading a team. I am more keen on Web development and Mobile
@@ -153,18 +261,19 @@
                 experience in working with clients to ensure their best satisfaction.
             </p>
         </section>
-    </section>
-    <!--Education-->
-    <section style="background-color: #576574;height: 400px">
-        <h1 style="text-align: center;color: #DFE4EA;font-size: 50px">Education & Experience</h1>
+
+        <!--Education-->
+        <section id="education">
+            <h1 style="">Education & Experience</h1>
+        </section>
     </section>
     <!--Skill-->
-    <section id="skill" style="background-color: #A5B1C2;height: 600px">
+    <section id="skill">
         <!--Languages-->
         <section>
             <br>
-            <b><i><u style="color: #F8EFBA"><h1 style="font-size: 40px;text-align: center;color: #F8EFBA">Languages</h1>
-            </u></i></b>
+            <b><u><h1><!--style=""-->Languages</h1>
+            </u></b>
             <img alt="Loading error this image" border="1" src="assets/icon/javaIcon.ico" width="75">
             <img alt="Loading error this image" src="assets/icon/htmlIcon.png" width="75">
             <img alt="Loading error this image" src="assets/icon/javaFx.png" width="75">
@@ -176,7 +285,7 @@
         <!--Tools-->
         <section>
             <br><br>
-            <b><i><u style="color: #F8EFBA"><h1 style="font-size: 40px;text-align: center;color: #F8EFBA">Tools</h1></u></i></b>
+            <b><u><h1 style="">Tools</h1></u></b>
             <img alt="Loading error this image" src="assets/icon/geany.png" width="75">
             <img alt="Loading error this image" src="assets/icon/intellijIcon.png" width="75">
             <img alt="Loading error this image" src="assets/icon/netbeansIcon.png" width="75">
@@ -187,8 +296,8 @@
     <!--projects-->
     <section id="projects">
         <!--Projects-->
-        <section style="background-color: white;height: 400px">
-            <h1 style="text-align: center;font-size: 38px">Projects</h1>
+        <section>
+            <h1>Projects</h1>
             <a href="https://github.com/TharinduDakshina/ParkinSystem.git" target="_blank"><img
                     alt="Loading error this image" src="assets/images/projectParkingSyastem.jpg" width="250"></a>
             <a href=""><img alt="Loading error this image" src="assets/images/projectPossSystem.jpg" width="250"></a>
@@ -196,8 +305,8 @@
                     alt="Loading error this image" src="assets/images/projectSaloonSystem.png" width="250"></a>
         </section>
         <!--course work-->
-        <section style="background-color: #A5B1C2;height: 400px">
-            <h1 style="text-align: center;font-size: 38px">Course works</h1>
+        <section>
+            <h1>Course works</h1>
             <a href="https://github.com/TharinduDakshina/HotelSystem.git" target="_blank"><img
                     alt="Loading error this image" src="assets/images/hotel%20ManagementSystem.jpg" width="250"></a>
             <a href="https://github.com/TharinduDakshina/StudentManagementSystem.git" target="_blank"><img
@@ -205,8 +314,8 @@
         </section>
     </section>
     <!--Gallery-->
-    <section style="background-color: white;height: 600px">
-        <h1 style="text-align: center;font-size: 38px">Gallery</h1>
+    <section id="gallery">
+        <h1>Gallery</h1>
         <img alt="Loading error this image" src="assets/images/my1.jpeg" width="200">
         <img alt="Loading error this image" src="assets/images/my2.jpeg" width="200">
         <img alt="Loading error this image" src="assets/images/my3.jpg" width="200">
@@ -214,12 +323,12 @@
         <img alt="Loading error this image" src="assets/images/my6.jpeg" width="200">
     </section>
     <!--Contact-->
-    <section id="contact" style="background-color: #808E9B; height: 700px">
-        <h1 style="text-align: center;font-size: 38px">Contact</h1>
+    <section id="contact">
+        <h1>Contact</h1>
         <section>
 
             <img alt="Loading error this icon" src="assets/icon/locationIcon.png" width="30px">
-            <p style="text-align: left;width: 160px">
+            <p>
                 <b>Piyarathana Mawatha,
                     <wbr>
                     Obadagoda,
@@ -229,14 +338,14 @@
                 </b>
             </p>
             <br>
-            <img alt="Loading error this icon" src="assets/icon/Whatsapp.png" width="30px"><b><a
-                href="tel:+94761339805%20" style="font-size: 18px" target="_self">+94761339805</a></b>
+            <img class="image" alt="Loading error this icon" src="assets/icon/Whatsapp.png" width="30px"><b>
+            <a class="image" href="tel:+94761339805%20" target="_self">+94761339805</a></b>
             <br><br><br>
-            <img alt="Loading error this icon" src="assets/icon/telegram.png" width="30px"><b><a
-                href="tel:+94761339805%20" style="font-size: 18px" target="_self">+94761339805</a></b>
+            <img class="image" alt="Loading error this icon" src="assets/icon/telegram.png" width="30px"><b>
+            <a class="image" href="tel:+94761339805%20"  target="_self">+94761339805</a></b>
             <br><br><br>
-            <img alt="Loading error this icon" src="assets/icon/contactMail.png" width="40"><b><a
-                href="mailto:tharindudakshina527@gmail.com" style="font-size: 18px" target="_blank">tharindudakshina527@gmail.com</a></b>
+            <img  alt="Loading error this icon" src="assets/icon/contactMail.png" width="40"><b>
+            <a class="image" href="mailto:tharindudakshina527@gmail.com"  target="_blank">tharindudakshina527@gmail.com</a></b>
         </section>
         <!--form-->
         <section>
