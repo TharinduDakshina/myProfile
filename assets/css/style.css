@@ -1,0 +1,188 @@
+
+    /*header*/
+body {
+    background-color: #DFE4EA
+}
+
+#home {
+    background-color: #DFE4EA;
+    height: 30px
+}
+
+header nav p {
+    font-size: 25px
+}
+
+header nav p a {
+    font-size: 20px;
+    text-align-all: right
+}
+
+/*main*/
+
+#homeMainSelection {
+    background-color: #2F3542;
+    height: 500px
+
+}
+
+#homeMainSelection > aside > h1 {
+    font-size: 65px;
+    color: white
+}
+
+#homeMainSelection > aside > h1 > p {
+    font-size: 40px;
+    color: #d6d9d4
+}
+
+#homeMainSelection > aside > p {
+    width: 500px;
+    font-size: 20px;
+    color: #DFE4EA;
+    text-align: justify
+}
+
+/*contactNavigation*/
+
+#contactNavigationSelection {
+    background-color: #747D8C;
+    height: 50px
+}
+
+#contactNavigationSelection > nav > p {
+    font-size: 20px
+}
+
+/*about*/
+#about {
+    background-color: #ffffff
+}
+
+#about > h1 {
+    text-align: center;
+    font-size: 38px
+}
+
+#about > section > aside > img {
+    border-radius: 50%;
+}
+
+#about > section > p {
+    font-size: 20px;
+    width: 500px;
+    text-align: justify
+}
+
+/*Education*/
+#education {
+    background-color: #576574;
+    height: 400px
+}
+
+#education > h1 {
+    text-align: center;
+    color: #DFE4EA;
+    font-size: 50px;
+}
+
+/*Skill*/
+#skill {
+    background-color: #A5B1C2;
+    height: 600px
+}
+
+/*Skill-->Languages*/
+#skill > section:first-child > b > u {
+    color: #F8EFBA
+}
+
+#skill > section:first-child > b > u > h1 {
+    font-size: 40px;
+    text-align: center;
+    font-style: italic;
+}
+
+/*Skill-->Tools*/
+#skill > section:nth-child(2) > b > u {
+    color: #F8EFBA
+}
+
+#skill > section:nth-child(2) > b > u > h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #F8EFBA;
+    font-style: italic;
+}
+
+/*Project*/
+
+#projects section:first-child {
+    background-color: white;
+    height: 400px
+}
+
+#projects section:first-child > h1 {
+    text-align: center;
+    font-size: 38px;
+}
+
+/*course Work*/
+#projects section:nth-child(2) {
+    background-color: #A5B1C2;
+    height: 400px
+}
+
+#projects section:nth-child(2) > h1 {
+    text-align: center;
+    font-size: 38px
+}
+
+/*Gallery*/
+#gallery {
+    background-color: white;
+    height: 600px
+}
+
+#gallery > h1 {
+    text-align: center;
+    font-size: 38px
+}
+
+/*Contact*/
+#contact {
+    background-color: #808E9B;
+    height: 700px
+}
+
+#contact > h1 {
+    text-align: center;
+    font-size: 38px
+}
+
+#contact section:nth-child(2) > p {
+    text-align: left;
+    width: 160px;
+}
+
+.contact {
+    font-size: 28px;
+}
+
+/*contact form*/
+#email, #name, #feedback, #formSubmit {
+    background-color: #C4C4C4;
+    color: white;
+}
+
+/*footer*/
+
+footer {
+    background-color: #808E9B;
+}
+
+footer > nav > p > a {
+    font-size: 20px;
+    alignment: right;
+    color: white
+}
