@@ -1,19 +1,30 @@
-
-    /*header*/
-body {
-    background-color: #DFE4EA
-}
-
+/*header*/
 #home {
+    width: 100vw;
     background-color: #DFE4EA;
     height: 30px
 }
 
+#home > nav > p > a:link {
+    color: black;
+}
+
+#home > nav > p > b > a:visited {
+    color: black;
+}
+
+#home > nav > p > b > a:hover {
+    color: #bf2cf5;
+}
+
 header nav p {
-    font-size: 25px
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 header nav p a {
+    font-style: unset;
     font-size: 20px;
     text-align-all: right
 }
@@ -23,35 +34,47 @@ header nav p a {
 #homeMainSelection {
     background-color: #2F3542;
     height: 500px
-
 }
 
 #homeMainSelection > aside > h1 {
     font-size: 65px;
-    color: white
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 60px;
 }
 
 #homeMainSelection > aside > h1 > p {
     font-size: 40px;
-    color: #d6d9d4
+    color: #d6d9d4;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #homeMainSelection > aside > p {
     width: 500px;
     font-size: 20px;
     color: #DFE4EA;
-    text-align: justify
+    text-align: justify;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 60px;
+    padding-top: 15px;
 }
+
 
 /*contactNavigation*/
 
 #contactNavigationSelection {
     background-color: #747D8C;
-    height: 50px
+    height: 50px;
+
 }
 
 #contactNavigationSelection > nav > p {
-    font-size: 20px
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /*about*/
@@ -61,17 +84,23 @@ header nav p a {
 
 #about > h1 {
     text-align: center;
-    font-size: 38px
+    font-size: 38px;
+    margin-top: 0px;
+    padding-top: 5vh;
 }
 
 #about > section > aside > img {
-    border-radius: 50%;
+    border-radius: 20%;
+    border: 2px solid black;
+
 }
 
 #about > section > p {
-    font-size: 20px;
+    font-size: 30px;
     width: 500px;
-    text-align: justify
+    text-align: justify;
+    padding-left: 15vw;
+    text-shadow: 1px 1px 2px #fafafa, 0 0 1em #fafafc, 0 0 0.2em #0f0f15;
 }
 
 /*Education*/
@@ -84,6 +113,13 @@ header nav p a {
     text-align: center;
     color: #DFE4EA;
     font-size: 50px;
+}
+
+#education > section > span {
+    display: block;
+    width: 2px;
+    height: 100%;
+    transform: translate(6px, -7px);
 }
 
 /*Skill*/
@@ -125,6 +161,7 @@ header nav p a {
 #projects section:first-child > h1 {
     text-align: center;
     font-size: 38px;
+    margin-top: 0px;
 }
 
 /*course Work*/
@@ -135,7 +172,8 @@ header nav p a {
 
 #projects section:nth-child(2) > h1 {
     text-align: center;
-    font-size: 38px
+    font-size: 38px;
+    margin-top: 0px;
 }
 
 /*Gallery*/
@@ -146,18 +184,21 @@ header nav p a {
 
 #gallery > h1 {
     text-align: center;
-    font-size: 38px
+    font-size: 38px;
+    margin-top: 0px;
 }
 
 /*Contact*/
 #contact {
     background-color: #808E9B;
-    height: 700px
+    height: 100vh
 }
 
 #contact > h1 {
     text-align: center;
-    font-size: 38px
+    font-size: 38px;
+    margin-top: 0px;
+    padding-top: 5vh;
 }
 
 #contact section:nth-child(2) > p {
@@ -181,8 +222,40 @@ footer {
     background-color: #808E9B;
 }
 
+footer > nav > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 15px 150px 15px 150px;
+    color: white;
+    font-size: 3vh;
+}
+
 footer > nav > p > a {
     font-size: 20px;
     alignment: right;
     color: white
+}
+
+footer > nav > p > a:hover {
+    color: #5203af;
+}
+
+footer > nav > p > a:first-child {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+footer > nav > p > a:nth-child(2) {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+footer > nav > p > a:nth-child(3) {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+footer > nav > p > a:last-child {
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
