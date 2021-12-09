@@ -78,7 +78,16 @@ header nav p a {
     margin-bottom: 0px;
 }
 
-/*about*/
+#contactNavigationSelection > nav > p>a{
+   color: black;
+}
+
+#contactNavigationSelection > nav > p>a:hover{
+   color: white;
+    url("")
+}
+
+    /*about*/
 #about {
     background-color: #ffffff;
     height: 100vh;
@@ -109,7 +118,7 @@ header nav p a {
 /*Education*/
 #education {
     background-color: #576574;
-    height: 100vh;
+    height: 500px;
     width: 100vw;
 }
 
@@ -117,6 +126,11 @@ header nav p a {
     text-align: center;
     color: #DFE4EA;
     font-size: 50px;
+}
+
+#mainHr{
+    height: 75vh;
+    width: 2vw;
 }
 
 
@@ -191,6 +205,7 @@ header nav p a {
 }
 
 /*Contact*/
+
 #contact {
     background-color: #808E9B;
     height: 100vh;
