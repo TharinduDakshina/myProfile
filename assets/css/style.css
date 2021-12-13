@@ -6,6 +6,9 @@
 }
 #home>nav> P>b>a{
     position: relative;
+    font-style: unset;
+    font-size: 20px;
+    text-align-all: right
 }
 
 #home > nav > P > b > a:first-child {
@@ -53,11 +56,7 @@ header nav p {
     margin-bottom: 0px;
 }
 
-header nav p a {
-    font-style: unset;
-    font-size: 20px;
-    text-align-all: right
-}
+
 
 /*main*/
 
