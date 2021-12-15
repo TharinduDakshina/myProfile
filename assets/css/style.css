@@ -3,8 +3,11 @@
     width: 100vw;
     background-color: #DFE4EA;
     height: 30px;
+    position: fixed;
+    z-index: 500;
 }
-#home>nav> P>b>a{
+
+#home > nav > P > b > a {
     position: relative;
     font-style: unset;
     font-size: 20px;
@@ -12,27 +15,27 @@
 }
 
 #home > nav > P > b > a:first-child {
-    left: 815px;
+    left: 50vw;
     top: 0px;
 }
 
 #home > nav > P > b > a:nth-child(2) {
-    left: 820px;
+    left: 52vw;
     top: 0px;
 }
 
 #home > nav > P > b > a:nth-child(3) {
-    left: 825px;
+    left: 54vw;
     top: 0px;
 }
 
 #home > nav > P > b > a:nth-child(4) {
-    left: 830px;
+    left: 56vw;
     top: 0px;
 }
 
 #home > nav > P > b > a:nth-child(5) {
-    left: 835px;
+    left: 58vw;
     top: 0px;
 }
 
@@ -85,17 +88,15 @@ header nav p {
 }
 
 #homeMainSelection > aside > h1 > p {
-
     font-size: 40px;
     color: #d6d9d4;
     margin-top: 0px;
     margin-bottom: 0px;
-
 }
 
 #homeMainSelection > aside > p {
     position: relative;
-    width: 45vw;
+    width: 39vw;
     font-size: 21px;
     color: #DFE4EA;
     text-align: justify;
@@ -124,12 +125,43 @@ header nav p {
     color: black;
     position: relative;
 }
-
-#contactNavigationSelection > nav >a:hover{
-   color: white;
+#contactNavigationSelection > nav > a:hover{
+    color: white;
 }
 
+#contactNavigationSelection > nav > a:nth-child(2) {
+    bottom: 8px;
+}
 
+#contactNavigationSelection > nav > img:nth-child(3) {
+    padding-top: 6px;
+}
+
+#contactNavigationSelection > nav > a:nth-child(4) {
+    bottom: 8px;
+}
+
+#contactNavigationSelection > nav > a:nth-child(5) {
+    left: 30vw;
+}
+
+#contactNavigationSelection > nav > a:nth-child(6) {
+    left: 31vw;
+    top: 4px;
+}
+
+#contactNavigationSelection > nav > a:nth-child(7) {
+    left: 32vw;
+    top: 4px;
+}
+
+#contactNavigationSelection > nav > a:nth-child(8) {
+    left: 33vw;
+}
+
+#contactNavigationSelection > nav > a:nth-child(9) {
+    left: 34vw;
+}
 
 
     /*about*/
@@ -149,11 +181,12 @@ header nav p {
 
 #about > section > aside > img {
     width: 25vw;
-    border-radius: 10%;
-    border: 2px solid black;
+    border: 8px solid #595a4d;
     position: absolute;
     right: 65px;
     top: 158px;
+    border-top-left-radius: 32%;
+    border-bottom-right-radius: 34%;
 }
 
 #about > section > p {
@@ -169,31 +202,105 @@ header nav p {
 /*Education*/
 #education {
     background-color: #576574;
-    height: 500px;
     width: 100vw;
+    position: relative;
 }
 
 #education > h1 {
     text-align: center;
     color: #DFE4EA;
     font-size: 50px;
+    position: relative;
+    font-weight: bolder;
 }
 
-#mainBar{
-    width: 20vw;
-    background-color: #a3eec0;
-    height: 0.5vh;
-    transform: rotate(90deg);
-}
-.subBar{
-    width: 4vw;
-}
-
-#mainHr{
-    height: 75vh;
-    width: 2vw;
+#education > section {
+    position: relative;
+    width: 0.5vw;
+    height: 50vh;
+    background-color: #cee390;
+    left: 50vw;
+    bottom: 10px;
+    border-radius: 15px;
 }
 
+#education > .shortBar {
+    width: 7vw;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #e3dfd7;
+    position: absolute;
+}
+
+#education > div {
+    position: absolute;
+}
+
+#education > div:nth-child(3) {
+    top: 12vh;
+    left: 50.5vw;
+}
+
+#education > div > p {
+    font-size: 20px;
+    color: white;
+}
+
+#education > div > p > span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#education > div:nth-child(4) {
+    left: 58vw;
+    top: 6vh;
+}
+
+#education > div:nth-child(5) {
+    top: 20vh;
+    left: 43vw;
+}
+
+#education > div:nth-child(6) {
+    top: 16.5vh;
+    left: 32vw;
+    alignment: right;
+}
+
+#education > div:nth-child(7) {
+    top: 27.5vh;
+    left: 50.5vw;
+}
+
+#education > div:nth-child(8) {
+    top: 22.5vh;
+    left: 58vw;
+}
+
+#education > div:nth-child(9) {
+    top: 35.5vh;
+    left: 43vw;
+}
+
+#education > div:nth-child(10) {
+    top: 29.5vh;
+    left: 26.5vw;
+}
+
+#education > div:nth-child(11) {
+    top: 46.5vh;
+    left: 50.5vw;
+}
+
+#education > div:nth-child(12) {
+    top: 41.5vh;
+    left: 58vw;
+}
+#education > div:nth-child(13) {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
 
 /*Skill*/
 #skill {
