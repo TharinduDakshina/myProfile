@@ -4,18 +4,54 @@
     <meta charset="UTF-8">
     <title>Assignment - 03</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body>section{
+            height: 100vh;
+        }
+
+        #fixCircle>div{
+           position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #fixCircle>div:first-child{
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            border: 25px solid red;
+        }
+
+
+
+        #fixCircle>div:nth-child(2){
+            width: 347px;
+            height: 347px;
+            border-radius: 100%;
+            border: 25px solid gray;
+        }
+
+
+    </style>
 </head>
 <body>
+    <section id="fixCircle">
+        <div></div>
+        <div></div>
+    </section>
     <section>
-        
+        <div></div>
     </section>
 
     <section>
-
+        <div></div>
     </section>
 
     <section>
-
+        <div></div>
     </section>
 </body>
 </html>
