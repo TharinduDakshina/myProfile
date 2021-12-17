@@ -5,8 +5,9 @@
     <title>Assignment - 03</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <style>
-        body>section{
+        body>.ContentBody{
             height: 100vh;
+            position: relative;
         }
 
         #fixCircle>div{
@@ -16,6 +17,7 @@
             left: 0;
             right: 0;
             margin: auto;
+            z-index: 1;
         }
 
         #fixCircle>div:first-child{
@@ -33,8 +35,53 @@
             border-radius: 100%;
             border: 25px solid gray;
         }
+        .ContentBody>div{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin:auto;
 
+        }
+        .ContentBody:nth-child(2)>div{
+            background-color: purple;
+        }
 
+        .ContentBody:nth-child(3)>div{
+            background-color: #2293d9;
+        }
+
+        .ContentBody:nth-child(4)>div{
+            background-color: #e05b5b;
+        }
+        .ContentBody>div>p{
+            font-weight: bold;
+            color: white;
+            text-align: justify;
+            position: absolute;
+        }
+        .ContentBody:nth-child(2)>div>p{
+            font-size: 80px;
+            left: 3vw;
+            top: 2vh;
+        }
+
+        .ContentBody:nth-child(3)>div>p{
+            font-size: 55px;
+            top: 7vh;
+            left: 0.5vw;
+        }
+
+        .ContentBody:nth-child(4)>div>p{
+            font-size: 44px;
+            width: 210px;
+            left: 2vw;
+            top: 2vh;
+        }
     </style>
 </head>
 <body>
@@ -42,16 +89,21 @@
         <div></div>
         <div></div>
     </section>
-    <section>
-        <div></div>
+
+    <section class="ContentBody">
+        <div>
+            <p>Hello</p>
+        </div>
     </section>
 
-    <section>
-        <div></div>
+    <section class="ContentBody">
+        <div> <p>Welcome to</p></div>
     </section>
 
-    <section>
-        <div></div>
+    <section class="ContentBody">
+        <div>
+            <p>Institute of Software Engineering</p>
+        </div>
     </section>
 </body>
 </html>
