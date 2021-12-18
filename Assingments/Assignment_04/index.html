@@ -2,9 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Assignment 04</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+
+        body>section{
+            position: relative;
+            height: 100vh;
+        }
+
+        section>div{
+            position: sticky;
+            height: 5vh;
+            top: -1px;
+        }
+        section:nth-child(2)>div{
+            background-color: #181875;
+            z-index: 2;
+        }
+
+        section:nth-child(3)>div{
+            background-color: #282727;
+            z-index: 3;
+        }
+        section:nth-child(4)>div{
+            background-color: red;
+            /*opacity: 0.1;*/
+            z-index: 3;
+        }
+
+        section:nth-child(2){
+            background-color: #2293d9;
+        }
+
+        section:nth-child(3){
+            background-color: white;
+            /*opacity: 0.1;*/
+        }
+
+        section:nth-child(4){
+            background-color: red;
+        }
+        section>h1{
+            position: absolute;
+            top: 26vh;
+            left: 37vw;
+            font-size: 9rem;
+        }
+        section>div>p{
+            position: absolute;
+            padding: 6px;
+            top: 4px;
+            color: white;
+            font-weight: bolder;
+            z-index: 10;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
+    <section>
+        <div></div>
+        <h1>Hello</h1>
+    </section>
+
+    <section>
+
+        <div>
+            <P>Card 2</P>
+        </div>
+        <h1>How</h1>
+    </section>
+
+
+    <section>
+
+        <div>
+            <p>Card 3</p>
+        </div>
+       <h1>Are</h1>
+    </section>
+
+    <section>
+
+        <div>
+            <p>Card 4</p>
+        </div>
+        <h1>You..?</h1>
+    </section>
 </body>
 </html>
