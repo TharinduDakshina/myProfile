@@ -16,6 +16,12 @@
             height: 5vh;
             top: -1px;
         }
+
+        section:nth-child(1)>div{
+            background-color: #f61919;
+            z-index: 1;
+        }
+
         section:nth-child(2)>div{
             background-color: #181875;
             z-index: 2;
@@ -26,8 +32,8 @@
             z-index: 3;
         }
         section:nth-child(4)>div{
-            background-color: red;
-            /*opacity: 0.1;*/
+            background-color: #3f3b3b;
+            opacity: 0.8;
             z-index: 3;
         }
 
@@ -37,7 +43,7 @@
 
         section:nth-child(3){
             background-color: white;
-            /*opacity: 0.1;*/
+            opacity: 0.8;
         }
 
         section:nth-child(4){
@@ -60,12 +66,20 @@
             margin-top: 0;
             margin-bottom: 0;
         }
+        #A{
+            width: 100vw;
+            height: 100vh;
+            background-color: #0f0f15;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
 
     <section>
-        <div></div>
+        <div>
+            <P>Card 1</P>
+        </div>
         <h1>Hello</h1>
     </section>
 
@@ -80,10 +94,13 @@
 
     <section>
 
-        <div>
-            <p>Card 3</p>
-        </div>
-       <h1>Are</h1>
+            <div>
+                <p>Card 3</p>
+            </div>
+
+            <h1>Are</h1>
+            <div id="A"></div>
+
     </section>
 
     <section>
