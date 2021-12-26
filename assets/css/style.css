@@ -111,13 +111,20 @@ header nav p {
 /*contactNavigation*/
 
 #contactNavigationSelection {
+    position: relative;
     background-color: #747D8C;
     height: 55px;
 
 }
 
-#contactNavigationSelection>nav>img:first-child{
-    padding-left:4vw;
+#contactNavigationSelection>nav>i:first-child{
+    font-size: 3em;
+    padding-left: 25px;
+}
+
+#contactNavigationSelection>nav>i:first-child:hover{
+   color: white;
+    cursor: pointer;
 }
 
 #contactNavigationSelection > nav > a{
@@ -133,8 +140,14 @@ header nav p {
     bottom: 8px;
 }
 
-#contactNavigationSelection > nav > img:nth-child(3) {
+#contactNavigationSelection > nav > i:nth-child(3) {
     padding-top: 6px;
+    font-size: 3em;
+}
+
+#contactNavigationSelection > nav > i:nth-child(3):hover{
+    color: white;
+    cursor: pointer;
 }
 
 #contactNavigationSelection > nav > a:nth-child(4) {
@@ -145,22 +158,46 @@ header nav p {
     left: 30vw;
 }
 
+#contactNavigationSelection > nav > a:nth-child(5)>i{
+    font-size: 2.5em;
+}
+
+
 #contactNavigationSelection > nav > a:nth-child(6) {
     left: 31vw;
-    top: 4px;
 }
+
+#contactNavigationSelection > nav > a:nth-child(6){
+    font-size: 3em;
+}
+
 
 #contactNavigationSelection > nav > a:nth-child(7) {
     left: 32vw;
-    top: 4px;
+}
+
+#contactNavigationSelection > nav > a:nth-child(7)>i {
+    font-size: 2.5em;
 }
 
 #contactNavigationSelection > nav > a:nth-child(8) {
     left: 33vw;
 }
 
+#contactNavigationSelection > nav > a:nth-child(8)>i {
+    font-size: 2.5em;
+}
+
 #contactNavigationSelection > nav > a:nth-child(9) {
     left: 34vw;
+}
+
+#contactNavigationSelection > nav > a:nth-child(9)>i {
+    font-size: 2.5em;
+}
+
+#contactNavigationSelection > nav > a:nth-child(10) {
+    left: 35vw;
 }
 
 
@@ -297,7 +334,7 @@ header nav p {
     left: 58vw;
 }
 #education > div:nth-child(13) {
-    width: 50px;
+    width: 50px;                            /*yata ira*/
     height: 50px;
     background-color: red;
 }
