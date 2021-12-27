@@ -435,7 +435,7 @@ header nav p {
 #contact>div{
     position: absolute;
     width: 0.2vw;
-    height: 76vh;
+    height: 65vh;
     background-color: #eee7e7;
     top: 17vh;
     left: 50vw;
@@ -477,12 +477,17 @@ header nav p {
     border-radius: 6px;
 }
 
+        /*contact footer*/
+#contact>section:nth-child(5)>nav{
+    position: absolute;
+    top: 0;                         /*==============meathana hadanna thiyenne  contact eke footer eka*/
+    left: 0;
+}
+
 #feedback{
     height: 15.2vh;
     margin-bottom: 3vh;
 }
-
-
 
 #formSubmit{
     background-color: #49e149;
