@@ -334,9 +334,11 @@ header nav p {
     left: 58vw;
 }
 #education > div:nth-child(13) {
-    width: 50px;                            /*yata ira*/
-    height: 50px;
-    background-color: red;
+    top: 60vh;
+    left: 49.44vw;
+    border-top: 13px solid #fafafc;
+    border-left: 13px solid #576574;
+    border-right: 13px solid #576574;
 }
 
 /*Skill*/
@@ -412,6 +414,7 @@ header nav p {
 /*Contact*/
 
 #contact {
+    position: relative;
     background-color: #808E9B;
     height: 100vh;
     width: 100vw;
@@ -422,13 +425,29 @@ header nav p {
     font-size: 38px;
     margin-top: 0px;
     padding-top: 5vh;
+    margin-bottom: 7vh;
+}
+
+#contact section:nth-child(2) > img:first-child {
+    margin-bottom: 7vh;
+}
+
+#contact>div{
+    position: absolute;
+    width: 0.2vw;
+    height: 76vh;
+    background-color: #eee7e7;
+    top: 17vh;
+    left: 50vw;
 }
 
 #contact section:nth-child(2) > p {
+    position: absolute;
     text-align: left;
     width: 160px;
+    top: 80px;
+    left: 7vw;
 }
-
 
 .contact {
     font-size: 28px;
@@ -440,9 +459,38 @@ header nav p {
 
 
 /*contact form*/
-#email, #name, #feedback, #formSubmit {
+#contact>section:nth-child(4)>div{
+    position: absolute;
+    top: 18vh;
+    left: 68vw;
+}
+
+#contact>section:nth-child(4)>div>form>label{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#email, #name, #feedback {
     background-color: #C4C4C4;
     color: white;
+    width: 26vw;
+    height: 5.2vh;
+    border-radius: 6px;
+}
+
+#feedback{
+    height: 15.2vh;
+    margin-bottom: 3vh;
+}
+
+
+
+#formSubmit{
+    background-color: #49e149;
+    font-weight: bold;
+}
+#formSubmit:hover{
+    color: white;
+    cursor: pointer;
 }
 
 /*footer*/

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section{
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+            border-radius: 15px;
+          /*  transform: rotate(6);*/
+
+            animation-name: test;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+        
+        @keyframes test  {
+            0%{
+                top: 0;
+                left: 0;
+                background-color: blue;
+            }
+            25%{
+                top: 0;
+                left: 80vw;
+                background-color: yellow;
+                transform: rotate(90deg);
+            }
+            50%{
+                top: 85vh;
+                left: 80vw;
+                background-color: red;
+                transform: rotate(180deg);
+            }
+            75%{
+                top: 85vh;
+                left: 0;
+                background-color: deeppink;
+                transform: rotate(270deg);
+            }
+            100%{
+                top: 0;
+                left: 0;
+                background-color: #ffdd00;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+     <section>
+
+     </section>
+</body>
+</html>
