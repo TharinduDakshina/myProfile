@@ -445,7 +445,7 @@ header nav p {
     position: absolute;
     text-align: left;
     width: 160px;
-    top: 80px;
+    top: 100px;
     left: 7vw;
 }
 
@@ -453,8 +453,8 @@ header nav p {
     font-size: 28px;
     color: black;
 }
-.contact:active{
-    color: white;
+.contact:hover{
+    color: #e3e4e7;
 }
 
 
@@ -478,10 +478,48 @@ header nav p {
 }
 
         /*contact footer*/
-#contact>section:nth-child(5)>nav{
+#contact>section:nth-child(5)>nav>div{
     position: absolute;
-    top: 0;                         /*==============meathana hadanna thiyenne  contact eke footer eka*/
+    top: 0;
     left: 0;
+    display: inline;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#contact>section:nth-child(5)>nav>div>a>i{
+    color: #0f0f15;
+    font-size: 2em;
+}
+
+#contact>section:nth-child(5)>nav>div>a>i:hover{
+    color: white;
+}
+
+#contact>section:nth-child(5)>nav>div:first-child{
+    color: #0f0f15;
+    top: 90vh;
+    left: 7vw;
+}
+
+#contact>section:nth-child(5)>nav>div:nth-child(2){
+    top: 90vh;
+    left: 22vw;
+}
+
+#contact>section:nth-child(5)>nav>div:nth-child(3){
+    top: 90vh;
+    left: 61vw;
+}
+
+#contact>section:nth-child(5)>nav>div:nth-child(4){
+    top: 90vh;
+    left: 41vw;
+}
+
+#contact>section:nth-child(5)>nav>div:nth-child(5){
+    top: 90vh;
+    left: 80vw;
 }
 
 #feedback{
