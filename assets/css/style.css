@@ -1,54 +1,42 @@
 /*header*/
 #home {
-    width: 100vw;
+    width: 99vw;
     background-color: #DFE4EA;
     height: 30px;
     position: fixed;
     z-index: 500;
 }
 
-#home > nav > P > b > a {
-    position: relative;
+#home>nav>p{
+    font-weight: bold;
     font-style: unset;
-    font-size: 20px;
-    text-align-all: right
+    display: inline;
 }
 
-#home > nav > P > b > a:first-child {
+#home>nav>ul{
+    position: relative;
+    list-style: none;
     left: 50vw;
     top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    display: inline-block;
+}
+#home > nav > ul>li {
+    display: inline-block;
+    margin: 0 30px 0 0 ;
+
 }
 
-#home > nav > P > b > a:nth-child(2) {
-    left: 52vw;
-    top: 0px;
-}
-
-#home > nav > P > b > a:nth-child(3) {
-    left: 54vw;
-    top: 0px;
-}
-
-#home > nav > P > b > a:nth-child(4) {
-    left: 56vw;
-    top: 0px;
-}
-
-#home > nav > P > b > a:nth-child(5) {
-    left: 58vw;
-    top: 0px;
-}
-
-
-#home > nav > p > a:link {
+#home > nav > ul>li > a:link {
     color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: unset;
+    font-size: 25px;
 }
 
-#home > nav > p > b > a:visited {
-    color: black;
-}
-
-#home > nav > p > b > a:hover {
+#home > nav > ul > li > a:hover {
     color: #bf2cf5;
 }
 
@@ -66,7 +54,7 @@ header nav p {
 #homeMainSelection {
     background-color: #2F3542;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 #homeMainSelection>section:first-child>img{
@@ -205,7 +193,7 @@ header nav p {
 #about {
     background-color: #ffffff;
     height: 800px;
-    width: 100vw;
+    width: 99vw;
     position: relative;
 }
 
@@ -239,7 +227,7 @@ header nav p {
 /*Education*/
 #education {
     background-color: #576574;
-    width: 100vw;
+    width: 99vw;
     position: relative;
 }
 
@@ -345,7 +333,7 @@ header nav p {
 #skill {
     background-color: #A5B1C2;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 /*Skill-->Languages*/
@@ -376,7 +364,7 @@ header nav p {
 #projects section:first-child {
     background-color: white;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 #projects section:first-child > h1 {
@@ -389,7 +377,7 @@ header nav p {
 #projects section:nth-child(2) {
     background-color: #A5B1C2;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 #projects section:nth-child(2) > h1 {
@@ -402,7 +390,7 @@ header nav p {
 #gallery {
     background-color: white;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 #gallery > h1 {
@@ -417,7 +405,7 @@ header nav p {
     position: relative;
     background-color: #808E9B;
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 #contact > h1 {
@@ -540,43 +528,30 @@ header nav p {
 
 footer {
     background-color: #808E9B;
-    width: 100vw;
+    width: 99vw;
 }
 
-footer > nav > p {
+footer > nav > ul {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding: 15px 150px 15px 150px;
-    color: white;
     font-size: 3vh;
+    list-style: none;
 }
 
-footer > nav > p > a {
+footer>nav>ul>li{
+    display: inline-block;
+    margin: 15px 150px 15px 150px;
     font-size: 20px;
     alignment: right;
-    color: white
+
 }
 
-footer > nav > p > a:hover {
+footer>nav>ul>li>a{
+    color: white;
+    text-decoration: none;
+}
+
+footer>nav>ul>li>a:hover {
     color: #5203af;
-}
-
-footer > nav > p > a:first-child {
-    margin-right: 5vw;
-    margin-left: 5vw;
-}
-
-footer > nav > p > a:nth-child(2) {
-    margin-right: 5vw;
-    margin-left: 5vw;
-}
-
-footer > nav > p > a:nth-child(3) {
-    margin-right: 5vw;
-    margin-left: 5vw;
-}
-
-footer > nav > p > a:last-child {
-    margin-right: 5vw;
-    margin-left: 5vw;
+    cursor: pointer;
 }
