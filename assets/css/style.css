@@ -237,6 +237,7 @@ header nav p {
     background-color: #576574;
     width: 98.5vw;
     position: relative;
+    height: 63vh;
 }
 
 #education > h1 {
@@ -247,8 +248,8 @@ header nav p {
     font-weight: bolder;
 }
 
-#education > section {
-    position: relative;
+#education > div:nth-child(2) {
+    position: absolute;
     width: 0.5vw;
     height: 50vh;
     background-color: #cee390;
