@@ -1,6 +1,14 @@
 /*header*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    width: 98.5vw;
+}
 #home {
-    width: 99vw;
+    width: 98.5vw;
     background-color: #DFE4EA;
     height: 30px;
     position: fixed;
@@ -54,7 +62,7 @@ header nav p {
 #homeMainSelection {
     background-color: #2F3542;
     height: 100vh;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 #homeMainSelection>section:first-child>img{
@@ -102,7 +110,7 @@ header nav p {
     position: relative;
     background-color: #747D8C;
     height: 55px;
-
+    width: 98.5vw;
 }
 
 #contactNavigationSelection>nav>i:first-child{
@@ -193,7 +201,7 @@ header nav p {
 #about {
     background-color: #ffffff;
     height: 800px;
-    width: 99vw;
+    width: 98.5vw;
     position: relative;
 }
 
@@ -227,7 +235,7 @@ header nav p {
 /*Education*/
 #education {
     background-color: #576574;
-    width: 99vw;
+    width: 98.5vw;
     position: relative;
 }
 
@@ -333,7 +341,7 @@ header nav p {
 #skill {
     background-color: #A5B1C2;
     height: 100vh;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 /*Skill-->Languages*/
@@ -364,7 +372,7 @@ header nav p {
 #projects section:first-child {
     background-color: white;
     height: 100vh;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 #projects section:first-child > h1 {
@@ -377,7 +385,7 @@ header nav p {
 #projects section:nth-child(2) {
     background-color: #A5B1C2;
     height: 100vh;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 #projects section:nth-child(2) > h1 {
@@ -390,7 +398,7 @@ header nav p {
 #gallery {
     background-color: white;
     height: 100vh;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 #gallery > h1 {
@@ -405,7 +413,7 @@ header nav p {
     position: relative;
     background-color: #808E9B;
     height: 100vh;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 #contact > h1 {
@@ -528,7 +536,7 @@ header nav p {
 
 footer {
     background-color: #808E9B;
-    width: 99vw;
+    width: 98.5vw;
 }
 
 footer > nav > ul {
