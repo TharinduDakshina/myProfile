@@ -13,7 +13,9 @@
     <meta content="width=device-width initial-scale=1" name="viewport">
     <meta content="#2d3436" name="theme-colour">
     <meta content="IE=edge,chrome" http-equiv="X-UA-Compatible">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 </head>
 
@@ -223,11 +225,33 @@
     <!--Gallery-->
     <section id="gallery">
         <h1>Gallery</h1>
-        <img alt="Loading error this image" src="assets/images/my1.jpeg" width="200">
-        <img alt="Loading error this image" src="assets/images/my2.jpeg" width="200">
-        <img alt="Loading error this image" src="assets/images/my3.jpg" width="200">
-        <img alt="Loading error this image" src="assets/images/my5.jpg" width="200">
-        <img alt="Loading error this image" src="assets/images/my6.jpeg" width="200">
+
+        <div class="box">
+            <span style="--i:1;">
+                <img alt="Loading error this image" src="assets/images/my1.jpeg" width="200">
+            </span>
+
+            <span style="--i:2;">
+                <img alt="Loading error this image" src="assets/images/my2.jpeg" width="200">
+            </span>
+
+            <span style="--i:3;">
+                <img alt="Loading error this image" src="assets/images/my3.jpg" width="200">
+            </span>
+
+            <span style="--i:4;">
+                <img alt="Loading error this image" src="assets/images/my5.jpg" width="200">
+            </span>
+
+            <span style="--i:5;">
+                <img alt="Loading error this image" src="assets/images/my6.jpeg" width="200">
+            </span>
+
+        </div>
+
+        <div onclick="window.location.href='Grid/galleryGrid/index.html'">
+            <p>View more</p>
+        </div>
     </section>
     <!--Contact-->
     <section id="contact">
