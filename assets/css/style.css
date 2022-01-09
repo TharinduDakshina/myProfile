@@ -374,31 +374,72 @@ header nav p {
 /*Skill*/
 #skill {
     background-color: #A5B1C2;
-    height: 100vh;
     width: 98.9vw;
 }
 
 /*Skill-->Languages*/
-#skill > section:first-child > b > u {
-    color: #F8EFBA
+#skill>section:nth-child(1){
+    position: relative;
+    height: 50vh;
 }
 
-#skill > section:first-child > b > u > h1 {
-    font-size: 40px;
+#skill>section:nth-child(1)>h1{
+    position: relative;
+    font-weight: bold;
+    font-size: 3em;
     text-align: center;
-    font-style: italic;
+    top: 18px;
+    margin: 0;
+}
+
+#skill>section:nth-child(1)>div{
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#skill>section:nth-child(1)>div>span{
+    height: 150px;
+    width: 150px;
+}
+
+#skill>section:nth-child(1)>div>span>img{
+    width: 150px;
 }
 
 /*Skill-->Tools*/
-#skill > section:nth-child(2) > b > u {
-    color: #F8EFBA
+
+#skill>section:nth-child(2){
+    position: relative;
+    height: 45vh;
 }
 
-#skill > section:nth-child(2) > b > u > h1 {
-    font-size: 40px;
+#skill>section:nth-child(2)>h1{
+    position: relative;
+    font-weight: bold;
+    font-size: 3em;
     text-align: center;
-    color: #F8EFBA;
-    font-style: italic;
+    top: 18px;
+    margin: 0;
+}
+
+#skill>section:nth-child(2)>div{
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#skill>section:nth-child(2)>div>span{
+    height: 150px;
+    width: 150px;
+}
+
+#skill>section:nth-child(2)>div>span>img{
+    width: 150px;
 }
 
 /*Project*/
@@ -490,7 +531,7 @@ header nav p {
     }
 
     100%{
-        transform: perspective(1000px) rotateY(360deg);
+        transform: perspective(1000px) rotateY(-360deg);
     }
 }
 
