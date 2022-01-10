@@ -3,18 +3,22 @@
 #home {
     width: 98.9vw;
     background-color: #DFE4EA;
-    height: 30px;
+    height: 4vh;
     position: fixed;
     z-index: 500;
 }
 
-#home>nav>p{
+#home > nav > p {
     font-weight: bold;
     font-style: unset;
     display: inline;
+    padding-left: 30px;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-#home>nav>ul{
+#home > nav > ul {
     position: relative;
     list-style: none;
     left: 50vw;
@@ -23,13 +27,14 @@
     margin-top: 0px;
     display: inline-block;
 }
-#home > nav > ul>li {
+
+#home > nav > ul > li {
     display: inline-block;
-    margin: 0 30px 0 0 ;
+    margin: 0 30px 0 0;
 
 }
 
-#home > nav > ul>li > a:link {
+#home > nav > ul > li > a:link {
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -41,12 +46,6 @@
     color: #bf2cf5;
 }
 
-header nav p {
-    padding-left: 30px;
-    font-size: 25px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
 
 
 
@@ -58,7 +57,7 @@ header nav p {
     width: 98.9vw;
 }
 
-#homeMainSelection>section:first-child>img{
+#homeMainSelection > section:first-child > img {
     width: 30vw;
     border-radius: 100%;
     position: absolute;
@@ -107,22 +106,23 @@ header nav p {
     width: 98.9vw;
 }
 
-#contactNavigationSelection>nav>i:first-child{
+#contactNavigationSelection > nav > i:first-child {
     font-size: 3em;
     padding-left: 25px;
 }
 
-#contactNavigationSelection>nav>i:first-child:hover{
-   color: white;
+#contactNavigationSelection > nav > i:first-child:hover {
+    color: white;
     cursor: pointer;
 }
 
-#contactNavigationSelection > nav > a{
+#contactNavigationSelection > nav > a {
     font-size: 20px;
     color: black;
     position: relative;
 }
-#contactNavigationSelection > nav > a:hover{
+
+#contactNavigationSelection > nav > a:hover {
     color: white;
 }
 
@@ -135,7 +135,7 @@ header nav p {
     font-size: 3em;
 }
 
-#contactNavigationSelection > nav > i:nth-child(3):hover{
+#contactNavigationSelection > nav > i:nth-child(3):hover {
     color: white;
     cursor: pointer;
 }
@@ -148,7 +148,7 @@ header nav p {
     left: 30vw;
 }
 
-#contactNavigationSelection > nav > a:nth-child(5)>i{
+#contactNavigationSelection > nav > a:nth-child(5) > i {
     font-size: 2.5em;
 }
 
@@ -157,7 +157,7 @@ header nav p {
     left: 31vw;
 }
 
-#contactNavigationSelection > nav > a:nth-child(6){
+#contactNavigationSelection > nav > a:nth-child(6) {
     font-size: 3em;
 }
 
@@ -166,7 +166,7 @@ header nav p {
     left: 32vw;
 }
 
-#contactNavigationSelection > nav > a:nth-child(7)>i {
+#contactNavigationSelection > nav > a:nth-child(7) > i {
     font-size: 2.5em;
 }
 
@@ -174,7 +174,7 @@ header nav p {
     left: 33vw;
 }
 
-#contactNavigationSelection > nav > a:nth-child(8)>i {
+#contactNavigationSelection > nav > a:nth-child(8) > i {
     font-size: 2.5em;
 }
 
@@ -182,7 +182,7 @@ header nav p {
     left: 34vw;
 }
 
-#contactNavigationSelection > nav > a:nth-child(9)>i {
+#contactNavigationSelection > nav > a:nth-child(9) > i {
     font-size: 2.5em;
 }
 
@@ -191,7 +191,7 @@ header nav p {
 }
 
 
-    /*about*/
+/*about*/
 #about {
     background-color: #ffffff;
     height: 800px;
@@ -226,7 +226,7 @@ header nav p {
     text-shadow: 1px 1px 2px #fafafa, 0 0 1em #fafafc, 0 0 0.2em #0f0f15;
 }
 
-#about>div:nth-child(4){
+#about > div:nth-child(4) {
     width: 19vw;
     height: 8vh;
     background-color: #76b21c;
@@ -236,11 +236,11 @@ header nav p {
     box-shadow: -12px 8px 9px -4px #4b4a47;
 }
 
-#about>div:nth-child(4)>a{
+#about > div:nth-child(4) > a {
     text-decoration: none;
 }
 
-#about>div:nth-child(4)>a>p{
+#about > div:nth-child(4) > a > p {
     position: relative;
     left: 1vw;
     top: 1.5vh;
@@ -250,14 +250,15 @@ header nav p {
     margin: 0;
 }
 
-#about>div:nth-child(4)>a>p:hover{
+#about > div:nth-child(4) > a > p:hover {
     color: white;
-    cursor: pointer ;
+    cursor: pointer;
 }
 
-#about>div:nth-child(4)>p>span{
+#about > div:nth-child(4) > p > span {
     padding-right: 1.3vw;
 }
+
 /*Education*/
 #education {
     background-color: #576574;
@@ -363,6 +364,7 @@ header nav p {
     top: 49.5vh;
     left: 58vw;
 }
+
 #education > div:nth-child(13) {
     top: 65vh;
     left: 49.44vw;
@@ -378,12 +380,12 @@ header nav p {
 }
 
 /*Skill-->Languages*/
-#skill>section:nth-child(1){
+#skill > section:nth-child(1) {
     position: relative;
     height: 50vh;
 }
 
-#skill>section:nth-child(1)>h1{
+#skill > section:nth-child(1) > h1 {
     position: relative;
     font-weight: bold;
     font-size: 3em;
@@ -392,7 +394,7 @@ header nav p {
     margin: 0;
 }
 
-#skill>section:nth-child(1)>div{
+#skill > section:nth-child(1) > div {
     height: 300px;
     position: relative;
     display: flex;
@@ -400,23 +402,23 @@ header nav p {
     justify-content: space-evenly;
 }
 
-#skill>section:nth-child(1)>div>span{
+#skill > section:nth-child(1) > div > span {
     height: 150px;
     width: 150px;
 }
 
-#skill>section:nth-child(1)>div>span>img{
+#skill > section:nth-child(1) > div > span > img {
     width: 150px;
 }
 
 /*Skill-->Tools*/
 
-#skill>section:nth-child(2){
+#skill > section:nth-child(2) {
     position: relative;
     height: 45vh;
 }
 
-#skill>section:nth-child(2)>h1{
+#skill > section:nth-child(2) > h1 {
     position: relative;
     font-weight: bold;
     font-size: 3em;
@@ -425,7 +427,7 @@ header nav p {
     margin: 0;
 }
 
-#skill>section:nth-child(2)>div{
+#skill > section:nth-child(2) > div {
     height: 300px;
     position: relative;
     display: flex;
@@ -433,12 +435,12 @@ header nav p {
     justify-content: space-evenly;
 }
 
-#skill>section:nth-child(2)>div>span{
+#skill > section:nth-child(2) > div > span {
     height: 150px;
     width: 150px;
 }
 
-#skill>section:nth-child(2)>div>span>img{
+#skill > section:nth-child(2) > div > span > img {
     width: 150px;
 }
 
@@ -455,12 +457,12 @@ header nav p {
     padding-top: 39px;
 }
 
-#projects section:first-child >section{
+#projects section:first-child > section {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: repeat(5,77px);
-    grid-template-columns: repeat(5,2fr);
+    grid-template-rows: repeat(5, 77px);
+    grid-template-columns: repeat(5, 2fr);
     grid-gap: 253px 20px;
     background-color: white;
 }
@@ -478,20 +480,20 @@ header nav p {
     margin-top: 0px;
 }
 
-#projects section:nth-child(2)>section:nth-child(2){
+#projects section:nth-child(2) > section:nth-child(2) {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: repeat(5,77px);
-    grid-template-columns: repeat(5,2fr);
+    grid-template-rows: repeat(5, 77px);
+    grid-template-columns: repeat(5, 2fr);
     grid-gap: 253px 20px;
 }
 
-#projects section:nth-child(2)>div{
+#projects section:nth-child(2) > div {
     display: inline-block;
 }
 
-#projects section:nth-child(2)>div>a>img{
+#projects section:nth-child(2) > div > a > img {
     width: 200px;
     height: 250px;
     border: 2px solid black;
@@ -511,7 +513,7 @@ header nav p {
 
 }
 
-.box{
+.box {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -526,16 +528,16 @@ header nav p {
 }
 
 @keyframes rotateAnimation {
-    0%{
+    0% {
         transform: perspective(1000px) rotateY(0deg);
     }
 
-    100%{
+    100% {
         transform: perspective(1000px) rotateY(-360deg);
     }
 }
 
-.box>span{
+.box > span {
     position: absolute;
     top: 0;
     left: 0;
@@ -544,10 +546,10 @@ header nav p {
     transform-origin: center;
     transform-style: preserve-3d;
     transform: rotateY(calc(var(--i) * 70deg)) translateZ(400px);
-    -webkit-box-reflect: below 10px linear-gradient(transparent,transparent, rgba(9, 6, 6, 0.27));
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(9, 6, 6, 0.27));
 }
 
-.box>span>img{
+.box > span > img {
     position: absolute;
     top: 0;
     left: 0;
@@ -557,7 +559,7 @@ header nav p {
 }
 
 
-#gallery>div:nth-child(3){
+#gallery > div:nth-child(3) {
     width: 141px;
     height: 43px;
     background-color: #9eb605;
@@ -567,13 +569,13 @@ header nav p {
     border-radius: 4%;
 }
 
-#gallery>div:nth-child(3):hover{
+#gallery > div:nth-child(3):hover {
     background-color: #06830f;
     cursor: pointer;
 
 }
 
-#gallery>div:nth-child(3)>p{
+#gallery > div:nth-child(3) > p {
     font-size: 1.5em;
     font-family: 'Lobster', cursive;
     color: #e1dcdc;
@@ -582,9 +584,10 @@ header nav p {
     left: 1.5vw;
 }
 
-#gallery>div:nth-child(3)>p:hover{
-color: #ccbb69;
+#gallery > div:nth-child(3) > p:hover {
+    color: #ccbb69;
 }
+
 /*Contact*/
 
 #contact {
@@ -602,11 +605,16 @@ color: #ccbb69;
     margin-bottom: 7vh;
 }
 
-#contact section:nth-child(2) > img:first-child {
-    margin-bottom: 7vh;
+#contact section:nth-child(2) > img{
+    width: 60vh;
 }
 
-#contact>div{
+#contact section:nth-child(2) > img:first-child {
+    margin-bottom: 7vh;
+    width: 60vh;
+}
+
+#contact > div {
     position: absolute;
     width: 0.2vw;
     height: 65vh;
@@ -628,22 +636,24 @@ color: #ccbb69;
     font-size: 28px;
     color: black;
 }
-.contact:hover{
+
+.contact:hover {
     color: #e3e4e7;
 }
 
 
 /*contact form*/
-#contact>section:nth-child(4)>div{
+#contact > section:nth-child(4) > div {
     position: absolute;
     top: 18vh;
     left: 68vw;
 }
 
-#contact>section:nth-child(4)>div>form>label{
+#contact > section:nth-child(4) > div > form > label {
     font-size: 1.4em;
     font-weight: bold;
 }
+
 #email, #name, #feedback {
     background-color: #C4C4C4;
     color: white;
@@ -652,8 +662,8 @@ color: #ccbb69;
     border-radius: 6px;
 }
 
-        /*contact footer*/
-#contact>section:nth-child(5)>nav>div{
+/*contact footer*/
+#contact > section:nth-child(5) > nav > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -662,51 +672,55 @@ color: #ccbb69;
     justify-content: space-evenly;
 }
 
-#contact>section:nth-child(5)>nav>div>a>i{
+#contact > section:nth-child(5) > nav > div > a > i {
     color: #0f0f15;
     font-size: 2em;
 }
 
-#contact>section:nth-child(5)>nav>div>a>i:hover{
+#contact > section:nth-child(5) > nav > div > a > i:hover {
     color: white;
 }
 
-#contact>section:nth-child(5)>nav>div:first-child{
+#contact > section:nth-child(5) > nav > div:first-child {
     color: #0f0f15;
     top: 90vh;
     left: 7vw;
 }
 
-#contact>section:nth-child(5)>nav>div:nth-child(2){
+#contact > section:nth-child(5) > nav > div:nth-child(2) {
     top: 90vh;
     left: 22vw;
 }
 
-#contact>section:nth-child(5)>nav>div:nth-child(3){
+#contact > section:nth-child(5) > nav > div:nth-child(3) {
     top: 90vh;
     left: 61vw;
 }
 
-#contact>section:nth-child(5)>nav>div:nth-child(4){
+#contact > section:nth-child(5) > nav > div:nth-child(4) {
     top: 90vh;
     left: 41vw;
 }
 
-#contact>section:nth-child(5)>nav>div:nth-child(5){
+#contact > section:nth-child(5) > nav > div:nth-child(5) {
     top: 90vh;
     left: 80vw;
 }
 
-#feedback{
+#feedback {
     height: 15.2vh;
     margin-bottom: 3vh;
 }
 
-#formSubmit{
+#formSubmit {
+    width: 100px;
+    height: 30px;
     background-color: #49e149;
     font-weight: bold;
+    border-radius: 25px;
 }
-#formSubmit:hover{
+
+#formSubmit:hover {
     color: white;
     cursor: pointer;
 }
@@ -725,7 +739,7 @@ footer > nav > ul {
     list-style: none;
 }
 
-footer>nav>ul>li{
+footer > nav > ul > li {
     display: inline-block;
     margin: 15px 150px 15px 150px;
     font-size: 20px;
@@ -733,12 +747,540 @@ footer>nav>ul>li{
 
 }
 
-footer>nav>ul>li>a{
+footer > nav > ul > li > a {
     color: white;
     text-decoration: none;
 }
 
-footer>nav>ul>li>a:hover {
+footer > nav > ul > li > a:hover {
     color: #5203af;
     cursor: pointer;
+}
+
+
+@media all and  (max-width: 320px)  {
+    #home {
+        width: 98.9vw;
+        background-color: #DFE4EA;
+        height: 4vh;
+        position: fixed;
+        z-index: 500;
+    }
+
+    #home > nav > p {
+        display: none;
+    }
+
+    #home > nav > ul {
+        position: absolute;
+        list-style: none;
+        left: 0;
+        top: 1px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        display: inline-block;
+        padding: 0;
+    }
+
+    #home > nav > ul > li {
+        display: inline-block;
+        margin: 0 12px 0 0;
+    }
+
+    #home > nav > ul > li > a:link {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        font-style: unset;
+        font-size: 17px;
+    }
+
+    #homeMainSelection {
+        background-color: #2F3542;
+        height: 100vh;
+        width: 98.9vw;
+    }
+
+    #homeMainSelection > section:first-child > img {
+        width: 50vw;
+        border-radius: 100%;
+        position: absolute;
+        right: 88px;
+        top: 63px;
+    }
+
+    #homeMainSelection > aside > h1 {
+        font-size: 1.7em;
+        color: white;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        top: 38vh;
+        left: -4.5vw;
+        width: 104vw;
+        text-align: center;
+    }
+
+    #homeMainSelection > aside > h1 > span {
+        font-size: 0.9em;
+        color: #d6d9d4;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #homeMainSelection > aside > p {
+        position: relative;
+        width: 84vw;
+        font-size: 18px;
+        color: #DFE4EA;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 15px;
+        top: 43vh;
+        left: 5vw;
+    }
+    #contactNavigationSelection {
+        display: none;
+    }
+
+    #about > h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 0px;
+        padding-top: 3vh;
+    }
+
+    #about > section > aside > img {
+        width: 37vw;
+        border: 8px solid #595a4d;
+        position: absolute;
+        right: 30vw;
+        top: 16vh;
+        border-top-left-radius: 32%;
+        border-bottom-right-radius: 34%;
+    }
+
+    #about > section > p {
+        font-size: 1.5em;
+        position: relative;
+        height: 75vh;
+        top: 18vh;
+        width: 86vw;
+        text-align: center;
+        padding-left: 4vw;
+        padding-top: 10vh;
+        text-shadow: 1px 1px 2px #fafafa, 0 0 1em #fafafc, 0 0 0.2em #0f0f15;
+        margin: 0;
+    }
+
+    #about > div:nth-child(4) {
+        width: 58vw;
+        height: 6vh;
+        background-color: #76b21c;
+        position: absolute;
+        top: 134vh;
+        left: 14.5vw;
+        box-shadow: -12px 8px 9px -4px #4b4a47;
+        border-radius: 25px;
+    }
+
+    #about > div:nth-child(4) > a {
+        text-decoration: none;
+    }
+
+    #about > div:nth-child(4) > a > p {
+        position: relative;
+        left: 5vw;
+        top: 1.2vh;
+        font-size: 1.3em;
+        color: #0f0f15;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    #education {
+        background-color: #576574;
+        width: 92vw;
+        position: relative;
+        left: 4vw;
+        margin-bottom: 39px;
+        height: 95vh;
+        box-shadow: -6px 10px 9px -4px #4b4a47;
+        border-radius: 10px;
+        top: 16vh;
+    }
+
+    #education > h1 {
+        text-align: center;
+        color: #DFE4EA;
+        font-size: 2em;
+        position: relative;
+        font-weight: bolder;
+        margin: 0;
+        top: 1.5vh;
+    }
+
+    #education > div:nth-child(2) {
+        position: absolute;
+        width: 1vw;
+        height: 74vh;
+        background-color: #cee390;
+        left: 39vw;
+        bottom: 63px;
+        border-radius: 15px;
+        top: 18vh;
+    }
+
+    #education > .shortBar {
+        width: 4vw;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #e3dfd7;
+        position: absolute;
+    }
+
+    #education > div:nth-child(3) {
+        top: 20vh;
+        left: 39.5vw;
+    }
+
+    #education > div > p {
+        font-size: 1em;
+        color: white;
+    }
+
+    #education > div > p > span {
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    #education > div:nth-child(4) {
+        left: 45vw;
+        top: 14vh;
+    }
+
+    #education > div:nth-child(5) {
+        top: 28vh;
+        left: 35vw;
+    }
+
+    #education > div:nth-child(6) {
+        top: 23.5vh;
+        left: 5vw;
+        width: 39vw;
+    }
+
+    #education > div:nth-child(7) {
+        top: 41.5vh;
+        left: 39.5vw;
+    }
+
+    #education > div:nth-child(8) {
+        top: 37.5vh;
+        left: 45vw;
+    }
+
+    #education > div:nth-child(9) {
+        top: 46.5vh;
+        left: 35vw;
+    }
+
+    #education > div:nth-child(10) {
+        top: 40.5vh;
+        left: 2.5vw;
+        width: 38vw;
+    }
+
+    #education > div:nth-child(11) {
+        top: 66.5vh;
+        left: 39.5vw;
+    }
+
+    #education > div:nth-child(12) {
+        top: 60.5vh;
+        left: 43vw;
+    }
+
+    #education > div:nth-child(13) {
+        top: 91vh;
+        left: 35.44vw;
+        border-top: 13px solid #fafafc;
+        border-left: 13px solid #576574;
+        border-right: 13px solid #576574;
+    }
+
+    #skill {
+        background-color: #A5B1C2;
+        width: 98.9vw;
+        position: relative;
+        top: 16vh;
+    }
+
+    #skill > section:nth-child(1) {
+        position: relative;
+        height: 43vh;
+    }
+
+    #skill > section:nth-child(1) > h1 {
+        position: relative;
+        font-weight: bold;
+        font-size: 2.15em;
+        text-align: center;
+        top: 18px;
+        margin: 0;
+    }
+
+    #skill > section:nth-child(1) > div {
+        top: 4vh;
+        height: 285px;
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: space-evenly;
+        grid-template-rows: repeat(3, 74px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 8px;
+        left: 5vw;
+    }
+
+    #skill > section:nth-child(1) > div > span {
+        height: 0;
+        width: 0px;
+    }
+
+    #skill > section:nth-child(1) > div > span > img {
+        width: 70px;
+    }
+
+    #skill > section:nth-child(2) {
+        position: relative;
+        height: 45vh;
+    }
+
+    #skill > section:nth-child(2) > h1 {
+        position: relative;
+        font-weight: bold;
+        font-size: 2.15em;
+        text-align: center;
+        top: 18px;
+        margin: 0;
+    }
+
+    #skill > section:nth-child(2) > div {
+        top: 0;
+        height: 300px;
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: space-evenly;
+        grid-template-rows: repeat(3, 74px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 8px;
+        left: 8vw;
+    }
+
+    #skill > section:nth-child(2) > div > span {
+        height: 0;
+        width: 0;
+    }
+
+    #skill > section:nth-child(2) > div > span > img {
+        width: 67px;
+    }
+
+    #projects{
+        position: relative;
+        top: 16vh;
+    }
+
+    #projects section:first-child {
+        background-color: white;
+        height: 50vh;
+        width: 98.9vw;
+    }
+
+    #projects section:first-child > h1 {
+        text-align: center;
+        font-size: 2em;
+        padding-top: 25px;
+        padding-bottom: 28px;
+        margin: 0;
+    }
+
+    #projects section:first-child > section {
+        width: 100%;
+        height: 31%;
+        display: grid;
+        grid-template-rows: repeat(5, 77px);
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 22px 0px;
+        background-color: white;
+        position: relative;
+        left: 2vw;
+    }
+
+    #projects section:nth-child(2) {
+        background-color: #A5B1C2;
+        height: 51vh;
+        width: 98.9vw;
+    }
+
+    #projects section:nth-child(2) > div {
+        display: inline-block;
+    }
+
+    #projects section:nth-child(2) > div > a > img {
+        width: 89px;
+        height: 81px;
+        border: 2px solid black;
+    }
+
+    #projects section:nth-child(2) > h1 {
+        text-align: center;
+        font-size: 38px;
+        margin-top: 0px;
+        position: relative;
+        top: 2vh;
+    }
+
+    #projects section:nth-child(2) > section:nth-child(2) {
+        top: 3vh;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 77px);
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 29px 11px;
+        position: relative;
+        left: 0.3vw;
+    }
+
+    #gallery {
+        background-color: #e3dcdc;
+        min-height: 80vh;
+        width: 98.9vw;
+        padding-top: 2.5vh;
+        position: relative;
+        top: 30vh;
+    }
+
+    #gallery > h1 {
+        text-align: center;
+        font-size: 2em;
+        margin: 0;
+        padding-top: 1vh;
+    }
+
+    .box {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        box-sizing: border-box;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        transform-style: preserve-3d;
+        animation: rotateAnimation 20s linear infinite;
+        left: 38vw;
+        top: 12vh;
+    }
+
+    .box > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(calc(var(--i) * 74deg)) translateZ(115px);
+    }
+
+    .box > span > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #gallery > div:nth-child(3) {
+        width: 114px;
+        height: 35px;
+        background-color: #9eb605;
+        position: relative;
+        left: 31vw;
+        top: 18vh;
+        border-radius: 5px;
+    }
+
+    #gallery > div:nth-child(3) > p {
+        font-size: 1.5em;
+        font-family: 'Lobster', cursive;
+        color: #e1dcdc;
+        position: relative;
+        top: 1vh;
+        left: 4.5vw;
+    }
+
+    #contact {
+        position: relative;
+        background-color: #808E9B;
+        height: 100vh;
+        width: 98.9vw;
+    }
+
+    #contact > h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 0px;
+        padding-top: 5vh;
+        margin-bottom: 6vh;
+    }
+
+    #contact > div {
+        display: none;
+    }
+
+    #contact > section:nth-child(4) {
+        display: none;
+    }
+
+    #contact section:nth-child(2) > img{
+        width: 11vh;
+    }
+
+    #contact section:nth-child(2) > img:first-child {
+        margin-bottom: 7vh;
+        width: 11vh;
+    }
+
+    #contact section:nth-child(2) > p {
+        position: absolute;
+        text-align: left;
+        width: 200px;
+        top: 15vh;
+        left: 27vw;
+        font-size: 1em;
+    }
+
+    .contact {
+        font-size: 1.4em;
+        color: black;
+        text-decoration: none;
+        position: relative;
+        top: -3vh;
+        left: 3vw;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 375px){
+
+
 }
