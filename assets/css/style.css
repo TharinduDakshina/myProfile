@@ -1284,9 +1284,9 @@ footer > nav > ul > li > a:hover {
 @media all and (min-width: 321px) and (max-width: 425px) {
 
     #home {
-        width: 75.9vw;
+        width: 99.9vw;
         background-color: #DFE4EA;
-        height: 4vh;
+        height: 4.5vh;
         position: fixed;
         z-index: 500;
     }
@@ -1304,16 +1304,16 @@ footer > nav > ul > li > a:hover {
     #home > nav > ul {
         position: relative;
         list-style: none;
-        left: -3vw;
+        left: 1vw;
         top: 0px;
         margin-bottom: 0px;
         margin-top: 0px;
-        display: inline-block;
+        display: inline-block
     }
 
     #home > nav > ul > li {
         display: inline-block;
-        margin: 0 5px 0 0;
+        margin: 0 11px 0 0;
     }
 
     #home > nav > ul > li > a:link {
@@ -1321,21 +1321,21 @@ footer > nav > ul > li > a:hover {
         font-weight: bold;
         text-decoration: none;
         font-style: unset;
-        font-size: 0.7em;
+        font-size: 1em;
     }
 
     #homeMainSelection {
         background-color: #2F3542;
         height: 100vh;
-        width: 75.9vw
+        width: 99.9vw
     }
 
     #homeMainSelection > section:first-child > img {
-        width: 42vw;
+        width: 47vw;
         border-radius: 100%;
         position: absolute;
-        right: 173px;
-        top: 70px;
+        right: 113px;
+        top: 65px;
     }
 
     #homeMainSelection > aside > h1 {
@@ -1344,14 +1344,14 @@ footer > nav > ul > li > a:hover {
         margin-top: 0px;
         margin-bottom: 0px;
         position: relative;
-        top: 255px;
-        left: 50px;
-        width: 53vw;
+        top: 276px;
+        left: 5px;
+        width: 97vw;
         text-align: center;
     }
 
     #homeMainSelection > aside > h1 > span {
-        font-size: 0.6em;
+        font-size: 0.7em;
         color: #d6d9d4;
         margin-top: 0px;
         margin-bottom: 0px;
@@ -1359,14 +1359,14 @@ footer > nav > ul > li > a:hover {
 
     #homeMainSelection > aside > p {
         position: relative;
-        width: 73vw;
-        font-size: 1em;
+        width: 93vw;
+        font-size: 1.09em;
         color: #DFE4EA;
         text-align: center;
         margin-top: 0px;
         margin-bottom: 0px;
         padding-top: 0px;
-        top: 275px;
+        top: 289px;
         left: 6px;
     }
 
@@ -1383,33 +1383,33 @@ footer > nav > ul > li > a:hover {
 
     #about > h1 {
         text-align: center;
-        font-size: 2.1em;
+        font-size: 2.3em;
         margin-top: 0px;
         position: relative;
-        left: -11vw;
+        padding-top: 2vh;
     }
 
     #about > section > aside > img {
-        width: 25vw;
+        width: 35vw;
         border: 8px solid #595a4d;
         position: absolute;
-        right: 200px;
-        top: 99px;
+        right: 147px;
+        top: 78px;
         border-top-left-radius: 32%;
         border-bottom-right-radius: 34%;
     }
 
     #about > section > p {
-        font-size: 1.1em;
+        font-size: 1.3em;
         height: 75vh;
-        width: 70vw;
+        width: 92vw;
         text-align: justify;
         padding-left: 0;
         margin: 0;
         padding-top: 0;
         text-shadow: 1px 1px 2px #fafafa, 0 0 1em #fafafc, 0 0 0.2em #0f0f15;
         position: relative;
-        top: 26vh;
+        top: 33vh;
         left: 3vw;
     }
 
@@ -1418,8 +1418,8 @@ footer > nav > ul > li > a:hover {
         height: 7vh;
         background-color: #76b21c;
         position: absolute;
-        top: 89vh;
-        left: 11.5vw;
+        top: 94vh;
+        left: 22.5vw;
         box-shadow: -12px 8px 9px -4px #4b4a47;
     }
 
@@ -1435,9 +1435,9 @@ footer > nav > ul > li > a:hover {
 
     #education {
         background-color: #576574;
-        width: 73vw;
+        width: 94vw;
         position: relative;
-        left: 1.5vw;
+        left: 2.5vw;
         margin-bottom: 39px;
         height: 84vh;
         box-shadow: -8px 10px 9px -4px #4b4a47;
@@ -1447,7 +1447,7 @@ footer > nav > ul > li > a:hover {
     #education > h1 {
         text-align: center;
         color: #DFE4EA;
-        font-size: 1.6em;
+        font-size: 2.1em;
         position: relative;
         font-weight: bolder;
         padding-bottom: 0;
@@ -1468,8 +1468,8 @@ footer > nav > ul > li > a:hover {
     }
 
     #education > .shortBar {
-        width: 5vw;
-        height: 3px;
+        width: 6vw;
+        height: 4px;
         border-radius: 100%;
         background-color: #e3dfd7;
         position: absolute;
@@ -1477,70 +1477,70 @@ footer > nav > ul > li > a:hover {
 
     #education > div:nth-child(3) {
         top: 12vh;
-        left: 36.5vw;
+        left: 46.5vw;
     }
 
     #education > div > p {
-        font-size: 1em;
+        font-size: 1.1em;
         color: white;
     }
 
     #education > div > p > span {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: bold;
     }
 
     #education > div:nth-child(4) {
-        left: 43vw;
+        left: 53vw;
         top: 8vh;
     }
 
     #education > div:nth-child(5) {
         top: 16vh;
-        left: 32vw;
+        left: 41vw;
     }
 
     #education > div:nth-child(6) {
         top: 11.5vh;
-        left: 10vw;
-        width: 14vw;
+        left: 6vw;
+        width: 35vw;
     }
 
     #education > div:nth-child(7) {
         top: 34.5vh;
-        left: 36.5vw;
+        left: 46.5vw;
     }
 
     #education > div:nth-child(8) {
         top: 30.5vh;
-        left: 42vw;
+        left: 53vw;
     }
 
     #education > div:nth-child(9) {
         top: 29.5vh;
-        left: 32vw;
+        left: 41vw;
     }
 
     #education > div:nth-child(10) {
-        top: 25.5vh;
-        left: 3.5vw;
-        width: 31vw;
+        top: 24.5vh;
+        left: 2.5vw;
+        width: 39vw;
     }
 
     #education > div:nth-child(11) {
-        top: 52.5vh;
-        left: 31.5vw;
+        top: 54.5vh;
+        left: 41.5vw;
     }
 
     #education > div:nth-child(12) {
-        top: 46.5vh;
-        left: 1vw;
-        width: 33vw;
+        top: 48.5vh;
+        left: 5vw;
+        width: 46vw;
     }
 
     #education > div:nth-child(13) {
         top: 76vh;
-        left: 33.3vw;
+        left: 43.9vw;
         border-top: 13px solid #fafafc;
         border-left: 13px solid #576574;
         border-right: 13px solid #576574;
@@ -1564,11 +1564,10 @@ footer > nav > ul > li > a:hover {
         text-align: center;
         top: 16px;
         margin: 0;
-        left: -12vw;
     }
 
     #skill > section:nth-child(1) > div {
-        top: 4vh;
+        top: 5vh;
         height: 285px;
         position: relative;
         display: grid;
@@ -1577,8 +1576,8 @@ footer > nav > ul > li > a:hover {
         grid-template-rows: repeat(3, 73px);
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px 2px;
-        left: 1vw;
-        width: 83vw;
+        left: 3vw;
+        width: 111vw;
     }
 
 
@@ -1602,7 +1601,6 @@ footer > nav > ul > li > a:hover {
         font-size: 2em;
         text-align: center;
         bottom: 8vh;
-        right: 12vw;
         margin: 0;
     }
 
@@ -1616,8 +1614,8 @@ footer > nav > ul > li > a:hover {
         grid-template-rows: repeat(3, 73px);
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 19px 2px;
-        left: 2vw;
-        width: 83vw;
+        left: 6vw;
+        width: 100vw;
     }
 
     #skill > section:nth-child(2) > div > span {
@@ -1642,11 +1640,10 @@ footer > nav > ul > li > a:hover {
         margin: 0;
         position: relative;
         top: -2vh;
-        right: 10vw;
     }
 
     #projects section:first-child > section {
-        width: 75%;
+        width: 100%;
         height: 100%;
         display: grid;
         grid-template-rows: repeat(5, 77px);
@@ -1676,12 +1673,11 @@ footer > nav > ul > li > a:hover {
         font-size: 2em;
         padding-bottom: 12px;
         position: relative;
-        right: 6vh;
         top: 3vh;
     }
 
     #projects section:nth-child(2) > section:nth-child(2) {
-        width: 77%;
+        width: 100%;
         height: 100%;
         display: grid;
         grid-template-rows: repeat(5, 77px);
@@ -1700,7 +1696,6 @@ footer > nav > ul > li > a:hover {
         text-align: center;
         font-size: 2em;
         position: relative;
-        right: 9vw;
     }
 
     .box {
@@ -1713,7 +1708,7 @@ footer > nav > ul > li > a:hover {
         height: 103px;
         transform-style: preserve-3d;
         animation: rotateAnimation 20s linear infinite;
-        left: 26vw;
+        left: 37vw;
         top: 3vh;
     }
 
@@ -1733,7 +1728,7 @@ footer > nav > ul > li > a:hover {
         height: 36px;
         background-color: #9eb605;
         position: relative;
-        left: 22vw;
+        left: 35vw;
         top: 14vh;
         border-radius: 4%;
     }
@@ -1751,7 +1746,7 @@ footer > nav > ul > li > a:hover {
         position: relative;
         background-color: #808E9B;
         height: 100vh;
-        width: 75.9vw;
+        width: 98.9vw;
     }
 
     #contact > h1 {
@@ -1803,7 +1798,7 @@ footer > nav > ul > li > a:hover {
 
 }
 
-    @media all and (min-width: 427px) and (max-width: 768px) {
+@media all and (min-width: 427px) and (max-width: 768px) {
         #home {
             width: 98.9vw;
             background-color: #1464c4;
