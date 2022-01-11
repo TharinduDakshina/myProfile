@@ -231,8 +231,8 @@
     height: 8vh;
     background-color: #76b21c;
     position: absolute;
-    top: 90vh;
-    left: 40.5vw;
+    top: 80vh;
+    left: 37.5vw;
     box-shadow: -12px 8px 9px -4px #4b4a47;
 }
 
@@ -606,12 +606,12 @@
 }
 
 #contact section:nth-child(2) > img{
-    width: 60vh;
+    width: 9vh;
 }
 
 #contact section:nth-child(2) > img:first-child {
     margin-bottom: 7vh;
-    width: 60vh;
+    width:9vh;
 }
 
 #contact > div {
@@ -628,7 +628,7 @@
     text-align: left;
     width: 200px;
     top: 100px;
-    left: 7vw;
+    left: 6vw;
     font-size: 1.2em;
 }
 
@@ -758,7 +758,7 @@ footer > nav > ul > li > a:hover {
 }
 
 
-@media all and  (max-width: 320px)  {
+@media all  and (max-width: 320px)  {
     #home {
         width: 98.9vw;
         background-color: #DFE4EA;
@@ -1280,7 +1280,301 @@ footer > nav > ul > li > a:hover {
     }
 }
 
-@media all and (min-width: 321px) and (max-width: 375px){
 
+@media all and (min-width: 321px) and (max-width: 425px) {
 
+    #home {
+        width: 98.9vw;
+        background-color: #DFE4EA;
+        height: 4vh;
+        position: fixed;
+        z-index: 500;
+    }
+
+    #home > nav > p {
+        font-weight: bold;
+        font-style: unset;
+        display: inline;
+        padding-left: 0px;
+        font-size: 1.2em;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #home > nav > ul {
+        position: relative;
+        list-style: none;
+        left: -3vw;
+        top: 0px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        display: inline-block;
+    }
+
+    #home > nav > ul > li {
+        display: inline-block;
+        margin: 0 3px 0 0;
+    }
+
+    #home > nav > ul > li > a:link {
+        color: black;
+        font-weight: bold;
+        text-decoration: none;
+        font-style: unset;
+        font-size: 0.8em;
+    }
+
+    #homeMainSelection {
+        background-color: #2F3542;
+        height: 100vh;
+        width: 98.9vw;
+    }
+
+    #homeMainSelection > section:first-child > img {
+        width: 42vw;
+        border-radius: 100%;
+        position: absolute;
+        right: 173px;
+        top: 70px;
+    }
+
+    #homeMainSelection > aside > h1 {
+        font-size: 2.4em;
+        color: white;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        top: 255px;
+        left: 50px;
+        width: 53vw;
+        text-align: center;
+    }
+
+    #homeMainSelection > aside > h1 > span {
+        font-size: 0.6em;
+        color: #d6d9d4;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #homeMainSelection > aside > p {
+        position: relative;
+        width: 73vw;
+        font-size: 1em;
+        color: #DFE4EA;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        top: 275px;
+        left: 6px;
+    }
+
+    #contactNavigationSelection {
+        display: none;
+    }
+
+    #about {
+        background-color: #ffffff;
+        height: 652px;
+        width: 98.9vw;
+        position: relative;
+    }
+
+    #about > h1 {
+        text-align: center;
+        font-size: 2.1em;
+        margin-top: 0px;
+        position: relative;
+        left: -11vw;
+    }
+
+    #about > section > aside > img {
+        width: 25vw;
+        border: 8px solid #595a4d;
+        position: absolute;
+        right: 200px;
+        top: 99px;
+        border-top-left-radius: 32%;
+        border-bottom-right-radius: 34%;
+    }
+
+    #about > section > p {
+        font-size: 1.1em;
+        height: 75vh;
+        width: 70vw;
+        text-align: justify;
+        padding-left: 0;
+        margin: 0;
+        padding-top: 0;
+        text-shadow: 1px 1px 2px #fafafa, 0 0 1em #fafafc, 0 0 0.2em #0f0f15;
+        position: relative;
+        top: 26vh;
+        left: 3vw;
+    }
+
+    #about > div:nth-child(4) {
+        width: 45vw;
+        height: 7vh;
+        background-color: #76b21c;
+        position: absolute;
+        top: 89vh;
+        left: 11.5vw;
+        box-shadow: -12px 8px 9px -4px #4b4a47;
+    }
+
+    #about > div:nth-child(4) > a > p {
+        position: relative;
+        left: 1vw;
+        top: 1.5vh;
+        font-size: 1.5em;
+        color: #0f0f15;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    #education {
+        background-color: #576574;
+        width: 73vw;
+        position: relative;
+        left: 1.5vw;
+        margin-bottom: 39px;
+        height: 84vh;
+        box-shadow: -8px 10px 9px -4px #4b4a47;
+        border-radius: 10px;
+    }
+
+    #education > h1 {
+        text-align: center;
+        color: #DFE4EA;
+        font-size: 1.6em;
+        position: relative;
+        font-weight: bolder;
+        padding-bottom: 0;
+        margin: 0;
+        top: 1vh;
+    }
+
+    #education > div:nth-child(2) {
+        position: absolute;
+        width: 1.1vw;
+        height: 69vh;
+        background-color: #cee390;
+        left: 0;
+        right: 0;
+        bottom: 6vh;
+        border-radius: 15px;
+        margin: auto;
+    }
+
+    #education > .shortBar {
+        width: 5vw;
+        height: 3px;
+        border-radius: 100%;
+        background-color: #e3dfd7;
+        position: absolute;
+    }
+
+    #education > div:nth-child(3) {
+        top: 12vh;
+        left: 36.5vw;
+    }
+
+    #education > div > p {
+        font-size: 1em;
+        color: white;
+    }
+
+    #education > div > p > span {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    #education > div:nth-child(4) {
+        left: 43vw;
+        top: 8vh;
+    }
+
+    #education > div:nth-child(5) {
+        top: 16vh;
+        left: 32vw;
+    }
+
+    #education > div:nth-child(6) {
+        top: 11.5vh;
+        left: 10vw;
+        width: 14vw;
+    }
+
+    #education > div:nth-child(7) {
+        top: 34.5vh;
+        left: 36.5vw;
+    }
+
+    #education > div:nth-child(8) {
+        top: 30.5vh;
+        left: 42vw;
+    }
+
+    #education > div:nth-child(9) {
+        top: 29.5vh;
+        left: 32vw;
+    }
+
+    #education > div:nth-child(10) {
+        top: 25.5vh;
+        left: 3.5vw;
+        width: 31vw;
+    }
+
+    #education > div:nth-child(11) {
+        top: 52.5vh;
+        left: 31.5vw;
+    }
+
+    #education > div:nth-child(12) {
+        top: 46.5vh;
+        left: 1vw;
+        width: 33vw;
+    }
+
+    #education > div:nth-child(13) {
+        top: 76vh;
+        left: 33.3vw;
+        border-top: 13px solid #fafafc;
+        border-left: 13px solid #576574;
+        border-right: 13px solid #576574;
+    }
+
+    #skill {
+        background-color: #A5B1C2;
+        width: 98.9vw;
+        position: relative;
+    }
+
+    #skill > section:nth-child(1) {
+        position: relative;
+        height: 50vh;
+    }
+
+}
+
+@media all and (min-width: 427px) and (max-width: 768px) {
+    #home {
+        width: 98.9vw;
+        background-color: #1464c4;
+        height: 4vh;
+        position: fixed;
+        z-index: 500;
+    }
+
+    #home > nav > p {
+        /*  font-weight: bold;*/
+        font-style: unset;
+        display: inline;
+        padding-left: 150px;
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
