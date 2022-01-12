@@ -26,9 +26,3 @@
 <br>
 ![image of MyProfile](assets/images/readme/img5.png)
 <br>
-<h3><u><b>Some images of my Assignments</b></u></h3>
-![image of MyProfile](assets/images/Assignment/assignment_01.png)
-<br>
-![image of MyProfile](assets/images/Assignment/assignment_02.png)
-<br>
-![image of MyProfile](assets/images/Assignment/assignment_05.png)

@@ -1277,6 +1277,10 @@ footer > nav > ul > li > a:hover {
     footer {
         display: none;
     }
+
+    #projects section:nth-child(2) > div:nth-child(6) {
+        display: none;
+    }
 }
 
 
@@ -1795,6 +1799,10 @@ footer > nav > ul > li > a:hover {
         display: none;
     }
 
+    #projects section:nth-child(2) > div:nth-child(6) {
+        display: none;
+    }
+
 }
 
 @media all and (min-width: 426px) and (max-width: 768px) {
@@ -2294,6 +2302,10 @@ footer > nav > ul > li > a:hover {
         margin: 0px 0px 14px 94px;
         font-size: 20px;
         alignment: right;
+    }
+
+    #projects section:nth-child(2) > div:nth-child(6) {
+        display: none;
     }
 
 }
