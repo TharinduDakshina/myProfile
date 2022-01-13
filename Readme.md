@@ -9,7 +9,7 @@
 <br>
 <li style="font-size: 20px"><b>Mockup URL of My Profile designed by figma</b> :- <a href="https://www.figma.com/file/dXUnQCBwTecJ6KMnyx1gaR/My-Profile?node-id=0%3A1" target="_blank">https://www.figma.com/file/dXUnQCBwTecJ6KMnyx1gaR/My-Profile?node-id=0%3A1</a></li>
 <br>
-<li style="font-size: 20px"><b>Github My Profile Page URL</b> :- <a href="https://github.com/TharinduDakshina/myProfile" target="_blank">https://github.com/TharinduDakshina/myProfile</a></li>
+<li style="font-size: 20px"><b>Github My Profile Page URL</b> :- <a href="https://tharindudakshina.github.io/myProfile/" target="_blank">https:https://tharindudakshina.github.io/myProfile/</a></li>
 <br>
 <li style="font-size: 20px"><b>000webhost URL</b> :- <a href="https://tharindudakshina.000webhostapp.com" target="_blank">https://tharindudakshina.000webhostapp.com</a></li>
 </ul>
