@@ -6,6 +6,28 @@
     <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="/assets/css/fonts/css/all.css">
+    <style>
+
+        #customerSearch>div:first-child{
+            background-color: lightgreen;
+            width: 25vw;
+            height: 5vh;
+        }
+
+        #customerSearch>div:first-child>h6{
+            font-weight: normal;
+
+        }
+
+        #customerSearch>div:nth-child(2){
+            width: 25vw;
+            height: 20vh;
+        }
+
+        #buttonSet{
+            width: 20vw;
+        }
+    </style>
 
 </head>
 <body>
@@ -41,26 +63,108 @@
             <h1 class="d-inline-block p-1">Customer</h1>
         </svg>
         <section class="row">
-            <div class="col bg-danger">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolor doloremque, doloribus
-                    optio
-                    pariatur provident vel voluptatem. Amet, aperiam error exercitationem laboriosam mollitia qui unde?
-                    Fugiat
-                    iste
-                    quasi voluptate!</p>
+            <div class="col">
+                <div id="customerSearch" class="container">
+                    <div>
+                        <h6 class="h3 p-1">Customer Search</h6>
+                    </div>
+                    <div class="bg-light">
+                        <nav class="navbar navbar-light bg-light">
+                            <div class="container-fluid">
+                                <form class="d-flex p-3 border">
+                                    <input class="form-control me-2" type="search" placeholder="Input NIC number" aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                                <!-- Example single danger button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-warning mt-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Action
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
 
-            <div class="col bg-primary">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolor doloremque, doloribus
-                    optio
-                    pariatur provident vel voluptatem. Amet, aperiam error exercitationem laboriosam mollitia qui unde?
-                    Fugiat
-                    iste
-                    quasi voluptate!</p>
+            <div class="col bg-white position-relative">
+                <div class="btn-group position-absolute top-0 end-0" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">New Customer</label>
+
+                    <input type="radio" class="btn-check " name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2">View all customers</label>
+
+                </div>
             </div>
         </section>
-        <section></section>
-        <section></section>
+        <section class="row">
+            <div id="buttonSet" class="btn-group p-1" role="group" aria-label="Basic mixed styles example" >
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-warning">Details</button>
+                <button type="button" class="btn btn-success">Add</button>
+            </div>
+        </section>
+        <section class="row">
+            <table class="table table-success table-striped mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Park</td>
+                    <td>Siman</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Saman</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 </body>
 </html>
