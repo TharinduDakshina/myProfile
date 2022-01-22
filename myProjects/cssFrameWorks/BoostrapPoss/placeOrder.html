@@ -6,9 +6,21 @@
     <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <style>
-        #invoiceDetails{
 
+        #invoiceDetails{
+            height: 5vh;
+            border-radius: 25px;
         }
+
+        #bill{
+            height: 5vh;
+        }
+
+        #ItemDetails{
+            height: 5vh;
+            border-radius: 25px;
+        }
+
     </style>
 </head>
 <body>
@@ -38,19 +50,169 @@
 </header>
 
 <main class="container-fluid">
-    <section class="row m-2">
-        <div class="col bg-dark m-1">
-            <div id="invoiceDetails"></div>
+    <section class="row m-2 rounded-3">
+        <div class="col bg-light m-1 card" style="width: 18rem;">
+                <div class="card-body">
+                    <form class="row g-2">
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Order Id</label>
+                            <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationDefault02" class="form-label">Date</label>
+                            <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Qty</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Customer Id</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationDefault04" class="form-label">State</label>
+                            <select class="form-select" id="validationDefault04" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationDefault05" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="validationDefault05" required>
+                        </div>
+                    </form>
+                </div>
         </div>
-        <div class="col bg-danger m-1">
-            <div id="ItemDetails"></div>
+        <div class="col bg-light m-1 card" style="width: 18rem;">
+            <div class="card-body">
+                <form class="row g-2">
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Order Id</label>
+                        <input type="text" class="form-control"  value="Mark" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Date</label>
+                        <input type="text" class="form-control"  value="Otto" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Qty</label>
+                        <input type="text" class="form-control"  value="Mark" required>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Customer Id</label>
+                        <input type="text" class="form-control"  value="Mark" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationDefault03" class="form-label">Customer Name</label>
+                        <input type="text" class="form-control"  required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationDefault04" class="form-label">State</label>
+                        <select class="form-select"  required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationDefault05" class="form-label">Zip</label>
+                        <input type="text" class="form-control"  required>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="col bg-warning m-1">
-            <div id="bill"></div>
+        <div class="col bg-warning m-1 card" style="width: 18rem;">
+            <h4 class="display-5 fw-bold ">Total : 12500.00/=</h4>
+            <h4 class="display-6 fw-bold ">subTotal : 12200.00/=</h4>
+            <form class="row g-2 m-1">
+            <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">Cash</label>
+                <input type="text" class="form-control"  value="00.00" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Discount</label>
+                <input type="text" class="form-control"  value="0.00" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">Balance</label>
+                <input type="text" class="form-control"  value="00.00" required>
+            </div>
+
+            <div class="position-relative">
+                <button type="button" class="btn btn-success position-absolute top-100 end-0">Pay bill</button>
+            </div>
+        </form>
         </div>
     </section>
 
-    <section></section>
+    <section class="row m-2">
+        <table class="table table-success table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Park</td>
+                <td>Siman</td>
+                <td>@mdo</td>
+            </tr>
+
+            <tr>
+                <th scope="row">4</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+
+            <tr>
+                <th scope="row">5</th>
+                <td>Saman</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+
+            <tr>
+                <th scope="row">6</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 </main>
 </body>
 </html>
