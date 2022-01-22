@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items Details</title>
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="/assets/css/fonts/css/all.css">
+
+    <style>
+
+        #customerSearch>div:first-child{
+            background-color: lightgreen;
+            width: 25vw;
+            height: 5vh;
+        }
+
+        #customerSearch>div:first-child>h6{
+            font-weight: normal;
+
+        }
+
+        #customerSearch>div:nth-child(2){
+            width: 25vw;
+            height: 20vh;
+        }
+
+        #buttonSet{
+            width: 20vw;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-light navbar navbar-expand-lg" style="background-color: #dbf1e2;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Orders</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" aria-current="page" href="#">Items</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" aria-current="page" href="#">Items</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="5%" height="5%" fill="currentColor" class="bi bi-person-square mb-2 mt-2 d-inline-block" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+        <h1 class="d-inline-block p-1">Items</h1>
+    </svg>
+    <section class="row">
+        <div class="col">
+            <div id="customerSearch" class="container">
+                <div>
+                    <h6 class="h3 p-1">Item Search</h6>
+                </div>
+                <div class="bg-light">
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <form class="d-flex p-3 border">
+                                <input class="form-control me-2" type="search" placeholder="Input NIC number" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                            <!-- Example single danger button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning mt-2 p-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Action
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="col bg-white position-relative">
+            <div class="btn-group position-absolute top-0 end-0" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">New Item</label>
+
+                <input type="radio" class="btn-check " name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">View all Items</label>
+
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div id="buttonSet" class="btn-group p-1" role="group" aria-label="Basic mixed styles example" >
+            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-warning">Details</button>
+            <button type="button" class="btn btn-success">Add</button>
+        </div>
+    </section>
+    <section class="row">
+        <table class="table table-success table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Park</td>
+                <td>Siman</td>
+                <td>@mdo</td>
+            </tr>
+
+            <tr>
+                <th scope="row">4</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+
+            <tr>
+                <th scope="row">5</th>
+                <td>Saman</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+
+            <tr>
+                <th scope="row">6</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
