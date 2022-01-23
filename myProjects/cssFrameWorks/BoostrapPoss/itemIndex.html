@@ -72,7 +72,7 @@
                     <nav class="navbar navbar-light bg-light">
                         <div class="container-fluid">
                             <form class="d-flex p-3 border">
-                                <input class="form-control me-2" type="search" placeholder="Input NIC number"
+                                <input class="form-control me-2" type="search" placeholder="Input Item code"
                                        aria-label="Search">
                                 <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
@@ -101,11 +101,51 @@
         <div class="col bg-white position-relative">
             <div class="btn-group position-absolute top-0 end-0" role="group"
                  aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">New Item</label>
 
-                <input type="radio" class="btn-check " name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">View all Items</label>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    New Item
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">New Item</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label fw-bold">Item Code</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="itemName" class="form-label fw-bold">Item Name</label>
+                                        <input type="email" class="form-control" id="itemName" aria-describedby="emailHelp">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="itemPrice" class="form-label fw-bold">Item Price</label>
+                                        <input type="email" class="form-control" id="itemPrice" aria-describedby="emailHelp">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="itemQty" class="form-label fw-bold">Item QTY</label>
+                                        <input type="email" class="form-control" id="itemQty" aria-describedby="emailHelp">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -170,6 +210,9 @@
             </tbody>
         </table>
     </section>
+
+
 </main>
+<script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
