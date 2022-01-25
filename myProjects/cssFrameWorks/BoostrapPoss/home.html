@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="/assets/css/fonts/css/all.css">
+    <style>
+       #image{
+           width: 100vw;
+           height: 92vh;
+           filter: blur(0.3rem);
+       }
+
+       #customerSearch > div:first-child {
+           background-color: lightgreen;
+           width: 25vw;
+           height: 5vh;
+       }
+
+       #customerSearch > div:first-child > h6 {
+           font-weight: normal;
+
+       }
+
+       #customerSearch > div:nth-child(2) {
+           width: 25vw;
+           height: 20vh;
+       }
+
+       .buttonSet {
+           width: 20vw;
+       }
+       #itemSearch > div:first-child {
+           background-color: lightgreen;
+           width: 25vw;
+           height: 5vh;
+       }
+
+       #itemSearch > div:first-child > h6 {
+           font-weight: normal;
+       }
+
+       #itemSearch > div:nth-child(2) {
+           width: 25vw;
+           height: 20vh;
+       }
+
+       header{
+           position: fixed;
+           z-index: 100;
+       }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-light navbar navbar-expand-lg" style="background-color: #dbf1e2;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active" href="#customer">Orders</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a aria-current="page" class="nav-link active" href="#item">Items</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a aria-current="page" class="nav-link active" href="#placeOrder">PlaceOrder</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="home">
+
+    <img id="image" src="assets/images/poss.jpg" alt="image loading Error"  >
+
+    <!--Customer-->
+    <div id="customer" class="container">
+        <svg class="bi bi-person-square mb-2 mt-2 d-inline-block" fill="currentColor" height="5%" viewBox="0 0 16 16"
+             width="5%" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+            <h1 class="d-inline-block p-1">Customer</h1>
+        </svg>
+        <section class="row">
+            <div class="col">
+                <div class="container" id="customerSearch">
+                    <div>
+                        <h6 class="h3 p-1">Customer Search</h6>
+                    </div>
+                    <div class="bg-light">
+                        <nav class="navbar navbar-light bg-light">
+                            <div class="container-fluid">
+                                <form class="d-flex p-3 border">
+                                    <input aria-label="Search" class="form-control me-2" placeholder="Input NIC number"
+                                           type="search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                                <!-- Example single danger button -->
+                                <div class="btn-group">
+                                    <button aria-expanded="false" class="btn btn-warning mt-2 p-1 dropdown-toggle"
+                                            data-bs-toggle="dropdown" type="button">
+                                        Action
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col bg-white position-relative">
+                <div aria-label="Basic radio toggle button group" class="btn-group position-absolute top-0 end-0"
+                     role="group">
+
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" type="button">
+                        New Customer
+                    </button>
+
+                    <!-- Modal -->
+                    <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-bs-backdrop="static"
+                         data-bs-keyboard="false" id="staticBackdropCustomer" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabelCustomer">New Item</h5>
+                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
+                                            type="button"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold" for="exampleInputEmail1">Customer NIC</label>
+                                            <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1Customer"
+                                                   type="email">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold" for="itemName">Customer Name</label>
+                                            <input aria-describedby="emailHelp" class="form-control" id="#"
+                                                   type="email">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold" for="itemPrice">Customer Address</label>
+                                            <input aria-describedby="emailHelp" class="form-control" id="#."
+                                                   type="email">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold" for="itemQty">Gender</label>
+                                            <input aria-describedby="emailHelp" class="form-control" id="#.."
+                                                   type="email">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                                    <button class="btn btn-primary" type="button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="row">
+            <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"  role="group">
+                <button class="btn btn-danger" type="button">Delete</button>
+                <button class="btn btn-warning" type="button">Details</button>
+                <button class="btn btn-success" type="button">Add</button>
+            </div>
+        </section>
+        <section class="row">
+            <table class="table table-success table-striped mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Park</td>
+                    <td>Siman</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Saman</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!--Items-->
+    <div id="item" class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="4%" height="4%" fill="currentColor" class="bi bi-boxes"
+             viewBox="0 0 16 16">
+            <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+        </svg>
+        <h1 class="d-inline-block p-1">Items</h1>
+        <section class="row">
+            <div class="col">
+                <div id="itemSearch" class="container">
+                    <div>
+                        <h6 class="h3 p-1">Item Search</h6>
+                    </div>
+                    <div class="bg-light">
+                        <nav class="navbar navbar-light bg-light">
+                            <div class="container-fluid">
+                                <form class="d-flex p-3 border">
+                                    <input class="form-control me-2" type="search" placeholder="Input Item code"
+                                           aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                                <!-- Example single danger button -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-warning mt-2 p-1 dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        Action
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col bg-white position-relative">
+                <div class="btn-group position-absolute top-0 end-0" role="group"
+                     aria-label="Basic radio toggle button group">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        New Item
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">New Item</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label fw-bold">Item Code</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="itemName" class="form-label fw-bold">Item Name</label>
+                                            <input type="email" class="form-control" id="itemName" aria-describedby="emailHelp">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="itemPrice" class="form-label fw-bold">Item Price</label>
+                                            <input type="email" class="form-control" id="itemPrice" aria-describedby="emailHelp">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="itemQty" class="form-label fw-bold">Item QTY</label>
+                                            <input type="email" class="form-control" id="itemQty" aria-describedby="emailHelp">
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div  class="btn-group p-1 buttonSet" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-warning">Details</button>
+                <button type="button" class="btn btn-success">Add</button>
+            </div>
+        </section>
+        <section class="row">
+            <table class="table table-success table-striped mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Park</td>
+                    <td>Siman</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Saman</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!--Place Order-->
+    <div id="placeOrder" class="container">
+        <section class="row m-2 rounded-3">
+            <div class="col bg-light m-1 card" style="width: 18rem;">
+                <div class="card-body">
+                    <form class="row g-2">
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Order Id</label>
+                            <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationDefault02" class="form-label">Date</label>
+                            <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Qty</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Customer Id</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control" id="validationDefault03" required>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationDefault04" class="form-label">State</label>
+                            <select class="form-select" id="validationDefault04" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationDefault05" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="validationDefault05" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col bg-light m-1 card" style="width: 18rem;">
+                <div class="card-body">
+                    <form class="row g-2">
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Order Id</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationDefault02" class="form-label">Date</label>
+                            <input type="text" class="form-control"  value="Otto" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Qty</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label for="validationDefault01" class="form-label">Customer Id</label>
+                            <input type="text" class="form-control"  value="Mark" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationDefault03" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control"  required>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationDefault04" class="form-label">State</label>
+                            <select class="form-select"  required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationDefault05" class="form-label">Zip</label>
+                            <input type="text" class="form-control"  required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col bg-warning m-1 card" style="width: 18rem;">
+                <h4 class="display-5 fw-bold ">Total : 12500.00/=</h4>
+                <h4 class="display-6 fw-bold ">subTotal : 12200.00/=</h4>
+                <form class="row g-2 m-1">
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Cash</label>
+                        <input type="text" class="form-control"  value="00.00" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Discount</label>
+                        <input type="text" class="form-control"  value="0.00" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Balance</label>
+                        <input type="text" class="form-control"  value="00.00" required>
+                    </div>
+
+                    <div class="position-relative">
+                        <button type="button" class="btn btn-success position-absolute top-100 end-0">Pay bill</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="row m-2">
+            <table class="table table-success table-striped mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Park</td>
+                    <td>Siman</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Saman</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</main>
+
+<script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
