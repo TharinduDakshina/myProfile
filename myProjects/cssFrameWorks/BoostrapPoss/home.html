@@ -47,10 +47,15 @@
            height: 20vh;
        }
 
-       header{
-           position: fixed;
-           z-index: 100;
+       #customer{
+           display: none;
        }
+        #item{
+            display: none;
+        }
+       #placeOrder{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -60,17 +65,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link active" href="#home">Home</a>
+                        <a aria-current="page" id="homeButton" class="nav-link active" href="#image">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a aria-current="page" class="nav-link active" href="#customer">Orders</a>
+                        <a aria-current="page" id="customerButton" class="nav-link active" href="#customer">Customer</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a aria-current="page" class="nav-link active" href="#item">Items</a>
+                        <a aria-current="page" id="itemButton" class="nav-link active" href="#item">Items</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a aria-current="page" class="nav-link active" href="#placeOrder">PlaceOrder</a>
+                        <a aria-current="page" id="placeOrderButton" class="nav-link active" href="#placeOrder">PlaceOrder</a>
                     </li>
 
                 </ul>
@@ -79,12 +84,12 @@
     </nav>
 </header>
 
-<main id="home">
+<main>
 
     <img id="image" src="assets/images/poss.jpg" alt="image loading Error"  >
 
     <!--Customer-->
-    <div id="customer" class="container">
+    <div id="customer" class="container ">
         <svg class="bi bi-person-square mb-2 mt-2 d-inline-block" fill="currentColor" height="5%" viewBox="0 0 16 16"
              width="5%" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -406,7 +411,7 @@
     </div>
 
     <!--Place Order-->
-    <div id="placeOrder" class="container">
+    <div id="placeOrder" class="container ">
         <section class="row m-2 rounded-3">
             <div class="col bg-light m-1 card" style="width: 18rem;">
                 <div class="card-body">
@@ -574,6 +579,44 @@
 
 </main>
 
+
+
 <script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    document.getElementById("homeButton").addEventListener("click",function (){
+       document.getElementById("image").style.display="block";
+       document.getElementById("customer").style.display="none";
+       document.getElementById("item").style.display="none";
+       document.getElementById("placeOrder").style.display="none";
+
+    });
+
+    document.getElementById("customerButton").addEventListener("click",function (){
+        document.getElementById("customer").style.display="block";
+        document.getElementById("image").style.display="none";
+        document.getElementById("item").style.display="none";
+        document.getElementById("placeOrder").style.display="none";
+
+    });
+
+    document.getElementById("itemButton").addEventListener("click",function (){
+        document.getElementById("item").style.display="block";
+        document.getElementById("image").style.display="none";
+        document.getElementById("customer").style.display="none";
+        document.getElementById("placeOrder").style.display="none";
+
+    });
+
+    document.getElementById("placeOrderButton").addEventListener("click",function (){
+        document.getElementById("placeOrder").style.display="block";
+        document.getElementById("image").style.display="none";
+        document.getElementById("customer").style.display="none";
+        document.getElementById("item").style.display="none";
+
+    });
+
+
+</script>
 </body>
 </html>
