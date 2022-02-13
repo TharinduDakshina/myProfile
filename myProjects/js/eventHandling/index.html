@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event handling</title>
+</head>
+<body>
+<h1 id="header">Hello world</h1>
+
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+
+    $("#header").css("position","relative");
+
+    $(window).mousemove(function (e){
+        $("#header").css("left",e.pageX);
+        $("#header").css("top",e.pageY);
+
+    });
+</script>
+</body>
+</html>
