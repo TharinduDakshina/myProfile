@@ -134,22 +134,25 @@
                 <div class="mb-3">
                     <label for="cstId" class="form-label">Customer Id</label>
                     <input type="text" class="form-control" id="cstId" placeholder="Customer Id">
-                    <p><small id="error" class="text-danger pl-1"></small></p>
+                    <p><small id="errorId" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="mb-3">
                     <label for="cstName" class="form-label">Customer Name</label>
                     <input type="text" class="form-control" id="cstName" placeholder="Customer Name">
+                    <p><small id="errorName" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="mb-3">
                     <label for="cstAddress" class="form-label">Customer Address</label>
                     <input type="text" class="form-control" id="cstAddress" placeholder="Customer Address">
+                    <p><small id="errorAddress" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="mb-3">
                     <label for="cstTp" class="form-label">Customer Tp</label>
                     <input type="text" class="form-control" id="cstTp" placeholder="Customer Tp">
+                    <p><small id="errorTp" class="text-danger pl-1"></small></p>
                 </div>
 
             </div>
@@ -569,15 +572,54 @@
     });
 
     let regxCstId=/^(C00-)[0-9]{3,4}$/;
+    let regxCstName=/^[A-z ]{3,20}$/;
+    let regxCstAddress=/^[A-z 0-9/,]{3,50}$/;
+    let regxTp=/^[0-9]{10}$/;
 
-    $("#cstId").keyup(function (){
+    $("#cstId").keyup(function (e){
         let input=$("#cstId").val();
         if (regxCstId.test(input)){
             $("#cstId").css("border","2px solid green");
-            $("#error").text("");
+            $("#errorId").text("");
+            /*if (Enter==e.key){
+                $("#cstName").focus();                  //////////////////////////////////////////
+            }*/
         }else {
             $("#cstId").css("border","2px solid red");
-            $("#error").text("Wrong Format : C00-0001");
+            $("#errorId").text("Wrong Format : C00-0001");
+        }
+    });
+
+    $("#cstName").keyup(function (){
+        let input=$("#cstName").val();
+        if (regxCstName.test(input)){
+            $("#cstName").css("border","2px solid green");
+            $("#errorName").text("");
+        }else {
+            $("#cstName").css("border","2px solid red");
+            $("#errorName").text('Wrong Format : "Length of name(3-20)"');
+        }
+    });
+
+    $("#cstAddress").keyup(function (){
+        let input=$("#cstAddress").val();
+        if (regxCstAddress.test(input)){
+            $("#cstAddress").css("border","2px solid green");
+            $("#errorAddress").text("");
+        }else {
+            $("#cstAddress").css("border","2px solid red");
+            $("#errorAddress").text('Wrong Format. ');
+        }
+    });
+
+    $("#cstTp").keyup(function (){
+        let input=$("#cstTp").val();
+        if (regxTp.test(input)){
+            $("#cstTp").css("border","2px solid green");
+            $("#errorTp").text("");
+        }else {
+            $("#cstTp").css("border","2px solid red");
+            $("#errorTp").text('Wrong Format : 0761339805');
         }
     });
 </script>
