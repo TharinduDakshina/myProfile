@@ -47,15 +47,7 @@
            height: 20vh;
        }
 
-       #customer{
-           display: none;
-       }
-        #item{
-            display: none;
-        }
-       #placeOrder{
-            display: none;
-        }
+
     </style>
 </head>
 <body>
@@ -169,52 +161,14 @@
             <table class="table table-success table-striped mt-5">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Customer Id</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Customer Address</th>
+                    <th scope="col">Customer Tp</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Park</td>
-                    <td>Siman</td>
-                    <td>@mdo</td>
-                </tr>
+                <tbody id="customerTableBody">
 
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Saman</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
                 </tbody>
             </table>
         </section>
@@ -552,32 +506,50 @@
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
 
-    $("homeButton").click(function (){
-        $("image").css("display","block");
-        $("customer").css("display","none");
-        $("item").css("display","none");
-        $("placeOrder").css("display","none");
+    $("#image").css("display","block");
+    $("#customer").css("display","none");
+    $("#item").css("display","none");
+    $("#placeOrder").css("display","none");
+
+    $("#homeButton").click(function (){
+        $("#image").css("display","block");
+        $("#customer").css("display","none");
+        $("#item").css("display","none");
+        $("#placeOrder").css("display","none");
     });
 
-    $("customerButton").click(function (){
-        $("image").css("display","none");
-        $("customer").css("display","block");
-        $("item").css("display","none");
-        $("placeOrder").css("display","none");
+    $("#customerButton").click(function (){
+        $("#image").css("display","none");
+        $("#customer").css("display","block");
+        $("#item").css("display","none");
+        $("#placeOrder").css("display","none");
     });
 
-    $("itemButton").click(function (){
-        $("image").css("display","none");
-        $("customer").css("display","none");
-        $("item").css("display","block");
-        $("placeOrder").css("display","none");
+    $("#itemButton").click(function (){
+        $("#image").css("display","none");
+        $("#customer").css("display","none");
+        $("#item").css("display","block");
+        $("#placeOrder").css("display","none");
     });
 
-    $("placeOrderButton").click(function (){
-        $("image").css("display","none");
-        $("customer").css("display","none");
-        $("item").css("display","none");
-        $("placeOrder").css("display","block");
+    $("#placeOrderButton").click(function (){
+        $("#image").css("display","none");
+        $("#customer").css("display","none");
+        $("#item").css("display","none");
+        $("#placeOrder").css("display","block");
+    });
+
+    $("#saveCustomer").click(function (){
+       let customerId=$("#cstId").val();
+       let customerName=$("#cstName").val();
+       let customerAddress=$("#cstAddress").val();
+       let customerTp=$("#cstTp").val();
+
+       let row=`<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerTp}</td></tr>;`
+
+        $("#customerTableBody").append(row);
+
+
     });
 
 </script>
