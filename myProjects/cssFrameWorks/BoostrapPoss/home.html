@@ -134,6 +134,7 @@
                 <div class="mb-3">
                     <label for="cstId" class="form-label">Customer Id</label>
                     <input type="text" class="form-control" id="cstId" placeholder="Customer Id">
+                    <p><small id="error" class="text-danger pl-1"></small></p>
                 </div>
 
                 <div class="mb-3">
@@ -567,6 +568,18 @@
         });
     });
 
+    let regxCstId=/^(C00-)[0-9]{3,4}$/;
+
+    $("#cstId").keyup(function (){
+        let input=$("#cstId").val();
+        if (regxCstId.test(input)){
+            $("#cstId").css("border","2px solid green");
+            $("#error").text("");
+        }else {
+            $("#cstId").css("border","2px solid red");
+            $("#error").text("Wrong Format : C00-0001");
+        }
+    });
 </script>
 </body>
 </html>
