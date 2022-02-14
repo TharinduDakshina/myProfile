@@ -129,74 +129,41 @@
                             </div>
                         </nav>
                     </div>
+
+                    <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"  role="group">
+                        <button id="delete" class="btn btn-danger" type="button">Delete</button>
+                        <button id="saveCustomer" class="btn btn-success" type="button">Save or Update</button>
+                    </div>
+
                 </div>
             </div>
 
             <div class="col bg-white position-relative">
-                <div aria-label="Basic radio toggle button group" class="btn-group position-absolute top-0 end-0"
-                     role="group">
+                <div class="mb-3">
+                    <label for="cstId" class="form-label">Customer Id</label>
+                    <input type="text" class="form-control" id="cstId" placeholder="Customer Id">
+                </div>
 
-                    <!-- Button trigger modal -->
-                    <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" type="button">
-                        New Customer
-                    </button>
+                <div class="mb-3">
+                    <label for="cstName" class="form-label">Customer Name</label>
+                    <input type="text" class="form-control" id="cstName" placeholder="Customer Name">
+                </div>
 
-                    <!-- Modal -->
-                    <div aria-hidden="true" aria-labelledby="staticBackdropLabel" class="modal fade" data-bs-backdrop="static"
-                         data-bs-keyboard="false" id="staticBackdropCustomer" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabelCustomer">New Item</h5>
-                                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"
-                                            type="button"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label class="form-label fw-bold" for="exampleInputEmail1">Customer NIC</label>
-                                            <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1Customer"
-                                                   type="email">
-                                        </div>
+                <div class="mb-3">
+                    <label for="cstAddress" class="form-label">Customer Address</label>
+                    <input type="text" class="form-control" id="cstAddress" placeholder="Customer Address">
+                </div>
 
-                                        <div class="mb-3">
-                                            <label class="form-label fw-bold" for="itemName">Customer Name</label>
-                                            <input aria-describedby="emailHelp" class="form-control" id="#"
-                                                   type="email">
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label class="form-label fw-bold" for="itemPrice">Customer Address</label>
-                                            <input aria-describedby="emailHelp" class="form-control" id="#."
-                                                   type="email">
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label class="form-label fw-bold" for="itemQty">Gender</label>
-                                            <input aria-describedby="emailHelp" class="form-control" id="#.."
-                                                   type="email">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
-                                    <button class="btn btn-primary" type="button">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="mb-3">
+                    <label for="cstTp" class="form-label">Customer Tp</label>
+                    <input type="text" class="form-control" id="cstTp" placeholder="Customer Tp">
                 </div>
 
             </div>
 
         </section>
         <section class="row">
-            <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"  role="group">
-                <button class="btn btn-danger" type="button">Delete</button>
-                <button class="btn btn-warning" type="button">Details</button>
-                <button class="btn btn-success" type="button">Add</button>
-            </div>
+
         </section>
         <section class="row">
             <table class="table table-success table-striped mt-5">
@@ -582,6 +549,7 @@
 
 
 <script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script>
 
     document.getElementById("homeButton").addEventListener("click",function (){
