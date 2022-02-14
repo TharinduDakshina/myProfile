@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Event handling</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
 <h1 id="header">Hello world</h1>
@@ -11,12 +16,23 @@
 <script>
 
     $("#header").css("position","relative");
-
+    var letterIndex=0;
+    let text=$("#header").text();
     $(window).mousemove(function (e){
         $("#header").css("left",e.pageX);
         $("#header").css("top",e.pageY);
-
     });
+
+    function generateIndex(){
+        $("#header").text(text.substr(0,letterIndex));
+        letterIndex++;
+        if (letterIndex==text.length){
+            letterIndex=0;
+        }
+    }
+
+    setInterval(generateIndex,100);
+
 </script>
 </body>
 </html>
