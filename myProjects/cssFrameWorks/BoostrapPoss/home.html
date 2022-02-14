@@ -540,6 +540,9 @@
     });
 
     $("#saveCustomer").click(function (){
+
+        $("#customerTableBody>tr").off();
+
        let customerId=$("#cstId").val();
        let customerName=$("#cstName").val();
        let customerAddress=$("#cstAddress").val();
@@ -549,7 +552,19 @@
 
         $("#customerTableBody").append(row);
 
+        $("#customerTableBody>tr").click(function (){
+            let cstId = $(this).children(":eq(0)").text();
+            let cstName = $(this).children(":eq(1)").text();
+            let cstAddress = $(this).children(":eq(2)").text();
+            let cstTp = $(this).children(":eq(3)").text();
 
+            console.log(cstId, cstName, cstAddress, cstTp);
+
+            $("#cstId").val(cstId);
+            $("#cstName").val(cstName);
+            $("#cstAddress").val(cstAddress);
+            $("#cstTp").val(cstTp);
+        });
     });
 
 </script>
