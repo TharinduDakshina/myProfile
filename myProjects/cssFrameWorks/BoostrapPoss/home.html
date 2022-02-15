@@ -588,6 +588,58 @@
             $("#itemPrice").val(price);
         });
     });
+
+    let regxId=/^(I00-)[0-9]{3,4}$/;
+    let regxItemName=/^[A-z ]{3,20}$/;
+    let regxItemQty=/^[0-9]{1,3}$/;
+    let regxItemPrice=/^[0-9](.){1,6}$/;
+
+    $("#itemId").keyup(function (e){
+        let input=$("#itemId").val();
+        if (regxId.test(input)){
+            $("#itemId").css("border","2px solid green");
+            $("#errorItemId").text("");
+            /*if (Enter==e.key){
+                $("#cstName").focus();                  //////////////////////////////////////////
+            }*/
+        }else {
+            $("#itemId").css("border","2px solid red");
+            $("#errorItemId").text("Wrong Format : I00-0001");
+        }
+    });
+
+    $("#itemName").keyup(function (){
+        let input=$("#itemName").val();
+        if (regxItemName.test(input)){
+            $("#itemName").css("border","2px solid green");
+            $("#errorItemName").text("");
+        }else {
+            $("#itemName").css("border","2px solid red");
+            $("#errorItemName").text('Wrong Format : "Length of name(3-20)"');
+        }
+    });
+
+    $("#itemQty").keyup(function (){
+        let input=$("#itemQty").val();
+        if (regxItemQty.test(input)){
+            $("#itemQty").css("border","2px solid green");
+            $("#errorQty").text("");
+        }else {
+            $("#itemQty").css("border","2px solid red");
+            $("#errorQty").text('Wrong Format : You can only enter numbers. ');
+        }
+    });
+
+    $("#itemPrice").keyup(function (){
+        let input=$("#itemPrice").val();
+        if (regxItemPrice.test(input)){
+            $("#itemPrice").css("border","2px solid green");
+            $("#errorPrice").text("");
+        }else {
+            $("#itemPrice").css("border","2px solid red");
+            $("#errorPrice").text('Wrong Format : You can only enter numbers and range ( 1.00 - 1000.00 )');
+        }
+    });
 </script>
 </body>
 </html>
