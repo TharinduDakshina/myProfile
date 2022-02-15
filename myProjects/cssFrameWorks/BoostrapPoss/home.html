@@ -478,6 +478,8 @@
         $("#placeOrder").css("display","block");
     });
 
+    $("#saveCustomer").prop("disabled",true);
+
     $("#saveCustomer").click(function (){
 
         $("#customerTableBody>tr").off();
@@ -514,53 +516,65 @@
     $("#cstId").keyup(function (e){
         let input=$("#cstId").val();
         if (regxCstId.test(input)){
-            $("#cstId").css("border","2px solid green");
+            $("#cstId").css("border","3px solid green");
             $("#errorId").text("");
-            /*if (Enter==e.key){
-                $("#cstName").focus();                  //////////////////////////////////////////
-            }*/
+            if (e.keyCode == 13){
+                $("#cstName").focus();
+            }
         }else {
-            $("#cstId").css("border","2px solid red");
+            $("#cstId").css("border","3px solid red");
             $("#errorId").text("Wrong Format : C00-0001");
         }
     });
 
-    $("#cstName").keyup(function (){
+    $("#cstName").keyup(function (e){
         let input=$("#cstName").val();
         if (regxCstName.test(input)){
-            $("#cstName").css("border","2px solid green");
+            $("#cstName").css("border","3px solid green");
             $("#errorName").text("");
+            if (e.keyCode == 13){
+                $("#cstAddress").focus();
+            }
         }else {
-            $("#cstName").css("border","2px solid red");
+            $("#cstName").css("border","3px solid red");
             $("#errorName").text('Wrong Format : "Length of name(3-20)"');
         }
     });
 
-    $("#cstAddress").keyup(function (){
+    $("#cstAddress").keyup(function (e){
         let input=$("#cstAddress").val();
         if (regxCstAddress.test(input)){
-            $("#cstAddress").css("border","2px solid green");
+            $("#cstAddress").css("border","3px solid green");
             $("#errorAddress").text("");
+            if (e.keyCode == 13){
+                $("#cstTp").focus();
+            }
         }else {
-            $("#cstAddress").css("border","2px solid red");
+            $("#cstAddress").css("border","3px solid red");
             $("#errorAddress").text('Wrong Format. ');
         }
     });
 
-    $("#cstTp").keyup(function (){
+    $("#cstTp").keyup(function (e){
         let input=$("#cstTp").val();
         if (regxTp.test(input)){
-            $("#cstTp").css("border","2px solid green");
+            $("#cstTp").css("border","3px solid green");
             $("#errorTp").text("");
+            if (e.keyCode == 13){
+                $("#saveCustomer").prop("disabled",false);
+            }
         }else {
-            $("#cstTp").css("border","2px solid red");
+            $("#cstTp").css("border","3px solid red");
             $("#errorTp").text('Wrong Format : 0761339805');
         }
     });
 
+
 </script>
 
 <script>
+    $("#saveItem").prop("disabled",true);
+
     $("#saveItem").click(function (){
 
         $("#itemTableBody>tr").off();
@@ -597,49 +611,59 @@
     $("#itemId").keyup(function (e){
         let input=$("#itemId").val();
         if (regxId.test(input)){
-            $("#itemId").css("border","2px solid green");
+            $("#itemId").css("border","3px solid green");
             $("#errorItemId").text("");
-            /*if (Enter==e.key){
-                $("#cstName").focus();                  //////////////////////////////////////////
-            }*/
+            if (e.keyCode==13){
+                $("#itemName").focus();
+            }
         }else {
-            $("#itemId").css("border","2px solid red");
+            $("#itemId").css("border","3px solid red");
             $("#errorItemId").text("Wrong Format : I00-0001");
         }
     });
 
-    $("#itemName").keyup(function (){
+    $("#itemName").keyup(function (e){
         let input=$("#itemName").val();
         if (regxItemName.test(input)){
-            $("#itemName").css("border","2px solid green");
+            $("#itemName").css("border","3px solid green");
             $("#errorItemName").text("");
+            if (e.keyCode==13){
+                $("#itemQty").focus();
+            }
         }else {
-            $("#itemName").css("border","2px solid red");
+            $("#itemName").css("border","3px solid red");
             $("#errorItemName").text('Wrong Format : "Length of name(3-20)"');
         }
     });
 
-    $("#itemQty").keyup(function (){
+    $("#itemQty").keyup(function (e){
         let input=$("#itemQty").val();
         if (regxItemQty.test(input)){
-            $("#itemQty").css("border","2px solid green");
+            $("#itemQty").css("border","3px solid green");
             $("#errorQty").text("");
+            if (e.keyCode==13){
+                $("#itemPrice").focus();
+            }
         }else {
-            $("#itemQty").css("border","2px solid red");
+            $("#itemQty").css("border","3px solid red");
             $("#errorQty").text('Wrong Format : You can only enter numbers. ');
         }
     });
 
-    $("#itemPrice").keyup(function (){
+    $("#itemPrice").keyup(function (e){
         let input=$("#itemPrice").val();
         if (regxItemPrice.test(input)){
-            $("#itemPrice").css("border","2px solid green");
+            $("#itemPrice").css("border","3px solid green");
             $("#errorPrice").text("");
+            if (e.keyCode==13){
+                $("#saveItem").prop("disabled",false);
+            }
         }else {
-            $("#itemPrice").css("border","2px solid red");
+            $("#itemPrice").css("border","3px solid red");
             $("#errorPrice").text('Wrong Format : You can only enter numbers and range ( 1.00 - 1000.00 )');
         }
     });
 </script>
+
 </body>
 </html>
