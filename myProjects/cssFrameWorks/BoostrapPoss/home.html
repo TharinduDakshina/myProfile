@@ -218,118 +218,53 @@
                             </div>
                         </nav>
                     </div>
+                    <div  class="btn-group p-1 buttonSet" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button id="saveItem" type="button" class="btn btn-success">Save or Update</button>
+                    </div>
                 </div>
             </div>
 
             <div class="col bg-white position-relative">
-                <div class="btn-group position-absolute top-0 end-0" role="group"
-                     aria-label="Basic radio toggle button group">
-
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        New Item
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">New Item</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label fw-bold">Item Code</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="itemName" class="form-label fw-bold">Item Name</label>
-                                            <input type="email" class="form-control" id="itemName" aria-describedby="emailHelp">
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="itemPrice" class="form-label fw-bold">Item Price</label>
-                                            <input type="email" class="form-control" id="itemPrice" aria-describedby="emailHelp">
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="itemQty" class="form-label fw-bold">Item QTY</label>
-                                            <input type="email" class="form-control" id="itemQty" aria-describedby="emailHelp">
-                                        </div>
-
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="mb-3">
+                    <label for="itemId" class="form-label">Item Id</label>
+                    <input type="text" class="form-control" id="itemId" placeholder="Item Id">
+                    <p><small id="errorItemId" class="text-danger pl-1"></small></p>
                 </div>
+
+                <div class="mb-3">
+                    <label for="itemName" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="itemName" placeholder="Item Name">
+                    <p><small id="errorItemName" class="text-danger pl-1"></small></p>
+                </div>
+
+                <div class="mb-3">
+                    <label for="itemQty" class="form-label">Item Qty</label>
+                    <input type="text" class="form-control" id="itemQty" placeholder="Item Qty">
+                    <p><small id="errorQty" class="text-danger pl-1"></small></p>
+                </div>
+
+                <div class="mb-3">
+                    <label for="itemPrice" class="form-label">Item Price</label>
+                    <input type="text" class="form-control" id="itemPrice" placeholder="Item Price">
+                    <p><small id="errorPrice" class="text-danger pl-1"></small></p>
+                </div>
+
             </div>
         </section>
+
         <section class="row">
-            <div  class="btn-group p-1 buttonSet" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-danger">Delete</button>
-                <button type="button" class="btn btn-warning">Details</button>
-                <button type="button" class="btn btn-success">Add</button>
-            </div>
-        </section>
-        <section class="row">
-            <table class="table table-success table-striped mt-5">
+            <table class="table table-danger table-striped mt-5">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Item QTY</th>
+                    <th scope="col">Item Price</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Park</td>
-                    <td>Siman</td>
-                    <td>@mdo</td>
-                </tr>
+                <tbody id="itemTableBody">
 
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Saman</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
                 </tbody>
             </table>
         </section>
@@ -621,6 +556,37 @@
             $("#cstTp").css("border","2px solid red");
             $("#errorTp").text('Wrong Format : 0761339805');
         }
+    });
+
+</script>
+
+<script>
+    $("#saveItem").click(function (){
+
+        $("#itemTableBody>tr").off();
+
+        let itemId=$("#itemId").val();
+        let itemName=$("#itemName").val();
+        let itemQty=$("#itemQty").val();
+        let itemPrice=$("#itemPrice").val();
+
+        let row=`<tr><td>${itemId}</td><td>${itemName}</td><td>${itemQty}</td><td>${itemPrice}</td></tr>;`
+
+        $("#itemTableBody").append(row);
+
+        $("#itemTableBody>tr").click(function (){
+            let id = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let qty = $(this).children(":eq(2)").text();
+            let price = $(this).children(":eq(3)").text();
+
+            console.log(id, name, qty, price);
+
+            $("#itemId").val(id);
+            $("#itemName").val(name);
+            $("#itemQty").val(qty);
+            $("#itemPrice").val(price);
+        });
     });
 </script>
 </body>
