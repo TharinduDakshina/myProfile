@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
+    <link href="assets/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="/assets/css/fonts/css/all.css">
+    <link href="/assets/css/fonts/css/all.css" rel="stylesheet">
     <style>
-       #image{
-           width: 100vw;
-           height: 92vh;
-           filter: blur(0.3rem);
-       }
+        #image {
+            width: 100vw;
+            height: 92vh;
+            filter: blur(0.3rem);
+        }
 
-       #customerSearch > div:first-child {
-           background-color: lightgreen;
-           width: 25vw;
-           height: 5vh;
-       }
+        #customerSearch > div:first-child {
+            background-color: lightgreen;
+            width: 25vw;
+            height: 5vh;
+        }
 
-       #customerSearch > div:first-child > h6 {
-           font-weight: normal;
+        #customerSearch > div:first-child > h6 {
+            font-weight: normal;
 
-       }
+        }
 
-       #customerSearch > div:nth-child(2) {
-           width: 25vw;
-           height: 20vh;
-       }
+        #customerSearch > div:nth-child(2) {
+            width: 25vw;
+            height: 20vh;
+        }
 
-       .buttonSet {
-           width: 20vw;
-       }
-       #itemSearch > div:first-child {
-           background-color: lightgreen;
-           width: 25vw;
-           height: 5vh;
-       }
+        .buttonSet {
+            width: 20vw;
+        }
 
-       #itemSearch > div:first-child > h6 {
-           font-weight: normal;
-       }
+        #itemSearch > div:first-child {
+            background-color: lightgreen;
+            width: 25vw;
+            height: 5vh;
+        }
 
-       #itemSearch > div:nth-child(2) {
-           width: 25vw;
-           height: 20vh;
-       }
+        #itemSearch > div:first-child > h6 {
+            font-weight: normal;
+        }
+
+        #itemSearch > div:nth-child(2) {
+            width: 25vw;
+            height: 20vh;
+        }
 
 
     </style>
@@ -57,17 +58,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a aria-current="page" id="homeButton" class="nav-link active" href="#image">Home</a>
+                        <a aria-current="page" class="nav-link active" href="#image" id="homeButton">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a aria-current="page" id="customerButton" class="nav-link active" href="#customer">Customer</a>
+                        <a aria-current="page" class="nav-link active" href="#customer" id="customerButton">Customer</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a aria-current="page" id="itemButton" class="nav-link active" href="#item">Items</a>
+                        <a aria-current="page" class="nav-link active" href="#item" id="itemButton">Items</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a aria-current="page" id="placeOrderButton" class="nav-link active" href="#placeOrder">PlaceOrder</a>
+                        <a aria-current="page" class="nav-link active" href="#placeOrder" id="placeOrderButton">PlaceOrder</a>
                     </li>
 
                 </ul>
@@ -78,10 +79,10 @@
 
 <main>
 
-    <img id="image" src="assets/images/poss.jpg" alt="image loading Error"  >
+    <img alt="image loading Error" id="image" src="assets/images/poss.jpg">
 
     <!--Customer-->
-    <div id="customer" class="container ">
+    <div class="container " id="customer">
         <svg class="bi bi-person-square mb-2 mt-2 d-inline-block" fill="currentColor" height="5%" viewBox="0 0 16 16"
              width="5%" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -122,9 +123,9 @@
                         </nav>
                     </div>
 
-                    <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"  role="group">
-                        <button id="delete" class="btn btn-danger" type="button">Delete</button>
-                        <button id="saveCustomer" class="btn btn-success" type="button">Save or Update</button>
+                    <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet" role="group">
+                        <button class="btn btn-danger" id="delete" type="button">Delete</button>
+                        <button class="btn btn-success" id="saveCustomer" type="button">Save or Update</button>
                     </div>
 
                 </div>
@@ -132,27 +133,27 @@
 
             <div class="col bg-white position-relative">
                 <div class="mb-3">
-                    <label for="cstId" class="form-label">Customer Id</label>
-                    <input type="text" class="form-control" id="cstId" placeholder="Customer Id">
-                    <p><small id="errorId" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="cstId">Customer Id</label>
+                    <input class="form-control" id="cstId" placeholder="Customer Id" type="text">
+                    <p><small class="text-danger pl-1" id="errorId"></small></p>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cstName" class="form-label">Customer Name</label>
-                    <input type="text" class="form-control" id="cstName" placeholder="Customer Name">
-                    <p><small id="errorName" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="cstName">Customer Name</label>
+                    <input class="form-control" id="cstName" placeholder="Customer Name" type="text">
+                    <p><small class="text-danger pl-1" id="errorName"></small></p>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cstAddress" class="form-label">Customer Address</label>
-                    <input type="text" class="form-control" id="cstAddress" placeholder="Customer Address">
-                    <p><small id="errorAddress" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="cstAddress">Customer Address</label>
+                    <input class="form-control" id="cstAddress" placeholder="Customer Address" type="text">
+                    <p><small class="text-danger pl-1" id="errorAddress"></small></p>
                 </div>
 
                 <div class="mb-3">
-                    <label for="cstTp" class="form-label">Customer Tp</label>
-                    <input type="text" class="form-control" id="cstTp" placeholder="Customer Tp">
-                    <p><small id="errorTp" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="cstTp">Customer Tp</label>
+                    <input class="form-control" id="cstTp" placeholder="Customer Tp" type="text">
+                    <p><small class="text-danger pl-1" id="errorTp"></small></p>
                 </div>
 
             </div>
@@ -179,15 +180,15 @@
     </div>
 
     <!--Items-->
-    <div id="item" class="container">
-        <svg xmlns="http://www.w3.org/2000/svg" width="4%" height="4%" fill="currentColor" class="bi bi-boxes"
-             viewBox="0 0 16 16">
+    <div class="container" id="item">
+        <svg class="bi bi-boxes" fill="currentColor" height="4%" viewBox="0 0 16 16" width="4%"
+             xmlns="http://www.w3.org/2000/svg">
             <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
         </svg>
         <h1 class="d-inline-block p-1">Items</h1>
         <section class="row">
             <div class="col">
-                <div id="itemSearch" class="container">
+                <div class="container" id="itemSearch">
                     <div>
                         <h6 class="h3 p-1">Item Search</h6>
                     </div>
@@ -195,14 +196,14 @@
                         <nav class="navbar navbar-light bg-light">
                             <div class="container-fluid">
                                 <form class="d-flex p-3 border">
-                                    <input class="form-control me-2" type="search" placeholder="Input Item code"
-                                           aria-label="Search">
+                                    <input aria-label="Search" class="form-control me-2" placeholder="Input Item code"
+                                           type="search">
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                 </form>
                                 <!-- Example single danger button -->
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-warning mt-2 p-1 dropdown-toggle"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button aria-expanded="false" class="btn btn-warning mt-2 p-1 dropdown-toggle"
+                                            data-bs-toggle="dropdown" type="button">
                                         Action
                                     </button>
                                     <ul class="dropdown-menu">
@@ -218,36 +219,36 @@
                             </div>
                         </nav>
                     </div>
-                    <div  class="btn-group p-1 buttonSet" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-danger">Delete</button>
-                        <button id="saveItem" type="button" class="btn btn-success">Save or Update</button>
+                    <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet" role="group">
+                        <button class="btn btn-danger" type="button">Delete</button>
+                        <button class="btn btn-success" id="saveItem" type="button">Save or Update</button>
                     </div>
                 </div>
             </div>
 
             <div class="col bg-white position-relative">
                 <div class="mb-3">
-                    <label for="itemId" class="form-label">Item Id</label>
-                    <input type="text" class="form-control" id="itemId" placeholder="Item Id">
-                    <p><small id="errorItemId" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="itemId">Item Id</label>
+                    <input class="form-control" id="itemId" placeholder="Item Id" type="text">
+                    <p><small class="text-danger pl-1" id="errorItemId"></small></p>
                 </div>
 
                 <div class="mb-3">
-                    <label for="itemName" class="form-label">Item Name</label>
-                    <input type="text" class="form-control" id="itemName" placeholder="Item Name">
-                    <p><small id="errorItemName" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="itemName">Item Name</label>
+                    <input class="form-control" id="itemName" placeholder="Item Name" type="text">
+                    <p><small class="text-danger pl-1" id="errorItemName"></small></p>
                 </div>
 
                 <div class="mb-3">
-                    <label for="itemQty" class="form-label">Item Qty</label>
-                    <input type="text" class="form-control" id="itemQty" placeholder="Item Qty">
-                    <p><small id="errorQty" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="itemQty">Item Qty</label>
+                    <input class="form-control" id="itemQty" placeholder="Item Qty" type="text">
+                    <p><small class="text-danger pl-1" id="errorQty"></small></p>
                 </div>
 
                 <div class="mb-3">
-                    <label for="itemPrice" class="form-label">Item Price</label>
-                    <input type="text" class="form-control" id="itemPrice" placeholder="Item Price">
-                    <p><small id="errorPrice" class="text-danger pl-1"></small></p>
+                    <label class="form-label" for="itemPrice">Item Price</label>
+                    <input class="form-control" id="itemPrice" placeholder="Item Price" type="text">
+                    <p><small class="text-danger pl-1" id="errorPrice"></small></p>
                 </div>
 
             </div>
@@ -271,46 +272,46 @@
     </div>
 
     <!--Place Order-->
-    <div id="placeOrder" class="container ">
+    <div class="container " id="placeOrder">
         <section class="row m-2 rounded-3">
             <div class="col bg-light m-1 card" style="width: 18rem;">
                 <div class="card-body">
                     <form class="row g-2">
                         <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Order Id</label>
-                            <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                            <label class="form-label" for="validationDefault01">Order Id</label>
+                            <input class="form-control" id="validationDefault01" required type="text" value="Mark">
                         </div>
                         <div class="col-md-4">
-                            <label for="validationDefault02" class="form-label">Date</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                            <label class="form-label" for="validationDefault02">Date</label>
+                            <input class="form-control" id="validationDefault02" required type="text" value="Otto">
                         </div>
 
                         <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Qty</label>
-                            <input type="text" class="form-control"  value="Mark" required>
+                            <label class="form-label" for="validationDefault01">Qty</label>
+                            <input class="form-control" required type="text" value="Mark">
                         </div>
 
 
                         <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Customer Id</label>
-                            <input type="text" class="form-control"  value="Mark" required>
+                            <label class="form-label" for="validationDefault01">Customer Id</label>
+                            <input class="form-control" required type="text" value="Mark">
                         </div>
                         <div class="col-md-6">
-                            <label for="validationDefault03" class="form-label">Customer Name</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <label class="form-label" for="validationDefault03">Customer Name</label>
+                            <input class="form-control" id="validationDefault03" required type="text">
                         </div>
 
                         <div class="col-md-3">
-                            <label for="validationDefault04" class="form-label">State</label>
+                            <label class="form-label" for="validationDefault04">State</label>
                             <select class="form-select" id="validationDefault04" required>
-                                <option selected disabled value="">Choose...</option>
+                                <option disabled selected value="">Choose...</option>
                                 <option>...</option>
                             </select>
                         </div>
 
                         <div class="col-md-3">
-                            <label for="validationDefault05" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="validationDefault05" required>
+                            <label class="form-label" for="validationDefault05">Zip</label>
+                            <input class="form-control" id="validationDefault05" required type="text">
                         </div>
                     </form>
                 </div>
@@ -319,40 +320,40 @@
                 <div class="card-body">
                     <form class="row g-2">
                         <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Order Id</label>
-                            <input type="text" class="form-control"  value="Mark" required>
+                            <label class="form-label" for="validationDefault01">Order Id</label>
+                            <input class="form-control" required type="text" value="Mark">
                         </div>
                         <div class="col-md-4">
-                            <label for="validationDefault02" class="form-label">Date</label>
-                            <input type="text" class="form-control"  value="Otto" required>
+                            <label class="form-label" for="validationDefault02">Date</label>
+                            <input class="form-control" required type="text" value="Otto">
                         </div>
 
                         <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Qty</label>
-                            <input type="text" class="form-control"  value="Mark" required>
+                            <label class="form-label" for="validationDefault01">Qty</label>
+                            <input class="form-control" required type="text" value="Mark">
                         </div>
 
 
                         <div class="col-md-4">
-                            <label for="validationDefault01" class="form-label">Customer Id</label>
-                            <input type="text" class="form-control"  value="Mark" required>
+                            <label class="form-label" for="validationDefault01">Customer Id</label>
+                            <input class="form-control" required type="text" value="Mark">
                         </div>
                         <div class="col-md-6">
-                            <label for="validationDefault03" class="form-label">Customer Name</label>
-                            <input type="text" class="form-control"  required>
+                            <label class="form-label" for="validationDefault03">Customer Name</label>
+                            <input class="form-control" required type="text">
                         </div>
 
                         <div class="col-md-3">
-                            <label for="validationDefault04" class="form-label">State</label>
-                            <select class="form-select"  required>
-                                <option selected disabled value="">Choose...</option>
+                            <label class="form-label" for="validationDefault04">State</label>
+                            <select class="form-select" required>
+                                <option disabled selected value="">Choose...</option>
                                 <option>...</option>
                             </select>
                         </div>
 
                         <div class="col-md-3">
-                            <label for="validationDefault05" class="form-label">Zip</label>
-                            <input type="text" class="form-control"  required>
+                            <label class="form-label" for="validationDefault05">Zip</label>
+                            <input class="form-control" required type="text">
                         </div>
                     </form>
                 </div>
@@ -362,21 +363,21 @@
                 <h4 class="display-6 fw-bold ">subTotal : 12200.00/=</h4>
                 <form class="row g-2 m-1">
                     <div class="col-md-4">
-                        <label for="validationDefault01" class="form-label">Cash</label>
-                        <input type="text" class="form-control"  value="00.00" required>
+                        <label class="form-label" for="validationDefault01">Cash</label>
+                        <input class="form-control" required type="text" value="00.00">
                     </div>
                     <div class="col-md-4">
-                        <label for="validationDefault02" class="form-label">Discount</label>
-                        <input type="text" class="form-control"  value="0.00" required>
+                        <label class="form-label" for="validationDefault02">Discount</label>
+                        <input class="form-control" required type="text" value="0.00">
                     </div>
 
                     <div class="col-md-4">
-                        <label for="validationDefault01" class="form-label">Balance</label>
-                        <input type="text" class="form-control"  value="00.00" required>
+                        <label class="form-label" for="validationDefault01">Balance</label>
+                        <input class="form-control" required type="text" value="00.00">
                     </div>
 
                     <div class="position-relative">
-                        <button type="button" class="btn btn-success position-absolute top-100 end-0">Pay bill</button>
+                        <button class="btn btn-success position-absolute top-100 end-0" type="button">Pay bill</button>
                     </div>
                 </form>
             </div>
@@ -440,60 +441,75 @@
 </main>
 
 
-
 <script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="db/DB.js"></script>
 <script>
 
-    $("#image").css("display","block");
-    $("#customer").css("display","none");
-    $("#item").css("display","none");
-    $("#placeOrder").css("display","none");
+    $("#image").css("display", "block");
+    $("#customer").css("display", "none");
+    $("#item").css("display", "none");
+    $("#placeOrder").css("display", "none");
 
-    $("#homeButton").click(function (){
-        $("#image").css("display","block");
-        $("#customer").css("display","none");
-        $("#item").css("display","none");
-        $("#placeOrder").css("display","none");
+    $("#homeButton").click(function () {
+        $("#image").css("display", "block");
+        $("#customer").css("display", "none");
+        $("#item").css("display", "none");
+        $("#placeOrder").css("display", "none");
     });
 
-    $("#customerButton").click(function (){
-        $("#image").css("display","none");
-        $("#customer").css("display","block");
-        $("#item").css("display","none");
-        $("#placeOrder").css("display","none");
+    $("#customerButton").click(function () {
+        $("#image").css("display", "none");
+        $("#customer").css("display", "block");
+        $("#item").css("display", "none");
+        $("#placeOrder").css("display", "none");
     });
 
-    $("#itemButton").click(function (){
-        $("#image").css("display","none");
-        $("#customer").css("display","none");
-        $("#item").css("display","block");
-        $("#placeOrder").css("display","none");
+    $("#itemButton").click(function () {
+        $("#image").css("display", "none");
+        $("#customer").css("display", "none");
+        $("#item").css("display", "block");
+        $("#placeOrder").css("display", "none");
     });
 
-    $("#placeOrderButton").click(function (){
-        $("#image").css("display","none");
-        $("#customer").css("display","none");
-        $("#item").css("display","none");
-        $("#placeOrder").css("display","block");
+    $("#placeOrderButton").click(function () {
+        $("#image").css("display", "none");
+        $("#customer").css("display", "none");
+        $("#item").css("display", "none");
+        $("#placeOrder").css("display", "block");
     });
 
-    $("#saveCustomer").prop("disabled",true);
+    $("#saveCustomer").prop("disabled", true);
 
-    $("#saveCustomer").click(function (){
+    $("#saveCustomer").click(function () {
 
         $("#customerTableBody>tr").off();
 
-       let customerId=$("#cstId").val();
-       let customerName=$("#cstName").val();
-       let customerAddress=$("#cstAddress").val();
-       let customerTp=$("#cstTp").val();
+        let customerId = $("#cstId").val();
+        let customerName = $("#cstName").val();
+        let customerAddress = $("#cstAddress").val();
+        let customerTp = $("#cstTp").val();
 
-       let row=`<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerTp}</td></tr>;`
+        var customer = {
+            id: customerId,
+            name: customerName,
+            address:customerAddress,
+            tp:customerTp
+        };
 
-        $("#customerTableBody").append(row);
 
-        $("#customerTableBody>tr").click(function (){
+        customerDB.push(customer);
+
+        $("#customerTableBody").empty();
+
+        customerDB.forEach(function (e){
+            let row=`<tr><td>${e.id}</td><td>${e.name}</td><td>${e.address}</td><td>${e.tp}</td></tr>;`;
+            $("#customerTableBody").append(row);
+        });
+
+
+
+        $("#customerTableBody>tr").click(function () {
             let cstId = $(this).children(":eq(0)").text();
             let cstName = $(this).children(":eq(1)").text();
             let cstAddress = $(this).children(":eq(2)").text();
@@ -508,87 +524,115 @@
         });
     });
 
-    let regxCstId=/^(C00-)[0-9]{3,4}$/;
-    let regxCstName=/^[A-z ]{3,20}$/;
-    let regxCstAddress=/^[A-z 0-9/,]{3,50}$/;
-    let regxTp=/^[0-9]{10}$/;
-
-    $("#cstId").keyup(function (e){
-        let input=$("#cstId").val();
-        if (regxCstId.test(input)){
-            $("#cstId").css("border","3px solid green");
+    let regxCstId = /^(C00-)[0-9]{3,4}$/;
+    let regxCstName = /^[A-z ]{3,20}$/;
+    let regxCstAddress = /^[A-z 0-9/,]{3,50}$/;
+    let regxTp = /^[0-9]{10}$/;
+    var checkNumber=0;
+    $("#cstId").keyup(function (e) {
+        let input = $("#cstId").val();
+        if (regxCstId.test(input)) {
+            $("#cstId").css("border", "3px solid green");
             $("#errorId").text("");
-            if (e.keyCode == 13){
+            $("#saveCustomer").prop("disabled", false);
+            if (e.keyCode == 13) {
                 $("#cstName").focus();
             }
-        }else {
-            $("#cstId").css("border","3px solid red");
+        } else {
+            checkNumber=1;
+            $("#cstId").css("border", "3px solid red");
             $("#errorId").text("Wrong Format : C00-0001");
+            $("#saveCustomer").prop("disabled", true);
         }
     });
 
-    $("#cstName").keyup(function (e){
-        let input=$("#cstName").val();
-        if (regxCstName.test(input)){
-            $("#cstName").css("border","3px solid green");
+    $("#cstName").keyup(function (e) {
+        let input = $("#cstName").val();
+        if (regxCstName.test(input)) {
+            $("#cstName").css("border", "3px solid green");
             $("#errorName").text("");
-            if (e.keyCode == 13){
+            $("#saveCustomer").prop("disabled", false);
+            if (e.keyCode == 13) {
                 $("#cstAddress").focus();
             }
-        }else {
-            $("#cstName").css("border","3px solid red");
+        } else {
+            checkNumber=1;
+            $("#cstName").css("border", "3px solid red");
             $("#errorName").text('Wrong Format : "Length of name(3-20)"');
+            $$("#saveCustomer").prop("disabled", true);
         }
     });
 
-    $("#cstAddress").keyup(function (e){
-        let input=$("#cstAddress").val();
-        if (regxCstAddress.test(input)){
-            $("#cstAddress").css("border","3px solid green");
+    $("#cstAddress").keyup(function (e) {
+        let input = $("#cstAddress").val();
+        if (regxCstAddress.test(input)) {
+            $("#cstAddress").css("border", "3px solid green");
             $("#errorAddress").text("");
-            if (e.keyCode == 13){
+            $("#saveCustomer").prop("disabled", false);
+            if (e.keyCode == 13) {
                 $("#cstTp").focus();
             }
-        }else {
-            $("#cstAddress").css("border","3px solid red");
+        } else {
+            checkNumber=1;
+            $("#cstAddress").css("border", "3px solid red");
             $("#errorAddress").text('Wrong Format. ');
+            $("#saveCustomer").prop("disabled", true);
         }
     });
 
-    $("#cstTp").keyup(function (e){
-        let input=$("#cstTp").val();
-        if (regxTp.test(input)){
-            $("#cstTp").css("border","3px solid green");
+    $("#cstTp").keyup(function (e) {
+        let input = $("#cstTp").val();
+        if (regxTp.test(input)) {
+            $("#cstTp").css("border", "3px solid green");
             $("#errorTp").text("");
-            if (e.keyCode == 13){
-                $("#saveCustomer").prop("disabled",false);
+            $("#saveCustomer").prop("disabled", false);
+            if (e.keyCode == 13) {
+                $("#saveCustomer").prop("disabled", false);
             }
-        }else {
-            $("#cstTp").css("border","3px solid red");
+        } else {
+            checkNumber=1;
+            $("#cstTp").css("border", "3px solid red");
             $("#errorTp").text('Wrong Format : 0761339805');
+            $("#saveCustomer").prop("disabled", true);
         }
     });
 
+    if (checkNumber==1){
+        $("#saveCustomer").prop("disabled", true);
+    }
 
 </script>
 
 <script>
-    $("#saveItem").prop("disabled",true);
+    $("#saveItem").prop("disabled", true);
 
-    $("#saveItem").click(function (){
+    $("#saveItem").click(function () {
 
         $("#itemTableBody>tr").off();
 
-        let itemId=$("#itemId").val();
-        let itemName=$("#itemName").val();
-        let itemQty=$("#itemQty").val();
-        let itemPrice=$("#itemPrice").val();
+        let itemId = $("#itemId").val();
+        let itemName = $("#itemName").val();
+        let itemQty = $("#itemQty").val();
+        let itemPrice = $("#itemPrice").val();
 
-        let row=`<tr><td>${itemId}</td><td>${itemName}</td><td>${itemQty}</td><td>${itemPrice}</td></tr>;`
+        var item={
+            id:itemId,
+            name:itemName,
+            qty:itemQty,
+            price:itemPrice
+        };
 
-        $("#itemTableBody").append(row);
+        itemDB.push(item);
 
-        $("#itemTableBody>tr").click(function (){
+        $("#itemTableBody").empty();
+
+        itemDB.forEach(function (e){
+            let row = `<tr><td>${e.id}</td><td>${e.name}</td><td>${e.qty}</td><td>${e.price}</td></tr>;`;
+            $("#itemTableBody").append(row);
+        });
+
+
+        $("#itemTableBody>tr").click(function () {
             let id = $(this).children(":eq(0)").text();
             let name = $(this).children(":eq(1)").text();
             let qty = $(this).children(":eq(2)").text();
@@ -603,64 +647,68 @@
         });
     });
 
-    let regxId=/^(I00-)[0-9]{3,4}$/;
-    let regxItemName=/^[A-z ]{3,20}$/;
-    let regxItemQty=/^[0-9]{1,3}$/;
-    let regxItemPrice=/^[0-9](.){1,6}$/;
+    let regxId = /^(I00-)[0-9]{3,4}$/;
+    let regxItemName = /^[A-z ]{3,20}$/;
+    let regxItemQty = /^[0-9]{1,3}$/;
+    let regxItemPrice = /^[0-9](.){1,6}$/;
 
-    $("#itemId").keyup(function (e){
-        let input=$("#itemId").val();
-        if (regxId.test(input)){
-            $("#itemId").css("border","3px solid green");
+    $("#itemId").keyup(function (e) {
+        let input = $("#itemId").val();
+        if (regxId.test(input)) {
+            $("#itemId").css("border", "3px solid green");
             $("#errorItemId").text("");
-            if (e.keyCode==13){
+            if (e.keyCode == 13) {
                 $("#itemName").focus();
             }
-        }else {
-            $("#itemId").css("border","3px solid red");
+        } else {
+            $("#itemId").css("border", "3px solid red");
             $("#errorItemId").text("Wrong Format : I00-0001");
+            $("#saveItem").prop("disabled", true);
         }
     });
 
-    $("#itemName").keyup(function (e){
-        let input=$("#itemName").val();
-        if (regxItemName.test(input)){
-            $("#itemName").css("border","3px solid green");
+    $("#itemName").keyup(function (e) {
+        let input = $("#itemName").val();
+        if (regxItemName.test(input)) {
+            $("#itemName").css("border", "3px solid green");
             $("#errorItemName").text("");
-            if (e.keyCode==13){
+            if (e.keyCode == 13) {
                 $("#itemQty").focus();
             }
-        }else {
-            $("#itemName").css("border","3px solid red");
+        } else {
+            $("#itemName").css("border", "3px solid red");
             $("#errorItemName").text('Wrong Format : "Length of name(3-20)"');
+            $("#saveItem").prop("disabled", true);
         }
     });
 
-    $("#itemQty").keyup(function (e){
-        let input=$("#itemQty").val();
-        if (regxItemQty.test(input)){
-            $("#itemQty").css("border","3px solid green");
+    $("#itemQty").keyup(function (e) {
+        let input = $("#itemQty").val();
+        if (regxItemQty.test(input)) {
+            $("#itemQty").css("border", "3px solid green");
             $("#errorQty").text("");
-            if (e.keyCode==13){
+            if (e.keyCode == 13) {
                 $("#itemPrice").focus();
             }
-        }else {
-            $("#itemQty").css("border","3px solid red");
+        } else {
+            $("#itemQty").css("border", "3px solid red");
             $("#errorQty").text('Wrong Format : You can only enter numbers. ');
+            $("#saveItem").prop("disabled", true);
         }
     });
 
-    $("#itemPrice").keyup(function (e){
-        let input=$("#itemPrice").val();
-        if (regxItemPrice.test(input)){
-            $("#itemPrice").css("border","3px solid green");
+    $("#itemPrice").keyup(function (e) {
+        let input = $("#itemPrice").val();
+        if (regxItemPrice.test(input)) {
+            $("#itemPrice").css("border", "3px solid green");
             $("#errorPrice").text("");
-            if (e.keyCode==13){
-                $("#saveItem").prop("disabled",false);
+            if (e.keyCode == 13) {
+                $("#saveItem").prop("disabled", false);
             }
-        }else {
-            $("#itemPrice").css("border","3px solid red");
+        } else {
+            $("#itemPrice").css("border", "3px solid red");
             $("#errorPrice").text('Wrong Format : You can only enter numbers and range ( 1.00 - 1000.00 )');
+            $("#saveItem").prop("disabled", true);
         }
     });
 </script>
