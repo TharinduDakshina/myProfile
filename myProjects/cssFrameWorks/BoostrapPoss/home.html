@@ -478,6 +478,9 @@
         $("#item").css("display", "none");
         $("#placeOrder").css("display", "block");
     });
+</script>
+
+<script>
 
     $("#saveCustomer").prop("disabled", true);
 
@@ -541,9 +544,6 @@
     let regxCstName = /^[A-z ]{3,20}$/;
     let regxCstAddress = /^[A-z 0-9/,]{3,50}$/;
     let regxTp = /^[0-9]{10}$/;
-    var checkNumber=0;
-
-
 
     $('#cstId,#cstName,#cstAddress,#cstTp').on('keydown', function (eventOb) {
         if (eventOb.key == "Tab") {
@@ -643,16 +643,16 @@
                             clearAll();
                         }
                     } else {
-                        $("#txtCusSalary").focus();
+                        $("#cstTp").focus();
                     }
                 } else {
-                    $("#txtCusAddress").focus();
+                    $("#cstAddress").focus();
                 }
             } else {
-                $("#txtCusName").focus();
+                $("#cstAddress").focus();
             }
         } else {
-            $("#txtCusID").focus();
+            $("#cstId").focus();
         }
     }
 
@@ -665,6 +665,9 @@
         }
     }
 
+    $('#saveCustomer').click(function () {
+        checkIfValid();
+    });
 
 
 </script>
@@ -673,110 +676,185 @@
     $("#saveItem").prop("disabled", true);
 
     $("#saveItem").click(function () {
+        saveItem();
+        clearItemAll();
+        loadAllItem();
+    });
 
-        $("#itemTableBody>tr").off();
-
+    function saveItem() {
+        //gather Item information
         let itemId = $("#itemId").val();
         let itemName = $("#itemName").val();
-        let itemQty = $("#itemQty").val();
+        let itemQTY = $("#itemQty").val();
         let itemPrice = $("#itemPrice").val();
 
-        var item={
-            id:itemId,
-            name:itemName,
-            qty:itemQty,
-            price:itemPrice
+        //create Object
+        var itemObject = {
+            iId: itemId,
+            iName: itemName,
+            iQty: itemQTY,
+            iPrice: itemPrice
         };
 
-        itemDB.push(item);
+        itemDB.push(itemObject);
+    }
 
+    function clearItemAll() {
+        $('#itemId,#itemName,#itemQty,#itemPrice').val("");
+        $('#itemId,#itemName,#itemQty,#itemPrice').css('border', '2px solid #ced4da');
+        $('#itemId').focus();
+        $("#saveItem").attr('disabled', true);
+        loadAllItem();
+        $("#errorItemId,#errorItemName,#errorQty,#errorPrice").text("");
+    }
+
+    function loadAllItem() {
         $("#itemTableBody").empty();
-
-        itemDB.forEach(function (e){
-            let row = `<tr><td>${e.id}</td><td>${e.name}</td><td>${e.qty}</td><td>${e.price}</td></tr>;`;
+        for (var i of itemDB) {
+            /*create a html row*/
+            let row = `<tr><td>${i.iId}</td><td>${i.iName}</td><td>${i.iQty}</td><td>${i.iPrice}</td></tr>`;
+            /*select the table body and append the row */
             $("#itemTableBody").append(row);
-        });
-
-
+        }
         $("#itemTableBody>tr").click(function () {
             let id = $(this).children(":eq(0)").text();
             let name = $(this).children(":eq(1)").text();
-            let qty = $(this).children(":eq(2)").text();
-            let price = $(this).children(":eq(3)").text();
-
-            console.log(id, name, qty, price);
+            let QTY = $(this).children(":eq(2)").text();
+            let iPrice = $(this).children(":eq(3)").text();
 
             $("#itemId").val(id);
             $("#itemName").val(name);
-            $("#itemQty").val(qty);
-            $("#itemPrice").val(price);
+            $("#itemQty").val(QTY);
+            $("#itemPrice").val(iPrice);
         });
-    });
+    }
 
     let regxId = /^(I00-)[0-9]{3,4}$/;
     let regxItemName = /^[A-z ]{3,20}$/;
     let regxItemQty = /^[0-9]{1,3}$/;
     let regxItemPrice = /^[0-9](.){1,6}$/;
 
-    $("#itemId").keyup(function (e) {
-        let input = $("#itemId").val();
-        if (regxId.test(input)) {
-            $("#itemId").css("border", "3px solid green");
-            $("#errorItemId").text("");
-            if (e.keyCode == 13) {
+    $('#itemId,#itemName,#itemQty,#itemPrice').on('keydown', function (eventOb) {
+        if (eventOb.key == "Tab") {
+            eventOb.preventDefault();
+        }
+    });
+
+    $('#itemId,#itemName,#itemQty,#itemPrice').on('blur', function () {
+        formValid();
+    });
+
+    function formValid() {
+        var itemId = $("#itemId").val();
+        $("#itemId").css('border', '2px solid green');
+        $("#errorItemId").text("");
+        if (regxId.test(itemId)) {
+            var itemName = $("#itemName").val();
+            if (regxItemName.test(itemName)) {
+                $("#itemName").css('border', '2px solid green');
+                $("#errorItemName").text("");
+                var itemQty = $("#itemQty").val();
+                if (regxItemQty.test(itemQty)) {
+                    var itemPrice = $("#itemPrice").val();
+                    var resp = regxItemPrice.test(itemPrice);
+                    $("#itemQty").css('border', '2px solid green');
+                    $("#errorQty").text("");
+                    if (resp) {
+                        $("#itemPrice").css('border', '2px solid green');
+                        $("#errorPrice").text("");
+                        return true;
+                    } else {
+                        $("#itemPrice").css('border', '2px solid red');
+                        $("#errorPrice").text("Cus Salary is a required field : Pattern 100.00 or 100");
+                        return false;
+                    }
+                } else {
+                    $("#itemQty").css('border', '2px solid red');
+                    $("#errorQty").text("Cus Name is a required field : Mimum 7");
+                    return false;
+                }
+            } else {
+                $("#itemName").css('border', '2px solid red');
+                $("#errorItemName").text("Cus Name is a required field : Mimimum 5, Max 20, Spaces Allowed");
+                return false;
+            }
+        } else {
+            $("#itemId").css('border', '2px solid red');
+            $("#errorItemId").text("Cus ID is a required field : Pattern C00-000");
+            return false;
+        }
+    }
+
+    $("#itemId").on('keyup', function (eventOb) {
+        setItemButton();
+        if (eventOb.key == "Enter") {
+            checkIfValidItem();
+        }
+    });
+
+    $("#itemName").on('keyup', function (eventOb) {
+        setItemButton();
+        if (eventOb.key == "Enter") {
+            checkIfValidItem();
+        }
+    });
+
+    $("#itemQty").on('keyup', function (eventOb) {
+        setItemButton();
+        if (eventOb.key == "Enter") {
+            checkIfValidItem();
+        }
+    });
+
+    $("#itemPrice").on('keyup', function (eventOb) {
+        setItemButton();
+        if (eventOb.key == "Enter") {
+            checkIfValidItem();
+        }
+    });
+
+    function checkIfValidItem() {
+        var itemId = $("#itemId").val();
+        if (regxId.test(itemId)) {
+            $("#itemName").focus();
+            var itemName = $("#itemName").val();
+            if (regxItemName.test(itemName)) {
+                $("#itemQty").focus();
+                var itemQty = $("#itemQty").val();
+                if (regxItemQty.test(itemQty)) {
+                    $("#itemPrice").focus();
+                    var itemPrice = $("#itemPrice").val();
+                    var resp = regxItemPrice.test(itemPrice);
+                    if (resp) {
+                        let res = confirm("Do you really need to add this Item..?");
+                        if (res) {
+                            saveCustomer();
+                            clearAll();
+                        }
+                    } else {
+                        $("#itemPrice").focus();
+                    }
+                } else {
+                    $("#itemQty").focus();
+                }
+            } else {
                 $("#itemName").focus();
             }
         } else {
-            $("#itemId").css("border", "3px solid red");
-            $("#errorItemId").text("Wrong Format : I00-0001");
-            $("#saveItem").prop("disabled", true);
+            $("#itemId").focus();
         }
-    });
+    }
 
-    $("#itemName").keyup(function (e) {
-        let input = $("#itemName").val();
-        if (regxItemName.test(input)) {
-            $("#itemName").css("border", "3px solid green");
-            $("#errorItemName").text("");
-            if (e.keyCode == 13) {
-                $("#itemQty").focus();
-            }
+    function setItemButton() {
+        let b = formValid();
+        if (b) {
+            $("#saveItem").attr('disabled', false);
         } else {
-            $("#itemName").css("border", "3px solid red");
-            $("#errorItemName").text('Wrong Format : "Length of name(3-20)"');
-            $("#saveItem").prop("disabled", true);
+            $("#saveItem").attr('disabled', true);
         }
-    });
+    }
 
-    $("#itemQty").keyup(function (e) {
-        let input = $("#itemQty").val();
-        if (regxItemQty.test(input)) {
-            $("#itemQty").css("border", "3px solid green");
-            $("#errorQty").text("");
-            if (e.keyCode == 13) {
-                $("#itemPrice").focus();
-            }
-        } else {
-            $("#itemQty").css("border", "3px solid red");
-            $("#errorQty").text('Wrong Format : You can only enter numbers. ');
-            $("#saveItem").prop("disabled", true);
-        }
-    });
 
-    $("#itemPrice").keyup(function (e) {
-        let input = $("#itemPrice").val();
-        if (regxItemPrice.test(input)) {
-            $("#itemPrice").css("border", "3px solid green");
-            $("#errorPrice").text("");
-            if (e.keyCode == 13) {
-                $("#saveItem").prop("disabled", false);
-            }
-        } else {
-            $("#itemPrice").css("border", "3px solid red");
-            $("#errorPrice").text('Wrong Format : You can only enter numbers and range ( 1.00 - 1000.00 )');
-            $("#saveItem").prop("disabled", true);
-        }
-    });
 </script>
 
 </body>
