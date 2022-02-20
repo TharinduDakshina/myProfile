@@ -792,12 +792,12 @@
 
     function formValidItem() {
         var itemId = $("#itemId").val();
-        let result = checkAlreadyExitsItem();
+        /*let result = checkAlreadyExitsItem();
         if (result == -1) {
             $("#itemId").css('border', '2px solid red');
             $("#errorItemId").text("This id was already exits.");
             return false;
-        }
+        }*/
         $("#itemId").css('border', '2px solid green');
         $("#errorItemId").text("");
         if (regxId.test(itemId)) {
