@@ -108,6 +108,7 @@
                                 <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"
                                      role="group">
                                     <button class="btn btn-danger" id="deleteCustomer" type="button">Delete</button>
+                                    <button class="btn btn-warning" id="btnUpdateCustomer" type="button">update</button>
                                     <button class="btn btn-success" id="saveCustomer" type="button">Save or Update
                                     </button>
                                 </div>
@@ -166,7 +167,7 @@
             </table>
         </section>
     </div>
-    <!--testing commit-->
+
     <!--Items-->
     <div class="container" id="item">
         <svg class="bi bi-boxes" fill="currentColor" height="4%" viewBox="0 0 16 16" width="4%"
@@ -194,6 +195,7 @@
                                 <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"
                                      role="group">
                                     <button class="btn btn-danger" id="deleteItem" type="button">Delete</button>
+                                    <button class="btn btn-warning" id="btnUpdate" type="button">Update</button>
                                     <button class="btn btn-success" id="saveItem" type="button">Save or Update</button>
                                 </div>
                             </div>
@@ -678,6 +680,7 @@
             clearAll();
             alert("No Such a Customer");
         }
+
     });
 
     function searchCustomer(id) {
@@ -687,6 +690,7 @@
             }
         }
     }
+
 
     $("#deleteCustomer").click(function () {
         var deleteId = $("#cstId").val();
@@ -706,7 +710,26 @@
         customerDB.splice(index, 1);
     }
 
+    $("#btnUpdateCustomer").click(function (){
+        var updateId = $("#cstId").val();
+        var updateName = $("#cstName").val();
+        var updateAddress = $("#cstAddress").val();
+        var updateTp = $("#cstTp").val();
+        updateCustomer(updateId,updateName,updateAddress,updateTp);
+        clearAll();
+    });
 
+    function updateCustomer(id,name,address,tp){
+        for (let i=0 ; i<customerDB.length;i++){
+            if (id==customerDB[i].id){
+                customerDB[i].name=name;
+                customerDB[i].address=address;
+                customerDB[i].tp=tp;
+
+                alert("Successfully Update ");
+            }
+        }
+    }
 </script>
 
 <script>
@@ -792,12 +815,12 @@
 
     function formValidItem() {
         var itemId = $("#itemId").val();
-        /*let result = checkAlreadyExitsItem();
+        let result = checkAlreadyExitsItem();
         if (result == -1) {
             $("#itemId").css('border', '2px solid red');
             $("#errorItemId").text("This id was already exits.");
             return false;
-        }*/
+        }
         $("#itemId").css('border', '2px solid green');
         $("#errorItemId").text("");
         if (regxId.test(itemId)) {
@@ -947,6 +970,26 @@
         itemDB.splice(index, 1);
     }
 
+    $("#btnUpdate").click(function (){
+        var updateItemId=$("#itemId").val();
+        var updateItemName=$("#itemName").val();
+        var updateItemQty=$("#itemQty").val();
+        var updateItemPrice=$("#itemPrice").val();
+        updateItem(updateItemId,updateItemName,updateItemQty,updateItemPrice);
+        clearItemAll();
+    });
+
+    function updateItem(id,name,qty,price){
+        for (let j=0;j<itemDB.length;j++){
+            if (id==itemDB[j].iId){
+                itemDB[j].iName=name;
+                itemDB[j].iQty=qty;
+                itemDB[j].iPrice=price;
+
+                alert("Successfully Updated.");
+            }
+        }
+    }
 </script>
 
 </body>
