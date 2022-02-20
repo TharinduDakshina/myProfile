@@ -166,7 +166,7 @@
             </table>
         </section>
     </div>
-
+    <!--testing commit-->
     <!--Items-->
     <div class="container" id="item">
         <svg class="bi bi-boxes" fill="currentColor" height="4%" viewBox="0 0 16 16" width="4%"
@@ -191,9 +191,10 @@
                                     </button>
                                 </form>
 
-                                <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet" role="group">
-                                    <button id="deleteItem" class="btn btn-danger" type="button">Delete</button>
-                                    <button id="saveItem" class="btn btn-success"  type="button">Save or Update</button>
+                                <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"
+                                     role="group">
+                                    <button class="btn btn-danger" id="deleteItem" type="button">Delete</button>
+                                    <button class="btn btn-success" id="saveItem" type="button">Save or Update</button>
                                 </div>
                             </div>
                         </nav>
@@ -480,13 +481,13 @@
             address: customerAddress,
             tp: customerTp
         };
-      //
+        //
         customerDB.push(customerObject);
 
     }
 
     function checkAlreadyExits() {
-        for (let i=0; i < customerDB.length; i++) {
+        for (let i = 0; i < customerDB.length; i++) {
             if ($("#cstId").val() == customerDB[i].id) {
                 return -1;
             }
@@ -545,7 +546,7 @@
     function formValid() {
         var cusID = $("#cstId").val();
         let result = checkAlreadyExits();
-        if (result==-1){
+        if (result == -1) {
             console.log(result)
             $("#cstId").css('border', '2px solid red');
             $("#errorId").text("This id was already exits.");
@@ -706,7 +707,6 @@
     }
 
 
-
 </script>
 
 <script>
@@ -737,7 +737,7 @@
     }
 
     function checkAlreadyExitsItem() {
-        for (let i=0; i < itemDB.length; i++) {
+        for (let i = 0; i < itemDB.length; i++) {
             if ($("#itemId").val() == itemDB[i].iId) {
                 return -1;
             }
@@ -793,7 +793,7 @@
     function formValidItem() {
         var itemId = $("#itemId").val();
         let result = checkAlreadyExitsItem();
-        if (result==-1){
+        if (result == -1) {
             $("#itemId").css('border', '2px solid red');
             $("#errorItemId").text("This id was already exits.");
             return false;
