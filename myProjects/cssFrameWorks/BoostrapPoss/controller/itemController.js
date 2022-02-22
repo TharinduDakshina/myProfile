@@ -14,19 +14,19 @@ function saveItem() {
     let itemPrice = $("#itemPrice").val();
 
     //create Object
-    var itemObject = {
-        iId: itemId,
-        iName: itemName,
-        iQty: itemQTY,
-        iPrice: itemPrice
-    };
+    var item= new itemDTO();
+    item.setItemId(itemId);
+    item.setItemName(itemName);
+    item.setItemQty(itemQTY);
+    item.setItemPrice(itemPrice);
 
-    itemDB.push(itemObject);
+
+    itemDB.push(item);
 }
 
 function checkAlreadyExitsItem() {
     for (let i = 0; i < itemDB.length; i++) {
-        if ($("#itemId").val() == itemDB[i].iId) {
+        if ($("#itemId").val() == itemDB[i].getItemId()) {
             return -1;
         }
     }
@@ -46,7 +46,7 @@ function loadAllItem() {
     $("#itemTableBody").empty();
     for (var i of itemDB) {
         /*create a html row*/
-        let itemRow = `<tr><td>${i.iId}</td><td>${i.iName}</td><td>${i.iQty}</td><td>${i.iPrice}</td></tr>`;
+        let itemRow = `<tr><td>${i.getItemId()}</td><td>${i.getItemName()}</td><td>${i.getItemQty()}</td><td>${i.getItemPrice()}</td></tr>`;
         /*select the table body and append the row */
         $("#itemTableBody").append(itemRow);
     }
@@ -68,10 +68,10 @@ $("#btnItemSearch").click(function () {
 
     var response = searchItem(searchID);
     if (response) {
-        $("#itemId").val(response.iId);
-        $("#itemName").val(response.iName);
-        $("#itemQty").val(response.iQty);
-        $("#itemPrice").val(response.iPrice);
+        $("#itemId").val(response.getItemId());
+        $("#itemName").val(response.getItemName());
+        $("#itemQty").val(response.getItemQty());
+        $("#itemPrice").val(response.getItemPrice());
     } else {
         clearItemAll();
         alert("No Such a Item");
@@ -80,7 +80,7 @@ $("#btnItemSearch").click(function () {
 
 function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].id == id) {
+        if (itemDB[i].getItemId() == id) {
             return itemDB[i];
         }
     }
@@ -95,9 +95,9 @@ $("#deleteItem").click(function () {
 function deleteItem(id) {
     var index = -1;
     for (var i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].id == id) {
+        if (itemDB[i].getItemId() == id) {
             index = i;
-            alert(itemDB[i].id + " Deleted");
+            alert(itemDB[i].getItemId() + " Deleted");
         }
     }
 
@@ -115,10 +115,10 @@ $("#btnUpdate").click(function (){
 
 function updateItem(id,name,qty,price){
     for (let j=0;j<itemDB.length;j++){
-        if (id==itemDB[j].iId){
-            itemDB[j].iName=name;
-            itemDB[j].iQty=qty;
-            itemDB[j].iPrice=price;
+        if (id==itemDB[j].getItemId()){
+            itemDB[j].setItemName(name);
+            itemDB[j].setItemQty(qty);
+            itemDB[j].setItemPrice(price);
 
             alert("Successfully Updated.");
         }
