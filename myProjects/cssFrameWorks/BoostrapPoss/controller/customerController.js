@@ -14,20 +14,20 @@ function saveCustomer() {
     let customerTp = $("#cstTp").val();
 
     //create Object
-    var customerObject = {
-        id: customerID,
-        name: customerName,
-        address: customerAddress,
-        tp: customerTp
-    };
-    //
-    customerDB.push(customerObject);
+
+    var customer=new customerDTO();
+    customer.setCustomerID(customerID);
+    customer.setCustomerName(customerName);
+    customer.setCustomerAddress(customerAddress);
+    customer.setCustomerTp(customerTp);
+
+    customerDB.push(customer);
 
 }
 
 function checkAlreadyExits() {
     for (let i = 0; i < customerDB.length; i++) {
-        if ($("#cstId").val() == customerDB[i].id) {
+        if ($("#cstId").val() == customerDB[i].getCustomerId()) {
             return -1;
         }
     }
@@ -38,7 +38,7 @@ function loadAllCustomers() {
     $("#customerTableBody").empty();
     for (var i of customerDB) {
         /*create a html row*/
-        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.tp}</td></tr>`;
+        let row = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAddress()}</td><td>${i.getCustomerTp()}</td></tr>`;
         /*select the table body and append the row */
         $("#customerTableBody").append(row);
     }
@@ -73,10 +73,10 @@ $("#btnSearch").click(function () {
 
     var response = searchCustomer(searchID);
     if (response) {
-        $("#cstId").val(response.id);
-        $("#cstName").val(response.name);
-        $("#cstAddress").val(response.address);
-        $("#cstTp").val(response.tp);
+        $("#cstId").val(response.getCustomerId());
+        $("#cstName").val(response.getCustomerName());
+        $("#cstAddress").val(response.getCustomerAddress());
+        $("#cstTp").val(response.getCustomerTp());
     } else {
         clearAll();
         alert("No Such a Customer");
@@ -86,7 +86,7 @@ $("#btnSearch").click(function () {
 
 function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
+        if (customerDB[i].getCustomerId() == id) {
             return customerDB[i];
         }
     }
@@ -101,9 +101,9 @@ $("#deleteCustomer").click(function () {
 function deleteCustomer(id) {
     var index = -1;
     for (var i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
+        if (customerDB[i].getCustomerId() == id) {
             index = i;
-            alert(customerDB[i].id + " Deleted");
+            alert(customerDB[i].getCustomerId() + " Deleted");
         }
     }
 
@@ -121,10 +121,10 @@ $("#btnUpdateCustomer").click(function (){
 
 function updateCustomer(id,name,address,tp){
     for (let i=0 ; i<customerDB.length;i++){
-        if (id==customerDB[i].id){
-            customerDB[i].name=name;
-            customerDB[i].address=address;
-            customerDB[i].tp=tp;
+        if (id==customerDB[i].getCustomerId()){
+            customerDB[i].setCustomerName(name);
+            customerDB[i].setCustomerAddress(address);
+            customerDB[i].setCustomerTp(tp);
 
             alert("Successfully Update ");
         }
