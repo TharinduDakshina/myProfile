@@ -251,87 +251,75 @@
     <!--Place Order-->
     <div class="container " id="placeOrder">
         <section class="row m-2 rounded-3">
-            <div class="col bg-light m-1 card" style="width: 18rem;">
+            <div class="col bg-light m-1 card">
+                <h5 class="card-header bg-primary " style="color: whitesmoke">Customer</h5>
                 <div class="card-body">
-                    <form class="row g-2">
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault01">Order Id</label>
-                            <input class="form-control" id="validationDefault01" required type="text" value="Mark">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault02">Date</label>
-                            <input class="form-control" id="validationDefault02" required type="text" value="Otto">
+                    <form class="row ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" for="orderFormCustomerTp">Order Id :</label>
+                                <input id="orderId" class="form-control" required type="text" >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" for="date">Date :</label>
+                                <input id="date" class="form-control" required type="date" >
+                            </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault01">Qty</label>
-                            <input class="form-control" required type="text" value="Mark">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="form-label fw-bold" for="orderFormCustomerId">Customer Id :</label>
+                                <input class="form-control" id="orderFormCustomerId" required type="text" >
+                            </div>
+                            <div class="col-md-7">
+                                <label class="form-label fw-bold" for="orderFormCustomerName">Customer Name :</label>
+                                <input class="form-control" id="orderFormCustomerName" required type="text" >
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold" for="orderFormCustomerAddress">Customer Address :</label>
+                                <input class="form-control" id="orderFormCustomerAddress" required type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" for="orderFormCustomerTp">Customer Tp :</label>
+                                <input id="orderFormCustomerTp" class="form-control" required type="text" >
+                            </div>
+
                         </div>
 
 
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault01">Customer Id</label>
-                            <input class="form-control" required type="text" value="Mark">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label" for="validationDefault03">Customer Name</label>
-                            <input class="form-control" id="validationDefault03" required type="text">
-                        </div>
 
-                        <div class="col-md-3">
-                            <label class="form-label" for="validationDefault04">State</label>
-                            <select class="form-select" id="validationDefault04" required>
-                                <option disabled selected value="">Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
 
-                        <div class="col-md-3">
-                            <label class="form-label" for="validationDefault05">Zip</label>
-                            <input class="form-control" id="validationDefault05" required type="text">
-                        </div>
+
+
                     </form>
                 </div>
             </div>
-            <div class="col bg-light m-1 card" style="width: 18rem;">
+            <div class="col bg-light m-1 card" >
+                <h5 class="card-header bg-primary " style="color: whitesmoke">Item Select</h5>
                 <div class="card-body">
-                    <form class="row g-2">
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault01">Order Id</label>
-                            <input class="form-control" required type="text" value="Mark">
-                        </div>
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault02">Date</label>
-                            <input class="form-control" required type="text" value="Otto">
-                        </div>
+                    <form class="row">
+                        <div class="row">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemId">Item Id :</label>
+                                <input id="orderFormItemId" class="form-control" required type="text" >
+                            </div>
 
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault01">Qty</label>
-                            <input class="form-control" required type="text" value="Mark">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Item Name :</label>
+                                <input id="orderFormItemName" class="form-control" required type="text" >
+                            </div>
                         </div>
 
 
-                        <div class="col-md-4">
-                            <label class="form-label" for="validationDefault01">Customer Id</label>
-                            <input class="form-control" required type="text" value="Mark">
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label" for="validationDefault03">Customer Name</label>
-                            <input class="form-control" required type="text">
-                        </div>
-
-                        <div class="col-md-3">
-                            <label class="form-label" for="validationDefault04">State</label>
-                            <select class="form-select" required>
-                                <option disabled selected value="">Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label class="form-label" for="validationDefault05">Zip</label>
-                            <input class="form-control" required type="text">
-                        </div>
                     </form>
                 </div>
             </div>
