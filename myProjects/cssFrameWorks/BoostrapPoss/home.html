@@ -48,7 +48,9 @@
             height: 20vh;
         }
 
-
+        hr{
+            height: 2px;
+        }
     </style>
 </head>
 <body>
@@ -303,11 +305,12 @@
                     </form>
                 </div>
             </div>
+
             <div class="col bg-light m-1 card" >
                 <h5 class="card-header bg-primary " style="color: whitesmoke">Item Select</h5>
                 <div class="card-body">
                     <form class="row">
-                        <div class="row">
+                        <div class="row mb-5">
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemId">Item Id :</label>
                                 <input id="orderFormItemId" class="form-control" required type="text" >
@@ -319,32 +322,76 @@
                             </div>
                         </div>
 
+                        <div class="row mb-4">
+                            <div class="col-md-4 fw-bold">
+                                <label class="form-label" for="orderFormQty">Item Qty :</label>
+                                <input id="orderFormQty" class="form-control" required type="text" >
+                            </div>
+
+                            <div class="col-md-4 fw-bold">
+                                <label class="form-label" for="orderFormPrice">Item Price :</label>
+                                <input id="orderFormPrice" class="form-control" required type="text" >
+                            </div>
+
+                            <div class="col-md-4 fw-bold">
+                                <label class="form-label" for="orderQty">Order Qty :</label>
+                                <input id="orderQty" class="form-control" required type="text" >
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div>
+                            <button id="btnAddItem" class="btn bg-warning p-2 text-dark bg-opacity-50 fw-bold"  type="button">Add Item</button>
+                        </div>
 
                     </form>
                 </div>
             </div>
-            <div class="col bg-warning m-1 card" style="width: 18rem;">
-                <h4 class="display-5 fw-bold ">Total : 12500.00/=</h4>
-                <h4 class="display-6 fw-bold ">subTotal : 12200.00/=</h4>
-                <form class="row g-2 m-1">
-                    <div class="col-md-4">
-                        <label class="form-label" for="validationDefault01">Cash</label>
-                        <input class="form-control" required type="text" value="00.00">
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="validationDefault02">Discount</label>
-                        <input class="form-control" required type="text" value="0.00">
+
+            <div class="col bg-white bg-opacity-10 m-1 card" style="width: 18rem;">
+                <div class="row mb-5">
+                    <div class="card-body">
+                        <div class="col-md-6 fw-bold ">
+                            <label class="form-label text-primary bg-opacity-10" for="total">Total </label>
+                            <h2 id="total" class="fw-lighter text-primary bg-opacity-10">00.00/=</h2>
+                        </div>
+
+                        <div class="col-md-6 fw-bold ">
+                            <label class="form-label text-danger bg-opacity-10" for="subTotal">SubTotal </label>
+                            <h2 id="subTotal" class="fw-lighter text-danger bg-opacity-10">00.00/=</h2>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Cash :</label>
+                                <input id="txtCash" class="form-control" required type="text" >
+                            </div>
+
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Discount :</label>
+                                <input id="txtDiscount" class="form-control" required type="text" >
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 fw-bold">
+                                <label class="form-label" for="orderFormItemName">Balance :</label>
+                                <input id="txtBalance" class="form-control" required type="text" >
+                            </div>
+
+                            <div class="col-md-6 fw-bold mt-4">
+                                <button id="btnPurchase" class="btn bg-success p-2 text-white bg-opacity-100 fw-bold"  type="button">Purchase</button>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class="col-md-4">
-                        <label class="form-label" for="validationDefault01">Balance</label>
-                        <input class="form-control" required type="text" value="00.00">
-                    </div>
 
-                    <div class="position-relative">
-                        <button class="btn btn-success position-absolute top-100 end-0" type="button">Pay bill</button>
-                    </div>
-                </form>
+
+                </div>
             </div>
         </section>
 
@@ -352,52 +399,15 @@
             <table class="table table-success table-striped mt-5">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Item Id</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Park</td>
-                    <td>Siman</td>
-                    <td>@mdo</td>
-                </tr>
+                <tbody id="orderFormTableBody">
 
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Saman</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
                 </tbody>
             </table>
         </section>
