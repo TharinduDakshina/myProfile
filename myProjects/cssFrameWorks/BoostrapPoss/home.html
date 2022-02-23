@@ -313,7 +313,10 @@
                         <div class="row mb-5">
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemId">Item Id :</label>
-                                <input id="orderFormItemId" class="form-control" required type="text" >
+                                <select id="orderFormItemId" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                    <option id="A" value="0">Select Item Code</option>
+
+                                </select>
                             </div>
 
                             <div class="col-md-6 fw-bold">
@@ -423,6 +426,7 @@
 <script src="module/itemDTO.js"></script>
 <script src="controller/customerController.js"></script>
 <script src="controller/itemController.js"></script>
+<script src="controller/orderFormController.js.js"></script>
 <script>
 
     $("#image").css("display", "block");
@@ -457,6 +461,11 @@
         $("#item").css("display", "none");
         $("#placeOrder").css("display", "block");
     });
+</script>
+<script>
+
+
+
 </script>
 </body>
 </html>
