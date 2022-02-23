@@ -271,8 +271,10 @@
 
                         <div class="row">
                             <div class="col-md-5">
-                                <label class="form-label fw-bold" for="orderFormCustomerId">Customer Id :</label>
-                                <input class="form-control" id="orderFormCustomerId" required type="text" >
+                                <label class="form-label fw-bold" for="orderFormCstId">Customer Id :</label>
+                                <select id="orderFormCstId" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+
+                                </select>
                             </div>
                             <div class="col-md-7">
                                 <label class="form-label fw-bold" for="orderFormCustomerName">Customer Name :</label>
@@ -296,12 +298,6 @@
                             </div>
 
                         </div>
-
-
-
-
-
-
                     </form>
                 </div>
             </div>
@@ -314,7 +310,6 @@
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemId">Item Id :</label>
                                 <select id="orderFormItemId" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-                                    <option id="A" value="0">Select Item Code</option>
 
                                 </select>
                             </div>
@@ -426,7 +421,7 @@
 <script src="module/itemDTO.js"></script>
 <script src="controller/customerController.js"></script>
 <script src="controller/itemController.js"></script>
-<script src="controller/orderFormController.js.js"></script>
+<script src="controller/orderFormController.js"></script>
 <script>
 
     $("#image").css("display", "block");
@@ -462,10 +457,6 @@
         $("#placeOrder").css("display", "block");
     });
 </script>
-<script>
 
-
-
-</script>
 </body>
 </html>
