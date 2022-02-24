@@ -48,7 +48,6 @@ function loadAllCustomers() {
         let cstAddress = $(this).children(":eq(2)").text();
         let cstTp = $(this).children(":eq(3)").text();
 
-        console.log(cstId, cstName, cstAddress, cstTp);
 
         $("#cstId").val(cstId);
         $("#cstName").val(cstName);
