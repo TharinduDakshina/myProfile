@@ -1,6 +1,25 @@
+{
+    loadOrderId();
+}
+
 $("#placeOrderButton").click(function (){
     loadItemId();
     loadCustomerId();
+});
+
+
+function loadOrderId(){
+    if ($("#orderId").val()==""){
+        $("#orderId").val("001");
+    }else {
+        var value =parseInt($("#orderId").val());
+        value++;
+        $("#orderId").val(value);
+    }
+}
+
+$("#btnPurchase").click(function (){
+    loadOrderId();
 });
 
 function  loadItemId(){
@@ -18,8 +37,6 @@ function loadCustomerId(){
         $("#orderFormCstId").append($("<option></option>").attr("value",e).text(e.getCustomerId()));
     });
 
- /*  var selectId=$("#orderFormCstId:selected").text();
-    console.log(selectId);*/
 }
 
 $("#orderFormCstId").change(function (){
