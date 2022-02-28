@@ -76,7 +76,7 @@ $("#btnAddItem").click(function () {
 });
 
 function saveOrder() {
-    var orderID=$("#orderId").val();
+   /* var orderID=$("#orderId").val();
     var date=$("#date").val();
     var customerId=$("#orderFormCstId option:selected").text();
     var itemId=$("#orderFormItemId option:selected").text();
@@ -84,7 +84,7 @@ function saveOrder() {
     var itemPrice=$("#orderFormPrice").val();
     var qty=$("#orderQty").val();
     var total=$("#total").val();
-    var subTotal=$("#subTotal").val();
+    var subTotal=$("#subTotal").val();*/
 
 
 }
