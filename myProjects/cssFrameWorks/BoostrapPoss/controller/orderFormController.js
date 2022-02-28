@@ -76,7 +76,7 @@ $("#btnAddItem").click(function () {
 });
 
 function saveOrder() {
-   /* var orderID=$("#orderId").val();
+    var orderID=$("#orderId").val();
     var date=$("#date").val();
     var customerId=$("#orderFormCstId option:selected").text();
     var itemId=$("#orderFormItemId option:selected").text();
@@ -84,9 +84,20 @@ function saveOrder() {
     var itemPrice=$("#orderFormPrice").val();
     var qty=$("#orderQty").val();
     var total=$("#total").val();
-    var subTotal=$("#subTotal").val();*/
+    var subTotal=$("#subTotal").val();
 
+    var orderDetails=new orderDTO();
+    orderDetails.setOrderId(orderID);
+    orderDetails.setOrderDate(date);
+    orderDetails.setOrderCustomerId(customerId);
+    orderDetails.setOrderItemId(itemId);
+    orderDetails.setOrderItemName(itemName);
+    orderDetails.setOrderItemPrice(itemPrice);
+    orderDetails.setOrderQty(qty);
+    orderDetails.setTotal(total);
+    orderDetails.setSubTotal(subTotal);
 
+    orderDB.push(orderDetails);
 }
 
 
@@ -116,3 +127,61 @@ function countTotal() {
 
 }
 
+
+
+/*========================= validation =====================================*/
+
+let regxQty = /^[0-9]{1,3}$/;
+let regxCash = /^[0-9](.){1,6}$/;
+
+$("#btnAddItem").attr("disabled",true);
+
+function validateOrderForm() {
+    var qty=$("#orderQty").val();
+    if (regxQty.test(qty)){
+        var cash=$("#txtCash").val();
+        $("#orderQty").css('border', '2px solid green');
+        if (regxCash.test(cash)){
+            $("#txtCash").css('border', '2px solid green');
+        }else {
+            $("#txtCash").css('border', '2px solid red');
+            $("#btnAddItem").attr("disabled",true);
+        }
+    }else {
+        $("#orderQty").css('border', '2px solid red');
+        $("#btnAddItem").attr("disabled",true);
+    }
+}
+
+$("#orderQty,#txtCash").on('keyup',function (){
+    validateOrderForm();
+});
+
+
+
+$("#orderQty").on('keyup',function (e){
+    if (e.key == "Enter"){
+        checkValidation();
+    }
+});
+
+$("#txtCash").on('keyup',function (e){
+    if (e.key == "Enter"){
+        checkValidation();
+    }
+});
+
+function checkValidation() {
+    var qty=$("#orderQty").val();
+    if (regxQty.test(qty)){
+        $("#txtCash").focus();
+        var cash=$("#txtCash").val();
+        if (regxCash.test(cash)){
+            $("#btnAddItem").attr("disabled",false);
+        }else {
+            $("#txtCash").focus();
+        }
+    }else {
+        $("#orderQty").focus();
+    }
+}
