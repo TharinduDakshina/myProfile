@@ -70,36 +70,12 @@ function setItemData(id) {
     }
 }
 
+
 $("#btnAddItem").click(function () {
     countTotal();
     saveOrder();
+    loadTable();
 });
-
-function saveOrder() {
-    var orderID=$("#orderId").val();
-    var date=$("#date").val();
-    var customerId=$("#orderFormCstId option:selected").text();
-    var itemId=$("#orderFormItemId option:selected").text();
-    var itemName=$("#orderFormItemName").val();
-    var itemPrice=$("#orderFormPrice").val();
-    var qty=$("#orderQty").val();
-    var total=$("#total").val();
-    var subTotal=$("#subTotal").val();
-
-    var orderDetails=new orderDTO();
-    orderDetails.setOrderId(orderID);
-    orderDetails.setOrderDate(date);
-    orderDetails.setOrderCustomerId(customerId);
-    orderDetails.setOrderItemId(itemId);
-    orderDetails.setOrderItemName(itemName);
-    orderDetails.setOrderItemPrice(itemPrice);
-    orderDetails.setOrderQty(qty);
-    orderDetails.setTotal(total);
-    orderDetails.setSubTotal(subTotal);
-
-    orderDB.push(orderDetails);
-}
-
 
 function countTotal() {
     var total;
@@ -127,7 +103,38 @@ function countTotal() {
 
 }
 
+function saveOrder() {
+    var orderID=$("#orderId").val();
+    var date=$("#date").val();
+    var customerId=$("#orderFormCstId option:selected").text();
+    var itemId=$("#orderFormItemId option:selected").text();
+    var itemName=$("#orderFormItemName").val();
+    var itemPrice=$("#orderFormPrice").val();
+    var qty=$("#orderQty").val();
+    var total=$("#total").text();
+    var subTotal=$("#subTotal").text();
 
+    var orderDetails=new orderDTO();
+    orderDetails.setOrderId(orderID);
+    orderDetails.setOrderDate(date);
+    orderDetails.setOrderCustomerId(customerId);
+    orderDetails.setOrderItemId(itemId);
+    orderDetails.setOrderItemName(itemName);
+    orderDetails.setOrderItemPrice(itemPrice);
+    orderDetails.setOrderQty(qty);
+    orderDetails.setTotal(total);
+    orderDetails.setSubTotal(subTotal);
+
+    orderDB.push(orderDetails);
+}
+
+function loadTable() {
+    $("#orderFormTableBody").empty();
+    orderDB.forEach(function (a){
+        let orderRow= `<tr><td>${a.getOrderId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td></tr>`;
+        $("#orderFormTableBody").append(orderRow);
+    });
+}
 
 /*========================= validation =====================================*/
 
@@ -135,6 +142,7 @@ let regxQty = /^[0-9]{1,3}$/;
 let regxCash = /^[0-9](.){1,6}$/;
 
 $("#btnAddItem").attr("disabled",true);
+$("#btnPurchase").attr("disabled",true);
 
 function validateOrderForm() {
     var qty=$("#orderQty").val();
@@ -175,9 +183,10 @@ function checkValidation() {
     var qty=$("#orderQty").val();
     if (regxQty.test(qty)){
         $("#txtCash").focus();
+        $("#btnAddItem").attr("disabled",false);
         var cash=$("#txtCash").val();
         if (regxCash.test(cash)){
-            $("#btnAddItem").attr("disabled",false);
+            $("#btnPurchase").attr("disabled",false);
         }else {
             $("#txtCash").focus();
         }
