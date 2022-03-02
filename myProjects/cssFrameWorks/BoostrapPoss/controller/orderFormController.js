@@ -8,7 +8,6 @@ $("#placeOrderButton").click(function () {
     loadCustomerId();
 });
 
-
 function loadOrderId() {
     if ($("#orderId").val() == "") {
         $("#orderId").val("001");
@@ -70,11 +69,17 @@ function setItemData(id) {
     }
 }
 
-
 $("#btnAddItem").click(function () {
     countTotal();
-    saveOrder();
-    loadTable();
+    if ($("#orderFormItemId option:selected").text()=="" || $("#orderFormCstId option:selected").text()==""){
+        alert("Please select the Customer Id and Item Id");
+        clearOrderItem();
+    }else {
+        saveOrder();
+        updateItemDatabase();
+        loadTable();
+    }
+
 });
 
 function countTotal() {
@@ -130,22 +135,25 @@ function saveOrder() {
             if (itemId==orderDB[i].getOrderItemId()){
                 orderDB[i].setOrderQty(orderDB[i].getOrderQty()+qty);
                 orderDB[i].setTotal(orderDB[i].getTotal()+total);
-                return false;
+                return true;
             }else {
                 continue L1;
             }
         }
-        return true;
+        return false;
     }
 
     if (orderDB.length==0){
-        checked=true;
+        checked=false;
     }else{
         checked=idExits();
     }
 
     if (checked){
+        clearOrderItem();
+    }else {
         orderDB.push(orderDetails);
+        clearOrderItem();
     }
 }
 
@@ -158,6 +166,25 @@ function loadTable() {
 
 }
 
+function clearOrderItem() {
+    $("#orderFormItemName,#orderQty,#orderFormPrice,#orderFormQty").val("");
+    $("#btnAddItem").attr("disabled",true);
+    validateOrderForm();
+}
+
+function updateItemDatabase() {
+    var itemId =$("#orderFormItemId option:selected").text();
+    var qty=parseInt($("#orderFormQty").val());
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemId == itemDB[i].getItemId()){
+            console.log(typeof itemDB[i].getItemQty());
+            itemDB[i].setItemQty(parseInt(itemDB[i].getItemQty())-qty);
+            console.log(typeof itemDB[i].getItemQty());
+            console.log(itemDB[i].getItemQty());
+        }
+    }
+}
+
 /*========================= validation =====================================*/
 
 let regxQty = /^[0-9]{1,3}$/;
@@ -165,6 +192,10 @@ let regxCash = /^[0-9](.){1,6}$/;
 
 $("#btnAddItem").attr("disabled",true);
 $("#btnPurchase").attr("disabled",true);
+
+$("#orderQty,#txtCash").on('keyup',function (){
+    validateOrderForm();
+});
 
 function validateOrderForm() {
     var qty=$("#orderQty").val();
@@ -183,12 +214,6 @@ function validateOrderForm() {
     }
 }
 
-$("#orderQty,#txtCash").on('keyup',function (){
-    validateOrderForm();
-});
-
-
-
 $("#orderQty").on('keyup',function (e){
     if (e.key == "Enter"){
         checkValidation();
@@ -204,7 +229,6 @@ $("#txtCash").on('keyup',function (e){
 function checkValidation() {
     var qty=$("#orderQty").val();
     if (regxQty.test(qty)){
-        $("#txtCash").focus();
         $("#btnAddItem").attr("disabled",false);
         var cash=$("#txtCash").val();
         if (regxCash.test(cash)){
