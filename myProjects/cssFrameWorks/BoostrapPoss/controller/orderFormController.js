@@ -209,7 +209,11 @@ function validateOrderForm() {
 
 $("#orderQty").on('keyup',function (e){
     if (e.key == "Enter"){
-        checkValidation();
+        if (parseInt($("#orderQty").val())  > parseInt($("#orderFormQty").val())){
+            alert("Quantity is invalid");
+        }else {
+            checkValidation();
+        }
     }
 });
 
