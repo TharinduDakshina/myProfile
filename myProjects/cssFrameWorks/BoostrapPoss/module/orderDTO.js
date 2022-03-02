@@ -80,4 +80,6 @@ function orderDTO(oId,date,cId,iId,iName,iPrice,oQty,total,subTotal){
     this.setSubTotal=function (value){
         __subTotal=value;
     }
+
+
 }

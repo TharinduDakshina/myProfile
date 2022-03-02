@@ -110,7 +110,7 @@ function saveOrder() {
     var itemId=$("#orderFormItemId option:selected").text();
     var itemName=$("#orderFormItemName").val();
     var itemPrice=$("#orderFormPrice").val();
-    var qty=$("#orderQty").val();
+    var qty=parseInt($("#orderQty").val());
     var total=$("#total").text();
     var subTotal=$("#subTotal").text();
 
@@ -125,15 +125,49 @@ function saveOrder() {
     orderDetails.setTotal(total);
     orderDetails.setSubTotal(subTotal);
 
-    orderDB.push(orderDetails);
+    var checked=false;
+
+    function idExits() {
+        for (var i=0;i<orderDB.length;i++){
+            console.log("..............................................");
+            if (itemId==orderDB[i].getOrderItemId()){
+                console.log("pre"+orderDB[i].getOrderQty());
+                orderDB[i].setOrderQty(orderDB[i].getOrderQty()+qty);
+                console.log(orderDB[i].getOrderQty());
+                orderDB[i].setTotal(orderDB[i].getTotal()+total);
+                console.log("////////////////////////////////////");
+                return true;
+            }else {
+                return false;
+                console.log("============================================");
+            }
+        }
+    }
+
+    if (orderDB.length==0){
+        checked=false;
+    }else{
+        checked=idExits();
+    }
+
+    if (checked){
+        console.log("-------------------------------");
+    }else {
+        orderDB.push(orderDetails);
+        console.log("+++++++++++++++++");
+
+    }
+
 }
 
 function loadTable() {
     $("#orderFormTableBody").empty();
+
     orderDB.forEach(function (a){
-        let orderRow= `<tr><td>${a.getOrderId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td></tr>`;
+        let orderRow= `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td></tr>`;
         $("#orderFormTableBody").append(orderRow);
     });
+
 }
 
 /*========================= validation =====================================*/
