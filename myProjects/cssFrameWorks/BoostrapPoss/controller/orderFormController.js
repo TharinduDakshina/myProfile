@@ -1,12 +1,6 @@
 {
     loadOrderId();
-
 }
-
-$("#placeOrderButton").click(function () {
-    loadItemId();
-    loadCustomerId();
-});
 
 function loadOrderId() {
     if ($("#orderId").val() == "") {
@@ -39,7 +33,7 @@ function loadCustomerId() {
 
 }
 
-$("#orderFormCstId").change(function () {
+$("#orderFormCstId").click(function () {
     var selectedId = $("#orderFormCstId option:selected").text();
     setCustomerData(selectedId);
 });
@@ -54,7 +48,7 @@ function setCustomerData(id) {
     }
 }
 
-$("#orderFormItemId").change(function () {
+$("#orderFormItemId").click(function () {
     var selectedId = $("#orderFormItemId option:selected").text();
     setItemData(selectedId);
 });
@@ -75,8 +69,8 @@ $("#btnAddItem").click(function () {
         alert("Please select the Customer Id and Item Id");
         clearOrderItem();
     }else {
-        saveOrder();
         updateItemDatabase();
+        saveOrder();
         loadTable();
     }
 
@@ -174,13 +168,12 @@ function clearOrderItem() {
 
 function updateItemDatabase() {
     var itemId =$("#orderFormItemId option:selected").text();
-    var qty=parseInt($("#orderFormQty").val());
+    var qty=parseInt($("#orderQty").val());
     for (let i = 0; i < itemDB.length; i++) {
         if (itemId == itemDB[i].getItemId()){
-            console.log(typeof itemDB[i].getItemQty());
-            itemDB[i].setItemQty(parseInt(itemDB[i].getItemQty())-qty);
-            console.log(typeof itemDB[i].getItemQty());
-            console.log(itemDB[i].getItemQty());
+            var x =parseInt(itemDB[i].getItemQty());
+            x-=qty;
+            itemDB[i].setItemQty(x);
         }
     }
 }

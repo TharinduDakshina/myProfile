@@ -309,8 +309,8 @@
                         <div class="row mb-5">
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemId">Item Id :</label>
-                                <select id="orderFormItemId" class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
-
+                                <select  id="orderFormItemId" class="form-select form-select-sm mb-3" aria-label="Default select example">
+                                    <option selected ></option>
                                 </select>
                             </div>
 
@@ -323,7 +323,7 @@
                         <div class="row mb-4">
                             <div class="col-md-4 fw-bold">
                                 <label class="form-label" for="orderFormQty">Item Qty :</label>
-                                <input id="orderFormQty" readonly="readonly" class="form-control" required type="text" >
+                                <input id="orderFormQty" readonly="readonly" class="form-control"  type="text" >
                             </div>
 
                             <div class="col-md-4 fw-bold">
@@ -451,6 +451,8 @@
         $("#customer").css("display", "none");
         $("#item").css("display", "none");
         $("#placeOrder").css("display", "block");
+        loadItemId();
+        loadCustomerId();
     });
 </script>
 
