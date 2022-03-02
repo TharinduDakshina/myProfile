@@ -109,10 +109,9 @@ function saveOrder() {
     var customerId=$("#orderFormCstId option:selected").text();
     var itemId=$("#orderFormItemId option:selected").text();
     var itemName=$("#orderFormItemName").val();
-    var itemPrice=$("#orderFormPrice").val();
+    var itemPrice=parseInt($("#orderFormPrice").val());
     var qty=parseInt($("#orderQty").val());
-    var total=$("#total").text();
-    var subTotal=$("#subTotal").text();
+    var total= itemPrice * qty;
 
     var orderDetails=new orderDTO();
     orderDetails.setOrderId(orderID);
@@ -123,46 +122,35 @@ function saveOrder() {
     orderDetails.setOrderItemPrice(itemPrice);
     orderDetails.setOrderQty(qty);
     orderDetails.setTotal(total);
-    orderDetails.setSubTotal(subTotal);
 
     var checked=false;
 
     function idExits() {
-        for (var i=0;i<orderDB.length;i++){
-            console.log("..............................................");
+      L1:  for (var i=0;i<orderDB.length;i++){
             if (itemId==orderDB[i].getOrderItemId()){
-                console.log("pre"+orderDB[i].getOrderQty());
                 orderDB[i].setOrderQty(orderDB[i].getOrderQty()+qty);
-                console.log(orderDB[i].getOrderQty());
                 orderDB[i].setTotal(orderDB[i].getTotal()+total);
-                console.log("////////////////////////////////////");
-                return true;
-            }else {
                 return false;
-                console.log("============================================");
+            }else {
+                continue L1;
             }
         }
+        return true;
     }
 
     if (orderDB.length==0){
-        checked=false;
+        checked=true;
     }else{
         checked=idExits();
     }
 
     if (checked){
-        console.log("-------------------------------");
-    }else {
         orderDB.push(orderDetails);
-        console.log("+++++++++++++++++");
-
     }
-
 }
 
 function loadTable() {
     $("#orderFormTableBody").empty();
-
     orderDB.forEach(function (a){
         let orderRow= `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td></tr>`;
         $("#orderFormTableBody").append(orderRow);

@@ -7,7 +7,6 @@ function orderDTO(oId,date,cId,iId,iName,iPrice,oQty,total,subTotal){
     var __iPrice=iPrice;
     var __oQty=oQty;
     var __total=total;
-    var __subTotal=subTotal;
 
     this.getOrderId=function (){
         return __oId;
@@ -73,13 +72,7 @@ function orderDTO(oId,date,cId,iId,iName,iPrice,oQty,total,subTotal){
         __total=value;
     }
 
-    this.getSubTotal=function (){
-        return __subTotal;
-    }
 
-    this.setSubTotal=function (value){
-        __subTotal=value;
-    }
 
 
 }
