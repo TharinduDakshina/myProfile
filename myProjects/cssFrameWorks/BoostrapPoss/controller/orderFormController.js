@@ -13,7 +13,14 @@ function loadOrderId() {
 }
 
 $("#btnPurchase").click(function () {
-    loadOrderId();
+    if ($("#date").val() == ""){
+        $("#date").css('border', '2px solid red');
+    }else {
+        loadOrderId();
+        $("#orderFormCustomerName,#orderFormCustomerAddress,#orderFormCustomerTp,#date").val("");
+        $("#orderFormTableBody").empty();
+    }
+
 });
 
 function loadItemId() {
@@ -93,11 +100,11 @@ function countTotal() {
     if (displayTotal > 100 || displayTotal < 1000){
         $("#txtDiscount").val("5%");
         var subTotal= displayTotal-((displayTotal * 5)/100);
-        $("#subTotal").text(subTotal);
+        $("#subTotal").text(subTotal+" /=");
     }else if (displayTotal > 1000 ){
         $("#txtDiscount").val("10%");
         var subTotal= displayTotal-((displayTotal * 10)/100);
-        $("#subTotal").text(subTotal);
+        $("#subTotal").text(subTotal+" /=");
     }
 
 }
@@ -192,17 +199,19 @@ $("#orderQty,#txtCash").on('keyup',function (){
 
 function validateOrderForm() {
     var qty=$("#orderQty").val();
+
     if (regxQty.test(qty)){
-        var cash=$("#txtCash").val();
         $("#orderQty").css('border', '2px solid green');
-        if (regxCash.test(cash)){
-            $("#txtCash").css('border', '2px solid green');
-        }else {
-            $("#txtCash").css('border', '2px solid red');
-            $("#btnAddItem").attr("disabled",true);
-        }
     }else {
         $("#orderQty").css('border', '2px solid red');
+        $("#btnAddItem").attr("disabled",true);
+    }
+
+    var cash=$("#txtCash").val();
+    if (regxCash.test(cash)){
+        $("#txtCash").css('border', '2px solid green');
+    }else {
+        $("#txtCash").css('border', '2px solid red');
         $("#btnAddItem").attr("disabled",true);
     }
 }
@@ -217,9 +226,16 @@ $("#orderQty").on('keyup',function (e){
     }
 });
 
+
+
 $("#txtCash").on('keyup',function (e){
     if (e.key == "Enter"){
-        checkValidation();
+        if (parseInt($("#total").text()) <= parseInt($("#txtCash").val())){
+            setBalance();
+            checkValidation();
+        }else {
+            alert("Wrong Amount..! ");
+        }
     }
 });
 
@@ -227,13 +243,19 @@ function checkValidation() {
     var qty=$("#orderQty").val();
     if (regxQty.test(qty)){
         $("#btnAddItem").attr("disabled",false);
-        var cash=$("#txtCash").val();
-        if (regxCash.test(cash)){
-            $("#btnPurchase").attr("disabled",false);
-        }else {
-            $("#txtCash").focus();
-        }
     }else {
         $("#orderQty").focus();
     }
+
+    var cash=$("#txtCash").val();
+    if (regxCash.test(cash)){
+        $("#btnPurchase").attr("disabled",false);
+    }else {
+        $("#txtCash").focus();
+    }
+}
+
+function setBalance() {
+    var balance=parseInt($("#txtCash").val())-parseInt($("#subTotal").text());
+    $("#txtBalance").val(balance+".00");
 }
