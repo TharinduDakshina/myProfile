@@ -161,7 +161,7 @@ function saveOrder() {
 function loadTable() {
     $("#orderFormTableBody").empty();
     orderDB.forEach(function (a){
-        let orderRow= `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td></tr>`;
+        let orderRow= `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td><td><button type="button" class="btn btn-danger ">Remove</button></td></tr>`;
         $("#orderFormTableBody").append(orderRow);
     });
 
