@@ -3,92 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link href="assets/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="/assets/css/fonts/css/all.css" rel="stylesheet">
-    <style>
-        #image {
-            width: 98vw;
-            height: 92vh;
-            filter: blur(0.3rem);
-            margin: 0;
-        }
-
-        #customerSearch > div:first-child {
-            background-color: lightgreen;
-            width: 25vw;
-            height: 5vh;
-        }
-
-        #customerSearch > div:first-child > h6 {
-            font-weight: normal;
-
-        }
-
-        #customerSearch > div:nth-child(2) {
-            width: 25vw;
-            height: 20vh;
-        }
-
-        .buttonSet {
-            width: 20vw;
-        }
-
-        #itemSearch > div:first-child {
-            background-color: lightgreen;
-            width: 25vw;
-            height: 5vh;
-        }
-
-        #itemSearch > div:first-child > h6 {
-            font-weight: normal;
-        }
-
-        #itemSearch > div:nth-child(2) {
-            width: 25vw;
-            height: 20vh;
-        }
-
-        hr{
-            height: 2px;
-        }
-
-        #header{
-            z-index: 1;
-            background-color: #bfe4ec;
-            width: 99vw;
-
-        }
-
-        #homePageRow{
-            width: 99vw;
-        }
-
-        #navHeader>li>a:hover{
-            color: #b05219;
-            font-weight: bold;
-        }
-
-        #homePageImages>div>img{
-            height: 50vh;
-            width: 50vw;
-        }
-
-        #animationHomePage{
-            position: relative;
-            top: 22vh;
-            left: 20vw;
-
-        }
-
-        #customerQty{
-            position: absolute;
-            width: 20vw;
-            height: 10vh;
-            background-color: rgba(74, 58, 58, 0.96);
-            z-index: 2;
-        }
-    </style>
+    <link href="assets/css/styles.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -165,7 +83,15 @@
             </div>
         </div>
         <div  class="col">
-            <div id="customerQty"></div>
+            <div id="customerQty">
+                <h4>Customers</h4>
+                <p id="homePageCustomers">24</p>
+            </div>
+
+            <div id="homePageItemQty">
+                <h4>Items</h4>
+                <p id="homePageItem">24</p>
+            </div>
         </div>
     </div>
 
@@ -497,7 +423,7 @@
 </main>
 
 
-<script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="db/DB.js"></script>
 <script src="module/customerDTO.js"></script>
