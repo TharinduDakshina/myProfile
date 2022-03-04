@@ -220,6 +220,7 @@ $("#orderQty").on('keyup',function (e){
     if (e.key == "Enter"){
         if (parseInt($("#orderQty").val())  > parseInt($("#orderFormQty").val())){
             alert("Quantity is invalid");
+            /*swal("Good job!", "You clicked the button!", "success");*/
         }else {
             checkValidation();
         }
