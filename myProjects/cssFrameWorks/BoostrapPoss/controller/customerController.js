@@ -15,7 +15,7 @@ function saveCustomer() {
 
     //create Object
 
-    var customer=new customerDTO();
+    var customer = new customerDTO();
     customer.setCustomerID(customerID);
     customer.setCustomerName(customerName);
     customer.setCustomerAddress(customerAddress);
@@ -66,7 +66,6 @@ function clearAll() {
 }
 
 
-
 $("#btnSearch").click(function () {
     var searchID = $("#txtCustomerSearch").val();
 
@@ -109,18 +108,18 @@ function deleteCustomer(id) {
     customerDB.splice(index, 1);
 }
 
-$("#btnUpdateCustomer").click(function (){
+$("#btnUpdateCustomer").click(function () {
     var updateId = $("#cstId").val();
     var updateName = $("#cstName").val();
     var updateAddress = $("#cstAddress").val();
     var updateTp = $("#cstTp").val();
-    updateCustomer(updateId,updateName,updateAddress,updateTp);
+    updateCustomer(updateId, updateName, updateAddress, updateTp);
     clearAll();
 });
 
-function updateCustomer(id,name,address,tp){
-    for (let i=0 ; i<customerDB.length;i++){
-        if (id==customerDB[i].getCustomerId()){
+function updateCustomer(id, name, address, tp) {
+    for (let i = 0; i < customerDB.length; i++) {
+        if (id == customerDB[i].getCustomerId()) {
             customerDB[i].setCustomerName(name);
             customerDB[i].setCustomerAddress(address);
             customerDB[i].setCustomerTp(tp);
@@ -129,7 +128,6 @@ function updateCustomer(id,name,address,tp){
         }
     }
 }
-
 
 
 /*---------------------Validation--------------------------*/

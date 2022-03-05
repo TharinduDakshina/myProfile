@@ -10,10 +10,10 @@
 </head>
 <body>
 <header>
-    <nav id="header" class="navbar  navbar-light navbar navbar-expand-lg" >
+    <nav class="navbar  navbar-light navbar navbar-expand-lg" id="header">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse" >
-                <ul id="navHeader" class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navHeader">
                     <li class="nav-item">
                         <a aria-current="page" class="nav-link active" href="#image" id="homeButton">Home</a>
                     </li>
@@ -36,9 +36,9 @@
 
 <main>
     <!--Home Page-->
-    <div id="homePageRow" class="row">
-        <img class="position-absolute" alt="image loading Error" id="image" src="assets/images/poss.jpg">
-        <div id="animationHomePage"  class="col">
+    <div class="row" id="homePageRow">
+        <img alt="image loading Error" class="position-absolute" id="image" src="assets/images/poss.jpg">
+        <div class="col" id="animationHomePage">
             <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
                 <div class="carousel-indicators">
                     <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
@@ -48,7 +48,7 @@
                     <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions"
                             type="button"></button>
                 </div>
-                <div id="homePageImages" class="carousel-inner" >
+                <div class="carousel-inner" id="homePageImages">
                     <div class="carousel-item active">
                         <img alt="image1" class="d-block " src="assets/images/image1.jpg">
                         <div class="carousel-caption d-none d-md-block">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
 
-                </div  >
+                </div>
                 <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions"
                         type="button">
                     <span class="visually-hidden">Previous</span>
@@ -82,7 +82,7 @@
                 </button>
             </div>
         </div>
-        <div  class="col">
+        <div class="col">
             <div id="customerQty">
                 <h4>Customers</h4>
                 <p id="homePageCustomers">24</p>
@@ -99,7 +99,7 @@
     </div>
 
     <!--Customer-->
-    <div class="container " id="customer" >
+    <div class="container " id="customer">
         <svg class="bi bi-person-square mb-2 mt-2 d-inline-block" fill="currentColor" height="5%" viewBox="0 0 16 16"
              width="5%" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -275,33 +275,38 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold" for="orderFormCustomerTp">Order Id :</label>
-                                <input id="orderId" readonly="readonly" class="form-control"  required type="text" placeholder="0001">
+                                <input class="form-control" id="orderId" placeholder="0001" readonly="readonly" required
+                                       type="text">
                             </div>
 
                             <div class="col-md-6">
                                 <label class="form-label fw-bold" for="date">Date :</label>
-                                <input id="date" class="form-control" required type="date" >
+                                <input class="form-control" id="date" required type="date">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-5">
                                 <label class="form-label fw-bold" for="orderFormCstId">Customer Id :</label>
-                                <select id="orderFormCstId"  class="form-select form-select-sm mb-3" aria-label=".form-select-lg example">
+                                <select aria-label=".form-select-lg example" class="form-select form-select-sm mb-3"
+                                        id="orderFormCstId">
 
                                 </select>
                             </div>
                             <div class="col-md-7">
                                 <label class="form-label fw-bold" for="orderFormCustomerName">Customer Name :</label>
-                                <input class="form-control" id="orderFormCustomerName" readonly="readonly" required type="text" >
+                                <input class="form-control" id="orderFormCustomerName" readonly="readonly" required
+                                       type="text">
                             </div>
                         </div>
 
                         <div class="row">
 
                             <div class="col-md-12">
-                                <label class="form-label fw-bold" for="orderFormCustomerAddress">Customer Address :</label>
-                                <input class="form-control" readonly="readonly" id="orderFormCustomerAddress" required type="text">
+                                <label class="form-label fw-bold" for="orderFormCustomerAddress">Customer Address
+                                    :</label>
+                                <input class="form-control" id="orderFormCustomerAddress" readonly="readonly" required
+                                       type="text">
                             </div>
 
                         </div>
@@ -309,7 +314,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-label fw-bold" for="orderFormCustomerTp">Customer Tp :</label>
-                                <input id="orderFormCustomerTp" readonly="readonly" class="form-control" required type="text" >
+                                <input class="form-control" id="orderFormCustomerTp" readonly="readonly" required
+                                       type="text">
                             </div>
 
                         </div>
@@ -317,38 +323,41 @@
                 </div>
             </div>
 
-            <div class="col bg-light m-1 card" >
+            <div class="col bg-light m-1 card">
                 <h5 class="card-header bg-primary " style="color: whitesmoke">Item Select</h5>
                 <div class="card-body">
                     <form class="row">
                         <div class="row mb-5">
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemId">Item Id :</label>
-                                <select  id="orderFormItemId" class="form-select form-select-sm mb-3" aria-label="Default select example">
-                                    <option selected ></option>
+                                <select aria-label="Default select example" class="form-select form-select-sm mb-3"
+                                        id="orderFormItemId">
+                                    <option selected></option>
                                 </select>
                             </div>
 
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemName">Item Name :</label>
-                                <input id="orderFormItemName" readonly="readonly" class="form-control" required type="text" >
+                                <input class="form-control" id="orderFormItemName" readonly="readonly" required
+                                       type="text">
                             </div>
                         </div>
 
                         <div class="row mb-4">
                             <div class="col-md-4 fw-bold">
                                 <label class="form-label" for="orderFormQty">Item Qty :</label>
-                                <input id="orderFormQty" readonly="readonly" class="form-control"  type="text" >
+                                <input class="form-control" id="orderFormQty" readonly="readonly" type="text">
                             </div>
 
                             <div class="col-md-4 fw-bold">
                                 <label class="form-label" for="orderFormPrice">Item Price :</label>
-                                <input id="orderFormPrice" readonly="readonly" class="form-control" required type="text" >
+                                <input class="form-control" id="orderFormPrice" readonly="readonly" required
+                                       type="text">
                             </div>
 
                             <div class="col-md-4 fw-bold">
                                 <label class="form-label" for="orderQty">Order Qty :</label>
-                                <input id="orderQty" class="form-control" required type="text" >
+                                <input class="form-control" id="orderQty" required type="text">
                             </div>
 
                         </div>
@@ -356,7 +365,9 @@
                         <hr>
 
                         <div>
-                            <button id="btnAddItem" class="btn bg-warning p-2 text-dark bg-opacity-50 fw-bold"  type="button">Add Item</button>
+                            <button class="btn bg-warning p-2 text-dark bg-opacity-50 fw-bold" id="btnAddItem"
+                                    type="button">Add Item
+                            </button>
                         </div>
 
                     </form>
@@ -368,34 +379,36 @@
                     <div class="card-body">
                         <div class="col-md-6 fw-bold ">
                             <label class="form-label text-primary bg-opacity-10" for="total">Total </label>
-                            <h2 id="total" class="fw-lighter text-primary bg-opacity-10">00.00/=</h2>
+                            <h2 class="fw-lighter text-primary bg-opacity-10" id="total">00.00/=</h2>
                         </div>
 
                         <div class="col-md-6 fw-bold ">
                             <label class="form-label text-danger bg-opacity-10" for="subTotal">SubTotal </label>
-                            <h2 id="subTotal" class="fw-lighter text-danger bg-opacity-10">00.00/=</h2>
+                            <h2 class="fw-lighter text-danger bg-opacity-10" id="subTotal">00.00/=</h2>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemName">Cash :</label>
-                                <input id="txtCash" class="form-control" required type="text" >
+                                <input class="form-control" id="txtCash" required type="text">
                             </div>
 
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemName">Discount :</label>
-                                <input id="txtDiscount" readonly="readonly" class="form-control" required type="text" >
+                                <input class="form-control" id="txtDiscount" readonly="readonly" required type="text">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 fw-bold">
                                 <label class="form-label" for="orderFormItemName">Balance :</label>
-                                <input id="txtBalance" readonly="readonly" class="form-control" required type="text" >
+                                <input class="form-control" id="txtBalance" readonly="readonly" required type="text">
                             </div>
 
                             <div class="col-md-6 fw-bold mt-4">
-                                <button id="btnPurchase" class="btn bg-success p-2 text-white bg-opacity-100 fw-bold"  type="button">Purchase</button>
+                                <button class="btn bg-success p-2 text-white bg-opacity-100 fw-bold" id="btnPurchase"
+                                        type="button">Purchase
+                                </button>
                             </div>
                         </div>
                     </div>
