@@ -70,6 +70,8 @@ function setItemData(id) {
     }
 }
 
+
+
 $("#btnAddItem").click(function () {
     countTotal();
     if ($("#orderFormItemId option:selected").text()=="" || $("#orderFormCstId option:selected").text()==""){
@@ -79,9 +81,40 @@ $("#btnAddItem").click(function () {
         updateItemDatabase();
         saveOrder();
         loadTable();
+
+        $("#orderFormTableBody>tr>td>button").click(function (){
+            let text="Confirm the remove of this item..!"
+            if (confirm(text)){
+                $(this).closest('tr').remove();
+                let orderId=$("#orderId").val();
+                let id =$(this).closest('tr').children(":eq(0)").text();
+                let qty =parseInt($(this).closest('tr').children(":eq(3)").text());
+
+                removeItem(orderId,id,qty);
+            }
+
+        });
     }
 
 });
+
+function removeItem(orderId,id,qty) {
+    /*update itemDB*/
+    for (let i = 0; i < itemDB.length; i++) {
+        if (id==itemDB[i].getItemId()){
+            let preQty=itemDB[i].getItemQty();
+            preQty+=qty;
+            itemDB[i].setItemQty(preQty);
+        }
+    }
+
+    /*update orderDB*/
+    for (let j = 0; j < orderDB.length; j++) {
+        if (id==orderDB[j].getOrderItemId() && orderId==orderDB[j].getOrderId()){
+            orderDB.splice(j,1);
+        }
+    }
+}
 
 function countTotal() {
     var total;
@@ -161,7 +194,7 @@ function saveOrder() {
 function loadTable() {
     $("#orderFormTableBody").empty();
     orderDB.forEach(function (a){
-        let orderRow= `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td><td><button type="button" class="btn btn-danger ">Remove</button></td></tr>`;
+        let orderRow= `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td><td><button id="delete" type="button" class="btn btn-danger ">Remove</button></td></tr>`;
         $("#orderFormTableBody").append(orderRow);
     });
 
