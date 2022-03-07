@@ -447,7 +447,7 @@
     background-color: white;
     height: 98vh;
     width: 98.9vw;
-
+    position: relative;
 }
 
 #projects section:first-child > h1 {
@@ -457,21 +457,25 @@
 }
 
 .hero{
+    position: relative;
     width: 100%;
-    height: 100vh;
-    background: #000;
+    height: 84vh;
     overflow: hidden;
+    left: 20px
 }
 .hero>.carousel{
-    width: 200px;
-    margin: 100px auto 0;
+    width: 253px;
+    margin: 71px auto 0;
     overflow: visible;
-    -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));
-}
+    -webkit-box-reflect: below 5px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));}
 
-.carousel>ul>li>img{
-    width: 200px;
-    height: 200px;
+.carousel ul{
+    position: relative;
+    right: 39px;
+}
+.carousel img{
+    width: 19vw;
+    height: 34vh;
 
 }
 
