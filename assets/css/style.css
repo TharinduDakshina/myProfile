@@ -447,7 +447,7 @@
     background-color: white;
     height: 98vh;
     width: 98.9vw;
-    background-size: cover;
+
 }
 
 #projects section:first-child > h1 {
@@ -456,23 +456,23 @@
     padding-top: 39px;
 }
 
-#projects>.hero{
+.hero{
     width: 100%;
     height: 100vh;
     background: #000;
     overflow: hidden;
 }
-#projects>.hero>.carousel{
-    width: 300px;
+.hero>.carousel{
+    width: 200px;
     margin: 100px auto 0;
     overflow: visible;
-
+    -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));
 }
 
-#projects>.carousel ul>li>img{
+.carousel>ul>li>img{
     width: 200px;
     height: 200px;
-    -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));
+
 }
 
 /*course Work*/

@@ -8,15 +8,17 @@
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fonts/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/jquery.flipster.min.css">
     <meta content="Tharindu,Dakshina,Thatindu dakshina" name="keywords">
     <meta content="The latest Tweets from Tharindu Dakshina (@Dakshina527) ❤❤IJSE Student❤❤ ❤#Sri Lanka.❤"
           name="description">
     <meta content="width=device-width initial-scale=1" name="viewport">
     <meta content="#2d3436" name="theme-colour">
     <meta content="IE=edge,chrome" http-equiv="X-UA-Compatible">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -254,32 +256,32 @@
         <section>
             <h1>Projects</h1>
 
-            <section class="hero">
+            <div class="hero">
                 <div class="carousel">
                     <ul>
                         <li>
-                            <a href="https://github.com/TharinduDakshina/ParkinSystem.git" target="_blank">
-                            <img alt="Loading error this image" src="assets/images/projectParkingSyastem.jpg"></a>
+                            <!--<a href="https://github.com/TharinduDakshina/ParkinSystem.git" target="_blank">-->
+                            <img alt="Loading error this image" src="assets/images/projectParkingSyastem.jpg"><!--</a>-->
                         </li>
 
                         <li>
-                            <a href="https://github.com/TharinduDakshina/SaloonSystem.git" target="_blank">
-                            <img alt="Loading error this image" src="assets/images/projectSaloonSystem.png"></a>
+                            <!--<a href="https://github.com/TharinduDakshina/SaloonSystem.git" target="_blank">-->
+                            <img alt="Loading error this image" src="assets/images/projectSaloonSystem.png"><!--</a>-->
                         </li>
 
                         <li>
-                            <a href="https://github.com/TharinduDakshina/SupperMarketPossSystem.git" target="_blank">
-                            <img alt="Loading error this image" src="assets/images/projectPossSystem.jpg"></a>
+                            <!--<a href="https://github.com/TharinduDakshina/SupperMarketPossSystem.git" target="_blank">-->
+                            <img alt="Loading error this image" src="assets/images/projectPossSystem.jpg"><!--</a>-->
                         </li>
 
                         <li>
-                            <a href="https://github.com/TharinduDakshina/Sipsewana_Hibernate.git" target="_blank">
-                            <img src="assets/images/progetStudentManagement.png" alt="Loading error this image"></a>
+                           <!-- <a href="https://github.com/TharinduDakshina/Sipsewana_Hibernate.git" target="_blank">-->
+                            <img src="assets/images/progetStudentManagement.png" alt="Loading error this image"><!--</a>-->
                         </li>
                     </ul>
                 </div>
 
-            </section>
+            </div>
             <!--<section class="projectSlide">
 
                 <div class="pre"></div>
@@ -498,11 +500,15 @@
     </nav>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="js/jquery.hislide.js"></script>
-
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="assets/js/jquery.flipster.min.js"></script>
 <script>
-    $(".projectSlide").hislide();
+
+
+    $('.carousel').flipster({
+        style:'carousel',
+        spacing:-0.2
+    });
 </script>
 </body>
 </html>
