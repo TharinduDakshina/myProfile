@@ -457,17 +457,17 @@
 }
 
 .hero{
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 98%;
     height: 84vh;
     overflow: hidden;
-    left: 20px
+    left: 20px;
 }
 .hero>.carousel{
     width: 253px;
-    margin: 71px auto 0;
+    margin: 84px auto 0;
     overflow: visible;
-    -webkit-box-reflect: below 5px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));}
+}
 
 .carousel ul{
     position: relative;
@@ -476,7 +476,36 @@
 .carousel img{
     width: 19vw;
     height: 34vh;
+    border: 2px solid black;
+    border-radius: 100%;
 
+}
+
+#projectMore{
+    width: 152px;
+    height: 50px;
+    background-color: #a6b31f;
+    position: absolute;
+    top: 62vh;
+    left: 67vw;
+    border-radius: 10px;
+}
+
+#projectMore:hover{
+    cursor: pointer;
+}
+
+#projectMore>p{
+    font-size: 1.6em;
+    font-family: 'Lobster', cursive;
+    color: #e1dcdc;
+    position: relative;
+    top: -2vh;
+    left: 2.9vw;
+}
+
+#projectMore>p:hover{
+    color: #ccbb69;
 }
 
 /*course Work*/
