@@ -492,6 +492,7 @@
 
 .projectMore:hover{
     cursor: pointer;
+    background-color: #06830f;
 }
 
 .projectMore>p{
@@ -515,9 +516,10 @@
 }
 
 #projects section:nth-child(2) > h1 {
+    padding-top: 82px;
     text-align: center;
     font-size: 38px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #projects section:nth-child(2) > section:nth-child(2) {
@@ -606,7 +608,7 @@
     position: relative;
     left: 45vw;
     top: 48vh;
-    border-radius: 4%;
+    border-radius: 10px;
 }
 
 #gallery > div:nth-child(3):hover {
@@ -625,7 +627,7 @@
 }
 
 #gallery > div:nth-child(3) > p:hover {
-    color: #ccbb69;
+    color: #5a041c;
 }
 
 /*Contact*/
@@ -696,11 +698,14 @@
 
 #email, #name, #feedback {
     background-color: #C4C4C4;
-    color: white;
+    color: black;
     width: 26vw;
     height: 5.2vh;
     border-radius: 6px;
+    font-weight: bold;
 }
+
+
 
 /*contact footer*/
 #contact > section:nth-child(5) > nav > div {
@@ -758,11 +763,6 @@
     background-color: #49e149;
     font-weight: bold;
     border-radius: 25px;
-}
-
-#formSubmit:hover {
-    color: white;
-    cursor: pointer;
 }
 
 /*footer*/

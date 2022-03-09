@@ -281,7 +281,7 @@
                     </ul>
                 </div>
 
-                <div class="projectMore">
+                <div class="projectMore" onclick="window.location.href='Grid/projectGrid/index.html'">
                     <p>More</p>
                 </div>
             </div>
@@ -344,7 +344,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="projectMore">
+                <div class="projectMore" onclick="window.location.href='Grid/assignmentsGrid/index.html'">
                     <p>More</p>
                 </div>
             </div>
@@ -415,13 +415,13 @@
             <div>
                 <form>
                     <label for="email">Email Address</label><br>
-                    <input id="email" type="text" value="Enter Email"><br><br>
+                    <input id="email" type="text" placeholder="Enter Email"><br><br>
 
                     <label for="name">Name</label><br>
-                    <input id="name" type="text" value="Enter your name"><br><br>
+                    <input id="name" type="text"  placeholder="Enter your name"><br><br>
 
                     <label for="feedback">Feedback</label><br>
-                    <textarea id="feedback"></textarea><br>
+                    <textarea id="feedback" placeholder="Enter Your Comment"></textarea><br>
 
                     <input id="formSubmit" type="submit" value="Submit"><br><br>
                 </form>
@@ -483,13 +483,8 @@
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="assets/js/jquery.flipster.min.js"></script>
-<script>
+<script src="assets/js/myScript.js"></script>
 
 
-    $('.carousel').flipster({
-        style:'carousel',
-        spacing:-0.01
-    });
-</script>
 </body>
 </html>
