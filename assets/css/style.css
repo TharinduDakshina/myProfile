@@ -480,7 +480,7 @@
     border-radius: 100%;
 }
 
-#projectMore{
+.projectMore{
     width: 152px;
     height: 50px;
     background-color: #a6b31f;
@@ -490,11 +490,11 @@
     border-radius: 10px;
 }
 
-#projectMore:hover{
+.projectMore:hover{
     cursor: pointer;
 }
 
-#projectMore>p{
+.projectMore>p{
     font-size: 1.6em;
     font-family: 'Lobster', cursive;
     color: #e1dcdc;
@@ -503,7 +503,7 @@
     left: 2.9vw;
 }
 
-#projectMore>p:hover{
+.projectMore>p:hover{
     color: #5a041c;
 }
 
