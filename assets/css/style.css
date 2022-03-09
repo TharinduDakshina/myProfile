@@ -476,9 +476,8 @@
 .carousel img{
     width: 19vw;
     height: 34vh;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 100%;
-
 }
 
 #projectMore{
@@ -505,7 +504,7 @@
 }
 
 #projectMore>p:hover{
-    color: #ccbb69;
+    color: #5a041c;
 }
 
 /*course Work*/
