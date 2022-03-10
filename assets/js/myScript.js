@@ -9,6 +9,13 @@ $('.carousel').flipster({
     spacing:-0.01
 });
 
+$(document).ready(function (){
+    $(".darkModeButton").click(function (){
+        $(".darkModeButtonInner").toggleClass("active");
+        $('body').toggleClass('dark');
+    });
+});
+
 $("#email,#name,#feedback").on('keyup',function (){
     contactValidation();
 });
