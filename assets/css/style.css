@@ -101,6 +101,7 @@
 
 #homeMainSelection > section:first-child > img {
     width: 30vw;
+    height: 55vh;
     border-radius: 100%;
     position: absolute;
     right: 100px;
@@ -842,9 +843,16 @@ footer > nav > ul > li > a:hover {
 }
 
 /*dark them use  */
-
 body.dark{
-    background-color: pink;
+    background-color: #121318;
+}
+
+#homeMainSelection.dark {
+    background-color: #121318;
+}
+
+#homeMainSelection.dark>img{
+    border: 2px solid whitesmoke;
 }
 
 @media all  and (max-width: 320px) {

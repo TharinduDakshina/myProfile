@@ -12,7 +12,7 @@ $('.carousel').flipster({
 $(document).ready(function (){
     $(".darkModeButton").click(function (){
         $(".darkModeButtonInner").toggleClass("active");
-        $('body').toggleClass('dark');
+        $("body,#homeMainSelection,#contactNavigationSelection,#about,#education,#skill,#projects,#gallery,#contact").toggleClass('dark');
     });
 });
 
