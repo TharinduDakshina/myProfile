@@ -514,7 +514,7 @@
 .hero{
     position: absolute;
     width: 98%;
-    height: 69vh;
+    height: 81vh;
     overflow: hidden;
     left: 17px;
     top: 134px;
@@ -537,18 +537,18 @@
 }
 
 .projectMore{
-    width: 152px;
-    height: 50px;
-    background-color: #a6b31f;
+    width: 130px;
+    height: 39px;
+    background-color: rgb(220 99 4 / 33%);
     position: absolute;
-    top: 62vh;
-    left: 67vw;
+    top: 71vh;
+    left: 45vw;
     border-radius: 10px;
 }
 
 .projectMore:hover{
     cursor: pointer;
-    background-color: #06830f;
+    background-color: #830606;
 }
 
 .projectMore>p{
@@ -556,12 +556,12 @@
     font-family: 'Lobster', cursive;
     color: #e1dcdc;
     position: relative;
-    top: -2vh;
-    left: 2.9vw;
+    top: -2.5vh;
+    left: 2.4vw;
 }
 
 .projectMore>p:hover{
-    color: #5a041c;
+    color: #fbe70b;
 }
 
 /*course Work*/
@@ -662,7 +662,7 @@
 #gallery > div:nth-child(3) {
     width: 141px;
     height: 43px;
-    background-color: #9eb605;
+    background-color: #9eb60580;
     position: relative;
     left: 45vw;
     top: 48vh;
@@ -670,7 +670,7 @@
 }
 
 #gallery > div:nth-child(3):hover {
-    background-color: #06830f;
+    background-color: #769705;
     cursor: pointer;
 
 }
