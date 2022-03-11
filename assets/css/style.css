@@ -409,7 +409,7 @@
 }
 
 #education > div:nth-child(13) {
-    top: 65vh;
+    top: 66vh;
     left: 49.44vw;
     border-top: 13px solid #fafafc;
     border-left: 13px solid #576574;
@@ -489,24 +489,35 @@
 
 /*Project*/
 #projects section:first-child {
-    background-color: white;
     height: 98vh;
     width: 98.9vw;
     position: relative;
+
+}
+
+#projects section:first-child>img{
+    position: absolute;
+    width: 98.9vw;
+    height: 98vh;
+    filter: blur(4px);
 }
 
 #projects section:first-child > h1 {
+    position: absolute;
     text-align: center;
     font-size: 38px;
+    left: 48vw;
+    height: 15vh;
     padding-top: 39px;
 }
 
 .hero{
     position: absolute;
     width: 98%;
-    height: 84vh;
+    height: 69vh;
     overflow: hidden;
-    left: 20px;
+    left: 17px;
+    top: 134px;
 }
 .hero>.carousel{
     width: 253px;
@@ -555,7 +566,9 @@
 
 /*course Work*/
 #projects section:nth-child(2) {
-    background-color: #A5B1C2;
+    position: relative;
+    background-image: url("/assets/images/assignmentBackground.jpg");
+    background-size:cover;
     height: 100vh;
     width: 98.9vw;
 }
