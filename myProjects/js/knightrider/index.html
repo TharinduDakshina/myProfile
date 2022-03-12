@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight Rider</title>
+    <link href="assets/js/" rel="stylesheet">
+    <style>
+        #a{
+            position: absolute;
+            display: flex;
+           /* border: 2px solid black;*/
+            width: 500px;
+            height: 50px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #a>div{
+            display: flex;
+            border: 1px solid black;
+            width: 98px;
+            height: 50px;
+            margin: 0;
+        }
+
+
+        #btn1{
+            border: 2px solid black;
+            background-color: greenyellow;
+            position: absolute;
+            top: 59vh;
+            left: 43vw;
+        }
+
+        #btn2{
+            border: 2px solid black;
+            background-color: #b25353;
+            position: absolute;
+            top: 59vh;
+            left: 51vw;
+        }
+    </style>
+</head>
+<body>
+    <section id="a">
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
+    </section>
+
+    <button id="btn1">Start</button>
+    <button id="btn2">Stop</button>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script>
+        var coloDB=['#630202','#6e0808','#961a1a','#961a1a'];
+        var indexDB=[$("body>section>div:nth-child(1)"),$('body>section>div:nth-child(2)'),$('body>section>div:nth-child(3)'),$('body>section>div:nth-child(4)'),$('body>section>div:nth-child(5)')];
+        console.log(indexDB)
+        $("#btn1").click(function (){
+            for (let i = 0; i < indexDB.length; i++) {
+
+            }
+        });
+    </script>
+</body>
+</html>

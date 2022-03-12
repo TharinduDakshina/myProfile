@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container" id="item">
+    <svg class="bi bi-boxes" fill="currentColor" height="4%" viewBox="0 0 16 16" width="4%"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+    </svg>
+    <h1 class="d-inline-block p-1">Items</h1>
+    <section class="row">
+        <div class="col">
+            <div class="container" id="itemSearch">
+                <div>
+                    <h6 class="h3 p-1">Item Search</h6>
+                </div>
+                <div class="bg-light">
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <form class="d-flex p-3 border">
+                                <input aria-label="Search" class="form-control me-2" id="txtItemSearch"
+                                       placeholder="Input Item code"
+                                       type="search">
+                                <button class="btn btn-outline-success" id="btnItemSearch" type="submit">Search
+                                </button>
+                            </form>
+
+                            <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"
+                                 role="group">
+                                <button class="btn btn-danger" id="deleteItem" type="button">Delete</button>
+                                <button class="btn btn-warning" id="btnUpdate" type="button">Update</button>
+                                <button class="btn btn-success" id="saveItem" type="button">Save or Update</button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col bg-white position-relative">
+            <div class="mb-3">
+                <label class="form-label" for="itemId">Item Id</label>
+                <input class="form-control" id="itemId" placeholder="Item Id" type="text">
+                <p><small class="text-danger pl-1" id="errorItemId"></small></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="itemName">Item Name</label>
+                <input class="form-control" id="itemName" placeholder="Item Name" type="text">
+                <p><small class="text-danger pl-1" id="errorItemName"></small></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="itemQty">Item Qty</label>
+                <input class="form-control" id="itemQty" placeholder="Item Qty" type="text">
+                <p><small class="text-danger pl-1" id="errorQty"></small></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="itemPrice">Item Price</label>
+                <input class="form-control" id="itemPrice" placeholder="Item Price" type="text">
+                <p><small class="text-danger pl-1" id="errorPrice"></small></p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="row">
+        <table class="table table-success table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Item QTY</th>
+                <th scope="col">Item Price</th>
+            </tr>
+            </thead>
+            <tbody id="itemTableBody">
+
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>

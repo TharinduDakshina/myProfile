@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container " id="customer">
+    <svg class="bi bi-person-square mb-2 mt-2 d-inline-block" fill="currentColor" height="5%" viewBox="0 0 16 16"
+         width="5%" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+        <h1 class="d-inline-block p-1">Customer</h1>
+    </svg>
+    <section class="row">
+        <div class="col">
+            <div class="container" id="customerSearch">
+                <div>
+                    <h6 class="h3 p-1">Customer Search</h6>
+                </div>
+                <div class="bg-light">
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <form class="d-flex p-3 border">
+                                <input aria-label="Search" class="form-control me-2" id="txtCustomerSearch"
+                                       placeholder="Input NIC number"
+                                       type="search">
+                                <button class="btn btn-outline-success" id="btnSearch" type="submit">Search</button>
+                            </form>
+                            <!-- Example single danger button -->
+                            <div aria-label="Basic mixed styles example" class="btn-group p-1 buttonSet"
+                                 role="group">
+                                <button class="btn btn-danger" id="deleteCustomer" type="button">Delete</button>
+                                <button class="btn btn-warning" id="btnUpdateCustomer" type="button">update</button>
+                                <button class="btn btn-success" id="saveCustomer" type="button">Save or Update
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col bg-white position-relative">
+            <div class="mb-3">
+                <label class="form-label" for="cstId">Customer Id</label>
+                <input class="form-control" id="cstId" placeholder="Customer Id" type="text">
+                <p><small class="text-danger pl-1" id="errorId"></small></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="cstName">Customer Name</label>
+                <input class="form-control" id="cstName" placeholder="Customer Name" type="text">
+                <p><small class="text-danger pl-1" id="errorName"></small></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="cstAddress">Customer Address</label>
+                <input class="form-control" id="cstAddress" placeholder="Customer Address" type="text">
+                <p><small class="text-danger pl-1" id="errorAddress"></small></p>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="cstTp">Customer Tp</label>
+                <input class="form-control" id="cstTp" placeholder="Customer Tp" type="text">
+                <p><small class="text-danger pl-1" id="errorTp"></small></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="row">
+        <table class="table table-success table-striped mt-5">
+            <thead>
+            <tr>
+                <th scope="col">Customer Id</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Customer Address</th>
+                <th scope="col">Customer Tp</th>
+            </tr>
+            </thead>
+            <tbody id="customerTableBody">
+
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>

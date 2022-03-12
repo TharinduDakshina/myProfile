@@ -72,7 +72,4 @@ function orderDTO(oId,date,cId,iId,iName,iPrice,oQty,total,subTotal){
         __total=value;
     }
 
-
-
-
 }
