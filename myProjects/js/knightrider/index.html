@@ -5,67 +5,113 @@
     <title>Knight Rider</title>
     <link href="assets/js/" rel="stylesheet">
     <style>
-        #a{
-            position: absolute;
+        body{
+            background-color: black;
+        }
+        section {
+            height: 9vh;
+            width: 70vw;
             display: flex;
-           /* border: 2px solid black;*/
-            width: 500px;
-            height: 50px;
+            position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
             margin: auto;
+            border: 2px solid black;
         }
 
-        #a>div{
+        section > div {
+            width: 16vw;
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        button {
+            width: 10vw;
+            height: 5vh;
+            color: white;
+            border-color: black;
+            font-weight: bolder;
+        }
+
+        body > div {
+            width: 25vw;
             display: flex;
-            border: 1px solid black;
-            width: 98px;
-            height: 50px;
-            margin: 0;
-        }
-
-
-        #btn1{
-            border: 2px solid black;
-            background-color: greenyellow;
             position: absolute;
-            top: 59vh;
-            left: 43vw;
+            bottom: 30vh;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
 
-        #btn2{
-            border: 2px solid black;
-            background-color: #b25353;
-            position: absolute;
-            top: 59vh;
-            left: 51vw;
-        }
     </style>
 </head>
 <body>
-    <section id="a">
-        <div id="1"></div>
-        <div id="2"></div>
-        <div id="3"></div>
-        <div id="4"></div>
-        <div id="5"></div>
-    </section>
 
-    <button id="btn1">Start</button>
-    <button id="btn2">Stop</button>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
 
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script>
-        var coloDB=['#630202','#6e0808','#961a1a','#961a1a'];
-        var indexDB=[$("body>section>div:nth-child(1)"),$('body>section>div:nth-child(2)'),$('body>section>div:nth-child(3)'),$('body>section>div:nth-child(4)'),$('body>section>div:nth-child(5)')];
-        console.log(indexDB)
-        $("#btn1").click(function (){
-            for (let i = 0; i < indexDB.length; i++) {
-                /*dsafsafsadfaswf*/
-            }
-        });
-    </script>
+<div>
+    <button id="start" style="background-color: #0000FF; ">Start</button>
+    <button id="end" style="background-color: #00FF00;">End</button>
+</div>
+
+
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script>
+
+    const music = new Audio('assets/audio/kittscanner.wav');
+
+
+    var colors =[ "#800000","#b61515","#ff3333","#ff5e5e","#ff9494","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"];
+    var divs =[$("section>div:nth-child(1)"),$("section>div:nth-child(2)"),$("section>div:nth-child(3)"),$("section>div:nth-child(4)"),$("section>div:nth-child(5)")];
+
+    var index=0;
+
+
+    var tempColors=[];
+    function animateLights() {
+
+        tempColors.unshift(colors[index]);
+        for (let i = 0; i < tempColors.length; i++) {
+            divs[i].css('background-color',tempColors[i]);
+        }
+
+
+
+        index++;
+        if (index==5){
+            tempColors=[];
+        }
+
+        if(index==10){
+            index=0;
+            tempColors=[];
+            divs=divs.reverse();
+        }
+    }
+
+
+    let timerId;
+    $("#start").click(function () {
+        clearInterval(timerId);
+        timerId =   setInterval(animateLights,90);
+        music.play();
+        music.loop =true;
+        music.playbackRate = 1;
+    });
+
+    $("#end").click(function () {
+        clearInterval(timerId);
+        music.pause();
+    });
+</script>
 </body>
 </html>

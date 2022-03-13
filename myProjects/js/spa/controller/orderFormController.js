@@ -88,8 +88,8 @@ $("#btnAddItem").click(function () {
                 let orderId = $("#orderId").val();
                 let id = $(this).closest('tr').children(":eq(0)").text();
                 let qty = parseInt($(this).closest('tr').children(":eq(3)").text());
-
-                removeItem(orderId, id, qty);
+                let total =parseInt($(this).closest('tr').children(":eq(4)").text());
+                removeItem(orderId, id, qty,total);
             }
 
         });
@@ -97,7 +97,7 @@ $("#btnAddItem").click(function () {
 
 });
 
-function removeItem(orderId, id, qty) {
+function removeItem(orderId, id, qty,total) {
     /*update itemDB*/
     for (let i = 0; i < itemDB.length; i++) {
         if (id == itemDB[i].getItemId()) {
@@ -113,14 +113,25 @@ function removeItem(orderId, id, qty) {
             orderDB.splice(j, 1);
         }
     }
+
+    /*updateTotal*/
+
+    let currentTotal =parseInt($('#total').text());
+    console.log(currentTotal);
+    let newTotal=currentTotal-total;
+    console.log(newTotal);
+    $('#total').text(newTotal+'.00/=');
+    countTotal();
+
 }
 
 function countTotal() {
     var total;
     var displayTotal = parseInt($("#total").text());
+    console.log(displayTotal);
     if (displayTotal == 0) {
         total = (parseInt($("#orderQty").val())) * (parseInt($("#orderFormPrice").val()));
-
+        console.log(total);
         $("#total").text(total + ".00 /=");
     } else {
         var sum = displayTotal + (parseInt($("#orderQty").val())) * (parseInt($("#orderFormPrice").val()));
@@ -132,13 +143,12 @@ function countTotal() {
     if (displayTotal > 100 || displayTotal < 1000) {
         $("#txtDiscount").val("5%");
         var subTotal = displayTotal - ((displayTotal * 5) / 100);
-        $("#subTotal").text(subTotal + " /=");
+            $("#subTotal").text(subTotal + " /=");
     } else if (displayTotal > 1000) {
         $("#txtDiscount").val("10%");
         var subTotal = displayTotal - ((displayTotal * 10) / 100);
         $("#subTotal").text(subTotal + " /=");
     }
-
 }
 
 function saveOrder() {
@@ -196,7 +206,6 @@ function loadTable() {
         let orderRow = `<tr><td>${a.getOrderItemId()}</td><td>${a.getOrderItemName()}</td><td>${a.getOrderItemPrice()}</td><td>${a.getOrderQty()}</td><td>${a.getTotal()}</td><td><button id="delete" type="button" class="btn btn-danger ">Remove</button></td></tr>`;
         $("#orderFormTableBody").append(orderRow);
     });
-
 }
 
 function clearOrderItem() {
