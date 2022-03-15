@@ -66,6 +66,9 @@
 
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script>
+
+    const music = new Audio('assets/audio/Knight-Rider-Theme-Song');
+
     var colors =[ "#800000","#b61515","#ff3333","#ff5e5e","#ff9494","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"];
     var divs =[$("section>div:nth-child(1)"),$("section>div:nth-child(2)"),$("section>div:nth-child(3)"),$("section>div:nth-child(4)"),$("section>div:nth-child(5)")];
 
@@ -98,7 +101,7 @@
         clearInterval(timerId);
         timerId =   setInterval(animateLights,90);
         music.play();
-        music.loop =true;
+        music.loop = true;
         music.playbackRate = 1;
     });
 
