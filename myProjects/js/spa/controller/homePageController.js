@@ -38,3 +38,4 @@ $("#placeOrderButton").click(function () {
 
 $("#homePageCustomers").text(customerDB.length);
 $("#homePageAmount").text(itemDB.length);
+$("#homePageOrderAmount").text(orderDB.length);

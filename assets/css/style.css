@@ -905,6 +905,8 @@ body.dark{
         font-size: 17px;
     }
 
+
+
     #homeMainSelection {
         background-color: #2F3542;
         height: 100vh;
@@ -912,11 +914,16 @@ body.dark{
     }
 
     #homeMainSelection > section:first-child > img {
-        width: 50vw;
+        width: 54vw;
         border-radius: 100%;
         position: absolute;
         right: 88px;
         top: 63px;
+        height: 25vh;
+    }
+
+    .darkModeButton{
+        display: none;
     }
 
     #homeMainSelection > aside > h1 {
@@ -1451,6 +1458,10 @@ body.dark{
         position: absolute;
         right: 113px;
         top: 65px;
+    }
+
+    .darkModeButton{
+        display: none;
     }
 
     #homeMainSelection > aside > h1 {

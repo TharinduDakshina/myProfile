@@ -2,12 +2,37 @@
     loadOrderId();
 }
 
+/*function loadOrderId() {
+    if ($("#orderId").val() == "") {
+        $("#orderId").val("0-001");
+    } else {
+        var tempID = parseInt($("#orderId").val().split("-")[1]);
+        tempID++;
+        if (tempID <=9){
+            tempID="0-00"+tempID;
+        }else if (tempID <= 99){
+            tempID="0-0"+tempID;
+        }else {
+            tempID="0-"+tempID;
+        }
+
+        $("#orderId").val(tempID);
+    }
+}*/
 function loadOrderId() {
     if ($("#orderId").val() == "") {
-        $("#orderId").val("001");
+        $("#orderId").val("0-001");
     } else {
-        var value = parseInt($("#orderId").val());
+        var value = parseInt($("#orderId").val().split("-")[1]);
         value++;
+        if (value <=9){
+            value="0-00"+value;
+        }else if (value <= 99){
+            value="0-0"+value;
+        }else {
+            value="0-"+value;
+        }
+
         $("#orderId").val(value);
     }
 }

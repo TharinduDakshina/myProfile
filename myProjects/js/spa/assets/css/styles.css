@@ -53,7 +53,7 @@ hr{
 
 #homePageRow{
     right: 2vw;
-    width: 48vw;
+    width: 100vw;
 }
 
 #navHeader>li>a:hover{
@@ -62,13 +62,12 @@ hr{
 }
 
 #homePageImages>div>img{
-    height: 92vh;
+    height: 92.5vh;
     width: 100vw;
-
 }
 
 
-#customerQty,#homePageItemAmount{
+#customerQty,#homePageItemAmount,#homePageOrders{
     position: absolute;
     width: 17vw;
     height: 36vh;
@@ -80,7 +79,7 @@ hr{
     border-bottom-right-radius: 34%;
 }
 
-#customerQty > h4 ,#homePageItemAmount > h4{
+#customerQty > h4 ,#homePageItemAmount > h4,#homePageOrders>h4{
     position: relative;
     top: 4vh;
     left: 3vw;
@@ -100,6 +99,16 @@ hr{
     width: 150px;
 }
 
+#homePageOrders > p{
+    position: relative;
+    top: 13vh;
+    left: 5vw;
+    font-weight: bold;
+    color: #c8cf33;
+    font-size: 4.9em;
+    width: 150px;
+}
+
 #homePageItemAmount{
     right: 0;
     top: 55vh;
@@ -111,26 +120,15 @@ hr{
     font-size: 2.9em;
 }
 
-#homePageLeftSideBar {
-
-    position: absolute;
-    width: 11vw;
-    height: 93vh;
-    background-color: #adceda;
-    top: 7vh;
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 15%;
-    filter: blur(0.3rem);
-
+#homePageOrders{
+    left: 0;
+   top: 8vh;
 }
 
-#homePageBottomBar{
+#homePageOrders>svg:nth-child(2){
     position: absolute;
-    width: 54vw;
-    height: 18vh;
-    background-color: #adceda;
-    bottom: 0vh;
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 0%;
-    filter: blur(0.3rem);
+    top: 11vh;
+    left: 8vh;
+    width: 87px;
+
 }
