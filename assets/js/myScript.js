@@ -1,6 +1,20 @@
 let regxName = /^[A-z ]{3,20}$/;
 let regxEmailAddress = /^[A-z 0-9@.,]{3,30}$/;
 
+
+
+$(window).on('load',function(){
+    $("#loader_content").fadeOut(1500);
+});
+
+$(document).ready(function (){
+
+    $(".darkModeButton").click(function (){
+        $(".darkModeButtonInner").toggleClass("active");
+        $("body,#homeMainSelection,#contactNavigationSelection,#about,#education,#skill,#projects,#gallery,#contact").toggleClass('dark');
+    });
+});
+
 $("#formSubmit").attr('disabled',true);
 
 
@@ -9,12 +23,6 @@ $('.carousel').flipster({
     spacing:-0.01
 });
 
-$(document).ready(function (){
-    $(".darkModeButton").click(function (){
-        $(".darkModeButtonInner").toggleClass("active");
-        $("body,#homeMainSelection,#contactNavigationSelection,#about,#education,#skill,#projects,#gallery,#contact").toggleClass('dark');
-    });
-});
 
 $("#email,#name,#feedback").on('keyup',function (){
     contactValidation();

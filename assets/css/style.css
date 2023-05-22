@@ -1,5 +1,23 @@
 /*header*/
 
+#loader_content{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    background:white;
+    z-index:500;
+}
+
+#loader_content > img{
+    width :700px;
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
 #home {
     width: 98.9vw;
     background-color: #DFE4EA;
