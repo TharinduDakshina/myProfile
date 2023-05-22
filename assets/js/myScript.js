@@ -9,10 +9,10 @@ $(window).on('load',function(){
 
 $(document).ready(function (){
 
-    /*$(".darkModeButton").click(function (){
+    $(".darkModeButton").click(function (){
         $(".darkModeButtonInner").toggleClass("active");
         $("body,#homeMainSelection,#contactNavigationSelection,#about,#education,#skill,#projects,#gallery,#contact").toggleClass('dark');
-    });*/
+    });
 });
 
 $("#formSubmit").attr('disabled',true);
