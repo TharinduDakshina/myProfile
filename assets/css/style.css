@@ -1,5 +1,10 @@
 /*header*/
 
+
+html{
+    scroll-behavior: smooth;
+}
+
 #loader_content{
     width:100vw;
     height:100vh;
@@ -884,6 +889,34 @@ body.dark{
 
 #homeMainSelection.dark>img{
     border: 2px solid whitesmoke;
+}
+
+.toTop{
+    background:white;
+    position:fixed;
+    bottom:16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    z-index: 10;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration: none;
+    color: #0f0f15;
+    font-size: 32px;
+    opacity:0;
+    pointer-events:none;
+    transition:all .4s;
+    background: #af863a;
+}
+
+.toTop.active{
+    bottom:32px;
+    pointer-events:auto;
+    opacity:1;
+    z-index: 10;
 }
 
 @media all  and (max-width: 320px) {
